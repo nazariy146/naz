@@ -60,17 +60,5 @@ public class MobileSteps {
         Element1.getClass();
         Element1.click();
     }
-    public void loginAsAdmin() {
-        SelenideElement idUser = getIdField("user");
-        SelenideElement idPassword = getIdField("password");
-        SelenideElement idlogIn = getIdField("logIn");
-
-        idUser.shouldBe(visible, Duration.ofSeconds(25));
-
-        mobileDriver("user");
-        inputData(idUser,"Admin");
-        clickButton(idPassword);
-        clickButton(idlogIn);
-    }
     //MNV need to refactor
 }

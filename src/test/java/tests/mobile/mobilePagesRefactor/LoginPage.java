@@ -16,21 +16,6 @@ public class LoginPage {
         return new SettingsPage();
     }
     //MNV need to dell
-//
-//    public SelenideElement getUserNameInput() {
-//        return $(By.id("com.abmcloud:id/spinnerUserSel"));
-//    }
-//
-//    public SelenideElement getUserPasswordInput() {
-//        return $(By.id("com.abmcloud:id/passwordUser"));
-//    }
-//
-//    public SelenideElement getLoginButton() {
-//        return $(By.id("com.abmcloud:id/AuthorizationUser"));
-//    }
-//    public SelenideElement User() {
-//        return $(By.id("com.abmcloud:id/layout_user"));
-//    }
     //MNV need to dell
 
 }
