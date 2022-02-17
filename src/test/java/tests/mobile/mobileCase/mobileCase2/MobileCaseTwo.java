@@ -2,6 +2,7 @@ package tests.mobile.mobileCase.mobileCase2;
 
 import org.testng.annotations.Test;
 import tests.mobile.mobileForm.MobileFormBatchProperties;
+import tests.mobile.mobileForm.MobileFormContainer;
 import tests.mobile.mobileForm.MobileFormSerialNumber;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
@@ -20,7 +21,6 @@ public class MobileCaseTwo extends BaseMobileClass {
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
-    ContainerCardPage containerCardPage = new ContainerCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();
     PackagingCardPage packagingCardPage = new PackagingCardPage();
     LoadingCardPage loadingCardPage = new LoadingCardPage();
@@ -30,6 +30,7 @@ public class MobileCaseTwo extends BaseMobileClass {
     RelocationTSDCardPage relocationTSDCardPage = new RelocationTSDCardPage();
     MobileFormBatchProperties mobileFormBatchProperties = new MobileFormBatchProperties();
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
+    MobileFormContainer mobileFormContainer = new MobileFormContainer();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -421,7 +422,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         findRestsPage.verifyData("qty", "10");
     }
 
-    @Test (priority = 5, dependsOnMethods = "processingInventoryTaskTest")
+    @Test (priority = 5, dependsOnMethods = "processingAccommodationTaskTest")
     public void processingRelocationTaskTest() throws Exception {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Moving");
@@ -708,56 +709,17 @@ public class MobileCaseTwo extends BaseMobileClass {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол11
-        containerCardPage.verifyData("containerInfo", "CON/OUT111 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT111");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол12
-        containerCardPage.verifyData("containerInfo", "CON/OUT112 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT112");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол13
-        containerCardPage.verifyData("containerInfo", "CON/OUT113 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT113");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол14
-        containerCardPage.verifyData("containerInfo", "CON/OUT114 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT114");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол15
-        containerCardPage.verifyData("containerInfo", "CON/OUT115 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT115");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол16
-        containerCardPage.verifyData("containerInfo", "CON/OUT116 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT116");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол17
-        containerCardPage.verifyData("containerInfo", "CON/OUT117 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT117");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол18
-        containerCardPage.verifyData("containerInfo", "CON/OUT118 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT118");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол19
-        containerCardPage.verifyData("containerInfo", "CON/OUT119 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT119");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол20
-        containerCardPage.verifyData("containerInfo", "CON/OUT120 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT120");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
+
+        mobileFormContainer.completeTask("OUT111", "CON/OUT111 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT112", "CON/OUT112 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT113", "CON/OUT113 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT114", "CON/OUT114 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT115", "CON/OUT115 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT116", "CON/OUT116 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT117", "CON/OUT117 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT118", "CON/OUT118 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT119", "CON/OUT119 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT120", "CON/OUT120 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
     }
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")
@@ -887,7 +849,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол11
         packagingCardPage.setCellOrContainerInput("OUT111");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT111", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT111", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -895,7 +857,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол12
         packagingCardPage.setCellOrContainerInput("OUT112");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT112", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT112", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -903,7 +865,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол13
         packagingCardPage.setCellOrContainerInput("OUT113");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT113", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT113", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -911,7 +873,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол14
         packagingCardPage.setCellOrContainerInput("OUT114");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT114", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT114", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -919,7 +881,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол15
         packagingCardPage.setCellOrContainerInput("OUT115");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT115", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT115", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -927,7 +889,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол16
         packagingCardPage.setCellOrContainerInput("OUT116");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT116", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT116", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -935,7 +897,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол17
         packagingCardPage.setCellOrContainerInput("OUT117");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT117", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT117", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -943,7 +905,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол18
         packagingCardPage.setCellOrContainerInput("OUT118");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT118", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT118", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -951,7 +913,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол19
         packagingCardPage.setCellOrContainerInput("OUT119");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT119", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT119", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -959,7 +921,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол20
         packagingCardPage.setCellOrContainerInput("OUT120");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT120", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT120", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();

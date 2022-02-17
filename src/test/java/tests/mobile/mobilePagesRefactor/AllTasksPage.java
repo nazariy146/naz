@@ -3,6 +3,8 @@ package tests.mobile.mobilePagesRefactor;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.$;
@@ -19,10 +21,10 @@ public class AllTasksPage {
     }
 
     public void checkWorkType(String taskTitle) throws Exception {
-        //$(By.id("com.abmcloud:id/top_app_bar")).shouldBe(visible);
-        $(By.id("com.abmcloud:id/text_work_type")).shouldBe(visible);
         if (getRelaxMessage().isDisplayed()) {
             waitUntilPass(WAIT_TASK_TIMEOUT, () -> {
+                refreshPage($(By.id("com.abmcloud:id/top_app_bar")));
+                $(By.id("com.abmcloud:id/text_work_type")).shouldBe(visible, Duration.ofSeconds(60));
                 refreshPage($(By.id("com.abmcloud:id/top_app_bar")));
                 getWorkType().shouldHave(exactText(taskTitle));
             });

@@ -2,6 +2,7 @@ package tests.mobile.mobileCase.mobileCase5;
 
 import org.testng.annotations.Test;
 import tests.mobile.mobileForm.MobileFormBatchProperties;
+import tests.mobile.mobileForm.MobileFormContainer;
 import tests.mobile.mobileForm.MobileFormSerialNumber;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
@@ -17,7 +18,6 @@ public class MobileCaseFive extends BaseMobileClass{
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
-    ContainerCardPage containerCardPage = new ContainerCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();
     PackagingCardPage packagingCardPage = new PackagingCardPage();
     LoadingCardPage loadingCardPage = new LoadingCardPage();
@@ -26,6 +26,7 @@ public class MobileCaseFive extends BaseMobileClass{
     RelocationTSDCardPage relocationTSDCardPage = new RelocationTSDCardPage();
     MobileFormBatchProperties mobileFormBatchProperties = new MobileFormBatchProperties();
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
+    MobileFormContainer mobileFormContainer = new MobileFormContainer();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -1255,56 +1256,17 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол41
-        containerCardPage.verifyData("containerInfo", "CON/OUT141 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT141");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол42
-        containerCardPage.verifyData("containerInfo", "CON/OUT142 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT142");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол43
-        containerCardPage.verifyData("containerInfo", "CON/OUT143 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT143");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол44
-        containerCardPage.verifyData("containerInfo", "CON/OUT144 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT144");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол45
-        containerCardPage.verifyData("containerInfo", "CON/OUT145 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT145");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол46
-        containerCardPage.verifyData("containerInfo", "CON/OUT146 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT146");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол47
-        containerCardPage.verifyData("containerInfo", "CON/OUT147 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT147");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол48
-        containerCardPage.verifyData("containerInfo", "CON/OUT148 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT148");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол49
-        containerCardPage.verifyData("containerInfo", "CON/OUT149 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT149");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол50
-        containerCardPage.verifyData("containerInfo", "CON/OUT150 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT150");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
+
+        mobileFormContainer.completeTask("OUT141", "CON/OUT141 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT142", "CON/OUT142 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT143", "CON/OUT143 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT144", "CON/OUT144 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT145", "CON/OUT145 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT146", "CON/OUT146 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT147", "CON/OUT147 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT148", "CON/OUT148 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT149", "CON/OUT149 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT150", "CON/OUT150 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
     }
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")
