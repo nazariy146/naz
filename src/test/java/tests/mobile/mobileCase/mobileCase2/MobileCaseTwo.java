@@ -421,7 +421,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         findRestsPage.verifyData("qty", "10");
     }
 
-    @Test (priority = 5, dependsOnMethods = "processingInventoryTaskTest")
+    @Test (priority = 5, dependsOnMethods = "processingAccommodationTaskTest")
     public void processingRelocationTaskTest() throws Exception {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Moving");
@@ -887,7 +887,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол11
         packagingCardPage.setCellOrContainerInput("OUT111");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT111", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT111", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -895,7 +895,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол12
         packagingCardPage.setCellOrContainerInput("OUT112");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT112", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT112", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -903,7 +903,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол13
         packagingCardPage.setCellOrContainerInput("OUT113");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT113", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT113", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -911,7 +911,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол14
         packagingCardPage.setCellOrContainerInput("OUT114");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT114", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT114", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -919,7 +919,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол15
         packagingCardPage.setCellOrContainerInput("OUT115");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT115", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT115", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -927,7 +927,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол16
         packagingCardPage.setCellOrContainerInput("OUT116");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT116", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT116", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -935,7 +935,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол17
         packagingCardPage.setCellOrContainerInput("OUT117");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT117", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT117", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -943,7 +943,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол18
         packagingCardPage.setCellOrContainerInput("OUT118");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT118", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT118", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -951,7 +951,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол19
         packagingCardPage.setCellOrContainerInput("OUT119");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT119", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT119", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();
@@ -959,7 +959,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         clickErrorDialogOkButton();
     //Стол20
         packagingCardPage.setCellOrContainerInput("OUT120");
-        packagingCardPage.checkCellProductInfoInRow(1, "OUT120", "10", "0.1", "0.1");
+        packagingCardPage.checkCellProductInfoInRow(1, "OUT120", "10", "0.1", "10");
         packagingCardPage.clickCreateCargoButton();
         getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
         clickSetOkYesButton();

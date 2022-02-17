@@ -6,6 +6,8 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -82,6 +84,7 @@ public class InventoryCardPage {
 
     public void inputData(String field, String source) {
         SelenideElement ID = getIdField(field);
+        ID.shouldBe(visible, Duration.ofSeconds(25));
         ID.click();
         ID.val(source);
         mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
@@ -89,11 +92,13 @@ public class InventoryCardPage {
 
     public void verifyData(String field, String source) {
         SelenideElement ID = getIdField(field);
+        ID.shouldBe(visible, Duration.ofSeconds(25));
         ID.shouldHave(text(source));
     }
 
     public void clickButton(String field) {
         SelenideElement ID = getIdField(field);
+        ID.shouldBe(visible, Duration.ofSeconds(25));
         ID.click();
     }
 

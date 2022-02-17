@@ -26,12 +26,14 @@ public class MobileSteps {
     }
 
     public void inputData(SelenideElement resourceId, String data) {
+        resourceId.shouldBe(visible, Duration.ofSeconds(25));
         resourceId.click();
         resourceId.val(data);
         mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
 
     public void clickButton(SelenideElement resourceId) {
+        resourceId.shouldBe(visible, Duration.ofSeconds(25));
         resourceId.click();
     }
 
@@ -62,6 +64,8 @@ public class MobileSteps {
         SelenideElement idUser = getIdField("user");
         SelenideElement idPassword = getIdField("password");
         SelenideElement idlogIn = getIdField("logIn");
+
+        idUser.shouldBe(visible, Duration.ofSeconds(25));
 
         mobileDriver("user");
         inputData(idUser,"Admin");
