@@ -2,6 +2,7 @@ package tests.mobile.mobileCase.mobileCase3;
 
 import org.testng.annotations.Test;
 import tests.mobile.mobileForm.MobileFormBatchProperties;
+import tests.mobile.mobileForm.MobileFormContainer;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
@@ -19,7 +20,6 @@ public class MobileCaseThree extends BaseMobileClass {
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
-    ContainerCardPage containerCardPage = new ContainerCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();
     PackagingCardPage packagingCardPage = new PackagingCardPage();
     LoadingCardPage loadingCardPage = new LoadingCardPage();
@@ -27,13 +27,14 @@ public class MobileCaseThree extends BaseMobileClass {
     RelocationCardPage relocationCardPage = new RelocationCardPage();
     RelocationTSDCardPage relocationTSDCardPage = new RelocationTSDCardPage();
     MobileFormBatchProperties mobileFormBatchProperties = new MobileFormBatchProperties();
+    MobileFormContainer mobileFormContainer = new MobileFormContainer();
 
     @Test
     public void processingNegativeReceptionTaskTest() throws Exception {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
-  /*  //Стол21
+    //Стол21
         receptionCardPage.verifyData("productInfo", "00021 Стол21 IN.01 Quantity 10 уп. (5)");
         receptionCardPage.inputData("source", "IN.02");
         receptionCardPage.verifyData("modalDialogMessage", "The control box does not match the task");
@@ -81,7 +82,7 @@ public class MobileCaseThree extends BaseMobileClass {
         receptionCardPage.clickButton("modalDialogErrorOK");
         receptionCardPage.inputData("qty","2");
         receptionCardPage.clickButton("commit");
-        getMessageModalDialog().shouldNotBe(visible);*/
+        getMessageModalDialog().shouldNotBe(visible);
     //Стол22
         receptionCardPage.inputData("source", "IN.01");
         receptionCardPage.inputData("container","IN1");
@@ -980,56 +981,17 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол21
-        containerCardPage.verifyData("containerInfo", "CON/OUT121 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT121");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол22
-        containerCardPage.verifyData("containerInfo", "CON/OUT122 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT122");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол23
-        containerCardPage.verifyData("containerInfo", "CON/OUT123 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT123");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");;
-    //Стол24
-        containerCardPage.verifyData("containerInfo", "CON/OUT124 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT124");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол25
-        containerCardPage.verifyData("containerInfo", "CON/OUT125 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT125");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол26
-        containerCardPage.verifyData("containerInfo", "CON/OUT126 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT126");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол27
-        containerCardPage.verifyData("containerInfo", "CON/OUT127 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT127");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол28
-        containerCardPage.verifyData("containerInfo", "CON/OUT128 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT128");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол29
-        containerCardPage.verifyData("containerInfo", "CON/OUT129 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT129");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол30
-        containerCardPage.verifyData("containerInfo", "CON/OUT130 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT130");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
+
+        mobileFormContainer.completeTask("OUT121", "CON/OUT121 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT122", "CON/OUT122 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT123", "CON/OUT123 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT124", "CON/OUT124 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT125", "CON/OUT125 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT126", "CON/OUT126 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT127", "CON/OUT127 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT128", "CON/OUT128 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT129", "CON/OUT129 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT130", "CON/OUT130 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
     }
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")

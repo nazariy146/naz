@@ -44,11 +44,12 @@ public class MobileFormSerialNumber {
     }
 
     public void uniqueSn(String SN, int qtySN) {
-        SelenideElement resourceId_SerialNumber, resourceId_TableSerialNumber, resourceId_TableQtyFact, resourceId_Commit;
+
+        SelenideElement resourceId_SerialNumber, resourceId_TableSerialNumber, resourceId_TableQtyFact, resourceId_commit;
         int tableSerialNumber = 1, tableQty = 2, tableQtyFact = 3;
 
         resourceId_SerialNumber = getResourceId("#serialNumber");
-        resourceId_Commit = getResourceId("#commit");
+        resourceId_commit = getResourceId("#commit");
 
             for (int i = 1, row = 3; i <= qtySN; i++, row++) {
                 String nowSN = SN + "FRAGSN" + SN + "Series01" + "31122022" + "0" + i;
@@ -59,7 +60,7 @@ public class MobileFormSerialNumber {
                 mobileSteps.verifyData(resourceId_TableSerialNumber, nowSN);
                 mobileSteps.verifyData(resourceId_TableQtyFact, "1");
             }
-        mobileSteps.clickButton(resourceId_Commit);
+        mobileSteps.clickButton(resourceId_commit);
         }
 
     public void qr (String SN, int qtySN) {

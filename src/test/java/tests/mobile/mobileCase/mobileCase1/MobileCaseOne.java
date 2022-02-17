@@ -19,7 +19,6 @@ public class MobileCaseOne extends BaseMobileClass {
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
-    ContainerCardPage containerCardPage = new ContainerCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();
     PackagingCardPage packagingCardPage = new PackagingCardPage();
     LoadingCardPage loadingCardPage = new LoadingCardPage();
@@ -28,6 +27,7 @@ public class MobileCaseOne extends BaseMobileClass {
     RelocationTSDCardPage relocationTSDCardPage = new RelocationTSDCardPage();
     MobileFormBatchProperties mobileFormBatchProperties = new MobileFormBatchProperties();
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
+    MobileFormContainer mobileFormContainer = new MobileFormContainer();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -736,56 +736,17 @@ public class MobileCaseOne extends BaseMobileClass {
         mobileSteps.loginAsAdmin();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол1
-        containerCardPage.verifyData("containerInfo", "CON/OUT101 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT101");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол2
-        containerCardPage.verifyData("containerInfo", "CON/OUT102 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT102");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол3
-        containerCardPage.verifyData("containerInfo", "CON/OUT103 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT103");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол4
-        containerCardPage.verifyData("containerInfo", "CON/OUT104 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT104");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол5
-        containerCardPage.verifyData("containerInfo", "CON/OUT105 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT105");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол6
-        containerCardPage.verifyData("containerInfo", "CON/OUT106 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT106");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол7
-        containerCardPage.verifyData("containerInfo", "CON/OUT107 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT107");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол8
-        containerCardPage.verifyData("containerInfo", "CON/OUT108 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT108");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол9
-        containerCardPage.verifyData("containerInfo", "CON/OUT109 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT109");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
-    //Стол10
-        containerCardPage.verifyData("containerInfo", "CON/OUT110 ➡ KT1.01.01.01.01");
-        containerCardPage.inputData("container", "OUT110");
-        containerCardPage.inputData("destination", "KT1.01.01.01.01");
-        containerCardPage.clickButton("commit");
+
+        mobileFormContainer.completeTask("OUT101", "CON/OUT101 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT102", "CON/OUT102 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT103", "CON/OUT103 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT104", "CON/OUT104 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT105", "CON/OUT105 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT106", "CON/OUT106 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT107", "CON/OUT107 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT108", "CON/OUT108 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT109", "CON/OUT109 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
+        mobileFormContainer.completeTask("OUT110", "CON/OUT110 ➡ KT1.01.01.01.01", "KT1.01.01.01.01");
     }
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")
