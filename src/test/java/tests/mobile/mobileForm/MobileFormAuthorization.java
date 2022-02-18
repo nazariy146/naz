@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class MobileFormAuthorization {
     MobileSteps mobileSteps = new MobileSteps();
 
-    private static SelenideElement getResourceId(String field) {
+    public SelenideElement getResourceId(String field) {
         switch (field) {
             case "#user":
                 return $(By.id("com.abmcloud:id/spn_user"));
@@ -19,6 +19,8 @@ public class MobileFormAuthorization {
                 return $(By.id("com.abmcloud:id/btn_authorize"));
             case "#password":
                 return $(By.id("com.abmcloud:id/et_password"));
+            case "#settings":
+                return $(By.id("com.abmcloud:id/ib_settings"));
         }
         return null;
     }
@@ -30,7 +32,7 @@ public class MobileFormAuthorization {
         resourceId_login = getResourceId("#login");
         resourceId_password = getResourceId("#password");
 
-        mobileSteps.mobileDriver("user");
+        mobileSteps.mobileDriver(resourceId_user);
         mobileSteps.inputData(resourceId_user, "Admin");
         mobileSteps.clickButton(resourceId_password);
         mobileSteps.clickButton(resourceId_login);

@@ -29,9 +29,11 @@ public class MobileCaseOne extends BaseMobileClass {
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
+    MobileFormSettings mobileFormSettings = new MobileFormSettings();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -135,6 +137,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 1, dependsOnMethods = "processingReceptionTaskTest")
     public void processingAccommodationTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -212,6 +215,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 2, dependsOnMethods = "processingAccommodationTaskTest")
     public void checkingFreeAmountTest() {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.selectFindRestsMenu();
     //Стол1
@@ -276,6 +280,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 3, dependsOnMethods = "processingAccommodationTaskTest")
     public void processingInventoryTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.getStringTasks(2).click();
     //Стол1
@@ -388,6 +393,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 4, dependsOnMethods = "processingInventoryTaskTest")
     public void checkingFreeAmountAfterProcessingInventoryTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.selectFindRestsMenu();
     //Стол1
@@ -452,6 +458,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 5, dependsOnMethods = "processingInventoryTaskTest")
     public void processingRelocationTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Moving");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -549,6 +556,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 6, dependsOnMethods = "processingRelocationTaskTest")
     public void processingRelocationTSDTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         relocationTSDCardPage.clickButton("rightMenu");
         relocationTSDCardPage.clickButton("relocation");
@@ -651,6 +659,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 7, dependsOnMethods = "processingAccommodationTaskTest")
     public void processingSelectionTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Selection");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -734,6 +743,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 8, dependsOnMethods = "processingSelectionTaskTest")
     public void processingContainerTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -752,6 +762,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")
     public void processingControlTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Control");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -881,11 +892,10 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 10, dependsOnMethods = "processingControlTaskTest")
     public void processingPackagingTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Packaging");
         allTasksPage.getWorkTypeTasksQuantity().click();
-
-
 
         packagingCardPage.setCellOrContainerInput("KT1.01.01.01.01");
         packagingCardPage.checkCellProductInfoInRow2(1, "OUT101", "10", "0.66", "10", "1", "1");
@@ -909,6 +919,7 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test (priority = 11, dependsOnMethods = "processingPackagingTaskTest")
     public void processingLoadingTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Loading");
         allTasksPage.getWorkTypeTasksQuantity().click();

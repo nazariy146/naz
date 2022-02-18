@@ -16,8 +16,8 @@ public class MobileSteps {
 
     public  static AndroidDriver mobileDriver;
 
-    public void mobileDriver(String field) {
-        mobileDriver = (AndroidDriver) getIdField(field).getWrappedDriver();
+    public void mobileDriver(SelenideElement resourceId) {
+        mobileDriver = (AndroidDriver) resourceId.getWrappedDriver();
     }
 
     public void verifyData(SelenideElement resourceId, String data) {
