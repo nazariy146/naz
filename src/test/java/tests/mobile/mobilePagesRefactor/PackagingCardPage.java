@@ -7,6 +7,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import org.openqa.selenium.By;
+import tests.mobile.mobileSteps.MobileSteps;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -15,11 +16,40 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofMillis;
 
 public class PackagingCardPage {
+    MobileSteps mobileSteps = new MobileSteps();
+
+    public SelenideElement getResourceId(String field) {
+        switch (field) {
+            case "#container":
+                return $(By.id("com.abmcloud:id/et_consolidate_cell"));
+            case "#createCargo":
+                return $(By.id("com.abmcloud:id/btn_create_cargo"));
+            case "#modalMessage":
+                return $(By.id("android:id/message"));
+            case "#modalOk":
+                return $(By.id("android:id/button1"));
+            case "#modalOk2":
+                return $(By.id("android:id/button2"));
+        }
+        return null;
+    }
+
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
+    }
+
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
+    }
+
+    public void clickButton(String button) {
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
+    }
 
     //MNV need to refactor
-    private SelenideElement getCellOrContainerInput() {
-        return $(By.id("com.abmcloud:id/et_consolidate_cell"));
-    }
     public SelenideElement getProductContainerInfo(int row) {
         return $(By.xpath("//androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView["+row+"]")).find(By.id("com.abmcloud:id/tv_container"));
     }
@@ -40,19 +70,6 @@ public class PackagingCardPage {
     }
     private SelenideElement getScrollableTable() {
         return $(By.id("com.abmcloud:id/recycler_view"));
-    }
-    private SelenideElement getCreateCargoButton() {
-        return $(By.id("com.abmcloud:id/btn_create_cargo"));
-    }
-    //MNV need to refactor
-
-    //MNV need to refactor
-    public void setCellOrContainerInput(String cellOrContainer) {
-        getCellOrContainerInput().shouldBe(visible);
-        AndroidDriver driver = (AndroidDriver) getCellOrContainerInput().getWrappedDriver();
-        getCellOrContainerInput().click();
-        getCellOrContainerInput().val(cellOrContainer);
-        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
     public void checkCellProductInfoInRow(int row, String container, String qty, String capacity, String weight) {//старый метод проверки табчасти
         if(!getProductContainerInfo(row).isDisplayed()) {
@@ -93,8 +110,24 @@ public class PackagingCardPage {
                 .moveTo(point(element.getLocation().x, element.getLocation().y-846))
                 .release().perform();
     }
-    public void clickCreateCargoButton() {
-        getCreateCargoButton().click();
-    }
     //MNV need to refactor
+
+    //MNV need to dell
+//    public void setCellOrContainerInput(String cellOrContainer) {
+//        getCellOrContainerInput().shouldBe(visible);
+//        AndroidDriver driver = (AndroidDriver) getCellOrContainerInput().getWrappedDriver();
+//        getCellOrContainerInput().click();
+//        getCellOrContainerInput().val(cellOrContainer);
+//        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+//    }
+//    private SelenideElement getCellOrContainerInput() {
+//        return $(By.id("com.abmcloud:id/et_consolidate_cell"));
+//    }
+//    public void clickCreateCargoButton() {
+//        getCreateCargoButton().click();
+//    }
+//    private SelenideElement getCreateCargoButton() {
+//        return $(By.id("com.abmcloud:id/btn_create_cargo"));
+//    }
+    //MNV need to dell
 }

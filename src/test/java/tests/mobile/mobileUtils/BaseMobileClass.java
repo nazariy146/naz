@@ -9,24 +9,16 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
-import tests.mobile.mobilePagesRefactor.LoginPage;
-import tests.mobile.mobilePagesRefactor.SettingsPage;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_ACTIVITY;
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_PACKAGE;
 import static tests.mobile.mobileUtils.ModalDialogs.*;
 
 public class BaseMobileClass implements WebDriverProvider {
-
-    LoginPage loginPage = new LoginPage();
-    SettingsPage settingsPage = new SettingsPage();
 
     public WebDriver createDriver(DesiredCapabilities capabilities) {
         capabilities.setCapability(MobileCapabilityType.VERSION, "10.0");

@@ -895,7 +895,7 @@ public class MobileCaseFour extends BaseMobileClass {
         allTasksPage.checkWorkType("Packaging");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        packagingCardPage.setCellOrContainerInput("KT1.01.01.01.01");
+        packagingCardPage.inputData("#container", "KT1.01.01.01.01");
         packagingCardPage.checkCellProductInfoInRow2(1, "OUT131", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(2, "OUT132", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(3, "OUT133", "10", "0.1", "10", "1", "1");
@@ -906,9 +906,12 @@ public class MobileCaseFour extends BaseMobileClass {
         packagingCardPage.checkCellProductInfoInRow2(8, "OUT138", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(9, "OUT139", "10", "1", "1", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(10, "OUT140", "10", "0.1", "10", "1", "1");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
+
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     }
 
     @Test (priority = 11, dependsOnMethods = "processingPackagingTaskTest")
@@ -918,11 +921,12 @@ public class MobileCaseFour extends BaseMobileClass {
         allTasksPage.checkWorkType("Loading");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        loadingCardPage.setRouteSheetInput("I000000001");
-        loadingCardPage.setGateInput("OUT.01");
+        loadingCardPage.inputData("#routeSheet", "I000000001");
+        loadingCardPage.verifyData("#routeSheet", "I000000001");
+        loadingCardPage.inputData("#gate", "OUT.01");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "0", "10");
         loadingCardPage.setSerialCargoInput("9990000000012", "9990000000029", "9990000000036", "9990000000043", "9990000000050", "9990000000067", "9990000000074", "9990000000081", "9990000000098", "9990000000104");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "10", "0");
-        loadingCardPage.clickCommitButton();
+        loadingCardPage.clickButton("#commit");
     }
 }

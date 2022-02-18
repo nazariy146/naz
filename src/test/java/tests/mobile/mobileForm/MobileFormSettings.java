@@ -4,6 +4,9 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MobileFormSettings {
@@ -31,6 +34,7 @@ public class MobileFormSettings {
         resourceId_license = getResourceId("#license");
         resourceId_save = getResourceId("#save");
 
+        resourceId_settings.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.mobileDriver(resourceId_settings);
         mobileSteps.clickButton(resourceId_settings);
         mobileSteps.inputData(resourceId_connection, "http://dmz.abmretail.com:8080/wms_regress_mikn/hs/TSDExchange");

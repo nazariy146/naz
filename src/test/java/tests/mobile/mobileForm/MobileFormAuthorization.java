@@ -4,6 +4,9 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MobileFormAuthorization {
@@ -26,13 +29,14 @@ public class MobileFormAuthorization {
     }
 
     public void completeTask(){
-        SelenideElement resourceId_user, resourceId_login, resourceId_password;
+        SelenideElement resourceId_user, resourceId_login, resourceId_password, resourceId_settings;
 
         resourceId_user = getResourceId("#user");
         resourceId_login = getResourceId("#login");
         resourceId_password = getResourceId("#password");
+        resourceId_settings = getResourceId("#settings");
 
-        mobileSteps.mobileDriver(resourceId_user);
+        resourceId_settings.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.inputData(resourceId_user, "Admin");
         mobileSteps.clickButton(resourceId_password);
         mobileSteps.clickButton(resourceId_login);

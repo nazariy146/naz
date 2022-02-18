@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class RelocationTSDCardPage {
     MobileSteps mobileSteps = new MobileSteps();
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "rightMenu"){
             return $(By.id("com.abmcloud:id/action_more_menu"));
         }
@@ -72,20 +72,19 @@ public class RelocationTSDCardPage {
        return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
     }
 
     public void clickButton(String button) {
-        getIdField(button).click();
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
 
     public void selectData(String field, String source) {
@@ -94,11 +93,6 @@ public class RelocationTSDCardPage {
         }
 
     //MNV need to dell
-/*    AndroidDriver driver;
-
-    public void andrDriver(String field) {
-        driver = (AndroidDriver) getIdField(field).getWrappedDriver();
-    }*/
     //MNV need to dell
 }
 

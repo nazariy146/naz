@@ -859,85 +859,85 @@ public class MobileCaseTwo extends BaseMobileClass {
         allTasksPage.checkWorkType("Packaging");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол11
-        packagingCardPage.setCellOrContainerInput("OUT111");
+        packagingCardPage.inputData("#container", "OUT111");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT111", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол12
-        packagingCardPage.setCellOrContainerInput("OUT112");
+        packagingCardPage.inputData("#container", "OUT112");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT112", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол13
-        packagingCardPage.setCellOrContainerInput("OUT113");
+        packagingCardPage.inputData("#container", "OUT113");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT113", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол14
-        packagingCardPage.setCellOrContainerInput("OUT114");
+        packagingCardPage.inputData("#container", "OUT114");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT114", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол15
-        packagingCardPage.setCellOrContainerInput("OUT115");
+        packagingCardPage.inputData("#container", "OUT115");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT115", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол16
-        packagingCardPage.setCellOrContainerInput("OUT116");
+        packagingCardPage.inputData("#container", "OUT116");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT116", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол17
-        packagingCardPage.setCellOrContainerInput("OUT117");
+        packagingCardPage.inputData("#container", "OUT117");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT117", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол18
-        packagingCardPage.setCellOrContainerInput("OUT118");
+        packagingCardPage.inputData("#container", "OUT118");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT118", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол19
-        packagingCardPage.setCellOrContainerInput("OUT119");
+        packagingCardPage.inputData("#container", "OUT119");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT119", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     //Стол20
-        packagingCardPage.setCellOrContainerInput("OUT120");
+        packagingCardPage.inputData("#container", "OUT120");
         packagingCardPage.checkCellProductInfoInRow(1, "OUT120", "10", "0.1", "10");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
-        getMessageModalDialog().shouldBe(visible, Duration.ofSeconds(10)).shouldHave(text("We've created cargo bays"));
-        clickErrorDialogOkButton();
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     }
 
     @Test (priority = 11, dependsOnMethods = "processingPackagingTaskTest")
@@ -971,12 +971,12 @@ public class MobileCaseTwo extends BaseMobileClass {
         allTasksPage.checkWorkType("Loading");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        loadingCardPage.setRouteSheetInput("I000000001");
-        loadingCardPage.getRouteSheetInput().shouldHave(exactText("I000000001"));
-        loadingCardPage.setGateInput("OUT.01");
+        loadingCardPage.inputData("#routeSheet", "I000000001");
+        loadingCardPage.verifyData("#routeSheet", "I000000001");
+        loadingCardPage.inputData("#gate", "OUT.01");
         loadingCardPage.checkLoadingInfo("0", "Костенко", "0", "1");
-        loadingCardPage.setSerialCargoInput("9990000000111");
+        loadingCardPage.inputData("##cargo", "9990000000111");
         loadingCardPage.checkLoadingInfo("0", "Костенко", "1", "0");
-        loadingCardPage.clickCommitButton();
+        loadingCardPage.clickButton("#commit");
     }
 }
