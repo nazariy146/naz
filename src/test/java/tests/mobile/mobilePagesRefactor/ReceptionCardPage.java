@@ -19,7 +19,7 @@ public class ReceptionCardPage {
 
     AndroidDriver driver;
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "source"){
             return $(By.id("com.abmcloud:id/editTextControlSource"));
         }
@@ -211,21 +211,19 @@ public class ReceptionCardPage {
         return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldBe(visible, Duration.ofSeconds(25));
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
     }
 
     public void clickButton(String button) {
-        getIdField(button).click();
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
 
     //MNV need to refactor
@@ -234,14 +232,14 @@ public class ReceptionCardPage {
         verifyData("packaging", packaging);
     }
     public void inputWidth (String field) {
-        SelenideElement ID = getIdField(field);
+        SelenideElement ID = getResourceId(field);
         ID.click();
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_1));
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
         driver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
     public void selectModalDialog(String field, String source) {
-        getIdField(field).click();
+        getResourceId(field).click();
         SelenideElement Element1 = $$(By.id("android:id/text1")).find(exactText(source));
         Element1.getId();
         Element1.getClass();

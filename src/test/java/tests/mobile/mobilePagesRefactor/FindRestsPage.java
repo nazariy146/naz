@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class FindRestsPage {
     MobileSteps mobileSteps = new MobileSteps();
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "product"){
             return $(By.id("com.abmcloud:id/barcode"));
         }
@@ -63,23 +63,22 @@ public class FindRestsPage {
         return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
+    }
+
+    public void clickButton(String button) {
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
 
     //MNV need to dell
-//    AndroidDriver driver;
-/*    public void andrDriver(String field) {
-        driver = (AndroidDriver) getIdField(field).getWrappedDriver();
-    }*/
     //MNV need to dell
 }
 

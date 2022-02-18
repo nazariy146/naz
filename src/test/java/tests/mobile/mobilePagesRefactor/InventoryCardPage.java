@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class InventoryCardPage {
     MobileSteps mobileSteps = new MobileSteps();
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "source"){
             return $(By.id("com.abmcloud:id/textBoxLocationInv"));
         }
@@ -82,24 +82,19 @@ public class InventoryCardPage {
         return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldBe(visible, Duration.ofSeconds(25));
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldBe(visible, Duration.ofSeconds(25));
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
     }
 
-    public void clickButton(String field) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldBe(visible, Duration.ofSeconds(25));
-        ID.click();
+    public void clickButton(String button) {
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
 
     public void clickButtonAndConfirm(String field) {
@@ -110,15 +105,11 @@ public class InventoryCardPage {
 
     //MNV need to refactor
     public void selectData(String field, String source) {
-        getIdField(field).click();
+        getResourceId(field).click();
         $$(By.id("android:id/text1")).find(exactText(source)).click();
     }
     //MNV need to refactor
 
     //MNV need to dell
-//    AndroidDriver driver;
-/*    public void andrDriver(String field) {
-        driver = (AndroidDriver) getIdField(field).getWrappedDriver();
-    }*/
     //MNV need to dell
 }

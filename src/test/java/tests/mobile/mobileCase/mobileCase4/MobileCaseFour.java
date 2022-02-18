@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import tests.mobile.mobileForm.MobileFormAuthorization;
 import tests.mobile.mobileForm.MobileFormContainer;
 import tests.mobile.mobileForm.MobileFormSerialNumber;
+import tests.mobile.mobileForm.MobileFormSettings;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
@@ -30,9 +31,11 @@ public class MobileCaseFour extends BaseMobileClass {
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
+    MobileFormSettings mobileFormSettings = new MobileFormSettings();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -129,6 +132,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 1, dependsOnMethods = "processingReceptionTaskTest")
     public void processingAccommodationTaskTest() throws Exception{
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -206,6 +210,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 2, dependsOnMethods = "processingAccommodationTaskTest")
     public void checkingFreeAmountTest() {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.selectFindRestsMenu();
     //Стол31
@@ -274,6 +279,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 3, dependsOnMethods = "processingAccommodationTaskTest")
     public void processingInventoryTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.getStringTasks(2).click();
     //Стол 31
@@ -376,6 +382,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 4, dependsOnMethods = "processingInventoryTaskTest")
     public void checkingFreeAmountTest2() {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.selectFindRestsMenu();
     //Стол31
@@ -444,6 +451,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 5, dependsOnMethods = "processingInventoryTaskTest")
     public void processingRelocationTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Moving");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -541,6 +549,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 6, dependsOnMethods = "processingRelocationTaskTest")
     public void processingRelocationTSDTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         relocationTSDCardPage.clickButton("rightMenu");
         relocationTSDCardPage.clickButton("relocation");
@@ -638,6 +647,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 7, dependsOnMethods = "processingRelocationTSDTaskTest")
     public void processingSelectionTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Selection");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -721,6 +731,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 8, dependsOnMethods = "processingSelectionTaskTest")
     public void processingContainerTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Контейнер (Selection)");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -739,6 +750,7 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 9, dependsOnMethods = "processingContainerTaskTest")
     public void processingControlTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Control");
         allTasksPage.getWorkTypeTasksQuantity().click();
@@ -878,11 +890,12 @@ public class MobileCaseFour extends BaseMobileClass {
 
     @Test (priority = 10, dependsOnMethods = "processingControlTaskTest")
     public void processingPackagingTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Packaging");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        packagingCardPage.setCellOrContainerInput("KT1.01.01.01.01");
+        packagingCardPage.inputData("#container", "KT1.01.01.01.01");
         packagingCardPage.checkCellProductInfoInRow2(1, "OUT131", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(2, "OUT132", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(3, "OUT133", "10", "0.1", "10", "1", "1");
@@ -893,22 +906,27 @@ public class MobileCaseFour extends BaseMobileClass {
         packagingCardPage.checkCellProductInfoInRow2(8, "OUT138", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(9, "OUT139", "10", "1", "1", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(10, "OUT140", "10", "0.1", "10", "1", "1");
-        packagingCardPage.clickCreateCargoButton();
-        getMessageModalDialog().shouldHave(text("Cargo slots will be created. Continue?"));
-        clickSetOkYesButton();
+
+        packagingCardPage.clickButton("#createCargo");
+        packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
+        packagingCardPage.clickButton("#modalOk");
+        packagingCardPage.verifyData("#modalMessage", "We've created cargo bays");
+        packagingCardPage.clickButton("#modalOk2");
     }
 
     @Test (priority = 11, dependsOnMethods = "processingPackagingTaskTest")
     public void processingLoadingTaskTest() throws Exception {
+        mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Loading");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        loadingCardPage.setRouteSheetInput("I000000001");
-        loadingCardPage.setGateInput("OUT.01");
+        loadingCardPage.inputData("#routeSheet", "I000000001");
+        loadingCardPage.verifyData("#routeSheet", "I000000001");
+        loadingCardPage.inputData("#gate", "OUT.01");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "0", "10");
         loadingCardPage.setSerialCargoInput("9990000000012", "9990000000029", "9990000000036", "9990000000043", "9990000000050", "9990000000067", "9990000000074", "9990000000081", "9990000000098", "9990000000104");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "10", "0");
-        loadingCardPage.clickCommitButton();
+        loadingCardPage.clickButton("#commit");
     }
 }

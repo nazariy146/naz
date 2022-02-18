@@ -18,7 +18,7 @@ import static java.time.Duration.ofMillis;
 public class ControlCardPage {
     MobileSteps mobileSteps = new MobileSteps();
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "source"){
             return $(By.id("com.abmcloud:id/editTextControlCell"));
         }
@@ -61,21 +61,19 @@ public class ControlCardPage {
         return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
     }
 
-    public void clickButton(String field) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
+    public void clickButton(String button) {
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
 
     //MNV need to refactor
@@ -100,16 +98,7 @@ public class ControlCardPage {
     public SelenideElement getQtyString1() {
         return $(By.xpath("//androidx.cardview.widget.CardView[1]/android.view.ViewGroup/android.widget.TextView[5]"));
     }
-    public void scrollElement(SelenideElement element) {
-        AndroidDriver driver = (AndroidDriver) element.getWrappedDriver();
 
-        TouchAction touchAction= new TouchAction(driver);
-
-        touchAction.press(point(element.getLocation().x, element.getLocation().y))
-                .waitAction(WaitOptions.waitOptions(ofMillis(300)))
-                .moveTo(point(element.getLocation().x, element.getLocation().y-854))
-                .release().perform();
-    }
     //MNV need to refactor
 
     //MNV need to dell

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class SelectionCardPage {
     MobileSteps mobileSteps = new MobileSteps();
 
-    public static SelenideElement getIdField(String Field) {
+    public static SelenideElement getResourceId(String Field) {
         if (Field == "productInfo"){
             return $(By.id("com.abmcloud:id/textViewDescription"));
         }
@@ -44,38 +44,20 @@ public class SelectionCardPage {
         return null;
     }
 
-    public void inputData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
-        ID.val(source);
-        mobileSteps.mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
+    public void inputData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.inputData(resourceId, data);
     }
 
-    public void verifyData(String field, String source) {
-        SelenideElement ID = getIdField(field);
-        ID.shouldHave(text(source));
+    public void verifyData(String field, String data) {
+        SelenideElement resourceId = getResourceId(field);
+        mobileSteps.verifyData(resourceId, data);
     }
 
-    public void clickButton(String field) {
-        SelenideElement ID = getIdField(field);
-        ID.click();
+    public void clickButton(String button) {
+        SelenideElement resourceId = getResourceId(button);
+        mobileSteps.clickButton(resourceId);
     }
-
-    //MNV need to refactor
-    public SelenideElement getSerialNumberInput() {
-        return $(By.id("com.abmcloud:id/editTextSerialNumber"));
-    }
-    public void checkSerialNumberInputText(String text) {
-        String serialNumberText = getSerialNumberInput().getText();
-        Assert.assertEquals(serialNumberText, text, "SerialNumberInputText is not empty");
-    }
-    public void checkSerialNumberQtyFactInEveryRow(String qtyFact, int qtyOfQtyFactsRows) {
-        for(int i = 0; i < qtyOfQtyFactsRows; i++) {
-            String text = $(By.xpath ("//android.widget.EditText[3][@bounds='[995,"+(700+i*95)+"][1440,"+(791+i*95)+"]']")).getText();
-            Assert.assertEquals(qtyFact, text);
-        }
-    }
-    //MNV need to refactor
 
     //MNV need to dell
     //MNV need to dell

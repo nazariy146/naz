@@ -15,13 +15,6 @@ public class ConsolidateContainerPage {
     private SelenideElement getContainerInput() {
         return $(By.id("com.abmcloud:id/editTextFromContainer"));
     }
-    public SelenideElement getSourceInfo(int row) {
-        //return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewSource")));
-        return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewSource"))); //MNV Release5 Case2
-    }
-    public SelenideElement getDescriptionInfo(int row) {
-        return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewDescription")));
-    }
     public SelenideElement getReceiverInput() {
         return $(By.id("com.abmcloud:id/editTextInContainer"));
     }
@@ -42,13 +35,23 @@ public class ConsolidateContainerPage {
             driver.pressKey(new KeyEvent(AndroidKey.ENTER));
         }
     }
-    public void checkAllProductsInfoAndQty(int row, String source, String description) {
-        //Actions.hideKeyboard();
+    //MNV need to refactor
+
+    //MNV need to dell
+/*    public void checkAllProductsInfoAndQty(int row, String source, String description) {
+
         getSourceInfo(row).shouldHave(text(source));
         getDescriptionInfo(row).shouldHave(text(description));
-    }
-    private SelenideElement getScrollableTable() {
+    }*/
+/*    private SelenideElement getScrollableTable() {
         return $(By.id("com.abmcloud:id/listViewSource"));
-    }
-    //MNV need to refactor
+    }*/
+/*    public SelenideElement getDescriptionInfo(int row) {
+        return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewDescription")));
+    }*/
+/*    public SelenideElement getSourceInfo(int row) {
+        //return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewSource")));
+        return $(By.xpath("//android.view.ViewGroup["+(row+1)+"]")).find((By.id("com.abmcloud:id/textViewSource"))); //MNV Release5 Case2
+    }*/
+    //MNV need to dell
 }
