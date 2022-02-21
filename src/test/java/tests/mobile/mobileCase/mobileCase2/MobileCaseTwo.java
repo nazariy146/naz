@@ -975,7 +975,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         loadingCardPage.verifyData("#routeSheet", "I000000001");
         loadingCardPage.inputData("#gate", "OUT.01");
         loadingCardPage.checkLoadingInfo("0", "Костенко", "0", "1");
-        loadingCardPage.inputData("##cargo", "9990000000111");
+        loadingCardPage.inputData("#cargo", "9990000000111");
         loadingCardPage.checkLoadingInfo("0", "Костенко", "1", "0");
         loadingCardPage.clickButton("#commit");
     }

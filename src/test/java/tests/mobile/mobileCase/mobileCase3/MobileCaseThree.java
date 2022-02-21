@@ -268,7 +268,7 @@ public class MobileCaseThree extends BaseMobileClass {
         accommodationCardPage.inputData("destination","B.1.1.1.1");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("Location was changed. Continue?"));
         clickSetOkYesButton();
-        receptionCardPage.checkAmountAndPackaging("5.0", "2");
+//        receptionCardPage.checkAmountAndPackaging("5.0", "2");MNV id поля надо правильно прописать
         accommodationCardPage.inputData("qty","3");
         accommodationCardPage.clickButton("commit");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("It is impossible to confirm15. Remaining 10"));
