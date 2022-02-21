@@ -27,8 +27,7 @@ public class ReceptionCardPage {
             return $(By.id("com.abmcloud:id/editTextControlBoxBarcode"));
         }
         else if (Field == "productInfo"){
-            //return $(By.id("com.abmcloud:id/textViewControlDescription")); -MNV release4 need dell
-            return $(By.id("com.abmcloud:id/textViewDescription")); //- release5
+            return $(By.id("com.abmcloud:id/textViewDescription"));
         }
         else if (Field == "container"){
             return $(By.id("com.abmcloud:id/editTextControlDestination"));
@@ -45,12 +44,6 @@ public class ReceptionCardPage {
         else if (Field == "expirationDate"){
             return $(By.id("com.abmcloud:id/et_shelf_life"));
         }
-        else if (Field == "serialNumberInputText"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/editTextSerialNumber"));
-        }
-        else if (Field == "commitSN"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/buttonSNCommit"));
-        }
         else if (Field == "palletWeight"){
             return $(By.id("com.abmcloud:id/editTextPalletWeight"));
         }
@@ -60,13 +53,13 @@ public class ReceptionCardPage {
         else if (Field == "tareWeight"){
             return $(By.id("com.abmcloud:id/editTextTareWeight"));
         }
-        else if (Field == "heightSKU"){
+        else if (Field == "heightSKU"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_unit_parameters_height"));
         }
-        else if (Field == "widthSKU"){
+        else if (Field == "widthSKU"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_unit_parameters_width"));
         }
-        else if (Field == "lenghtSKU"){
+        else if (Field == "lenghtSKU"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_unit_parameters_length"));
         }
         else if (Field == "newSeries"){
@@ -109,7 +102,7 @@ public class ReceptionCardPage {
         else if (Field == "selectBarcode"){
             return $(By.id("com.abmcloud:id/tv_barcode"));
         }
-        else if (Field == "weightSKU"){
+        else if (Field == "weightSKU"){//MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_unit_parameters_weight"));
         }
         else if (Field == "clearProductInput"){
@@ -130,31 +123,31 @@ public class ReceptionCardPage {
         else if (Field == "newSku"){
             return $(By.id("com.abmcloud:id/ib_add"));
         }
-        else if (Field == "palletFlag"){
+        else if (Field == "palletFlag"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/sw_pallet"));
         }
-        else if (Field == "pallet"){
+        else if (Field == "pallet"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_pallet"));
         }
         else if (Field == "palletEdit"){
             return $(By.id("com.abmcloud:id/ib_pallet"));
         }
-        else if (Field == "layerFlag"){
+        else if (Field == "layerFlag"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/sw_layer"));
         }
-        else if (Field == "layer"){
+        else if (Field == "layer"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_layer"));
         }
-        else if (Field == "boxFlag"){
+        else if (Field == "boxFlag"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/sw_box"));
         }
-        else if (Field == "box"){
+        else if (Field == "box"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_box"));
         }
         else if (Field == "boxEdit"){
             return $(By.id("com.abmcloud:id/ib_box"));
         }
-        else if (Field == "groupFlag"){
+        else if (Field == "groupFlag"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/sw_group"));
         }
         else if (Field == "group"){
@@ -169,11 +162,11 @@ public class ReceptionCardPage {
         else if (Field == "base"){
             return $(By.id("com.abmcloud:id/et_base"));
         }
-        else if (Field == "skuQty"){
+        else if (Field == "skuQty"){ //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/et_unit_parameters_ratio"));
         }
-        else if (Field == "skuName"){
-            return $(By.id("com.abmcloud:id/tv_base_unit"));
+        else if (Field == "skuName"){ //MNV после Рефакторинга удалить
+            return $(By.id("com.abmcloud:id/tv_base_unit"));//
         }
         else if (Field == "skuName"){
             return $(By.id("com.abmcloud:id/textinput_placeholder"));
@@ -208,6 +201,9 @@ public class ReceptionCardPage {
         else if (Field == "Barcode"){   //eleo выбор поля создания штрихкода
             return $(By.id("com.abmcloud:id/et_unit_parameters_barcode"));
         }
+        else if (Field == "commitSN"){   //MNV после Рефакторинга удалить
+            return $(By.id("com.abmcloud:id/buttonSNCommit"));
+        }
         return null;
     }
 
@@ -238,6 +234,9 @@ public class ReceptionCardPage {
         driver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
         driver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
+    //MNV need to refactor
+
+    //MNV need to dell
     public void selectModalDialog(String field, String source) {
         getResourceId(field).click();
         SelenideElement Element1 = $$(By.id("android:id/text1")).find(exactText(source));
@@ -245,8 +244,5 @@ public class ReceptionCardPage {
         Element1.getClass();
         Element1.click();
     }
-    //MNV need to refactor
-
-    //MNV need to dell
     //MNV need to dell
 }
