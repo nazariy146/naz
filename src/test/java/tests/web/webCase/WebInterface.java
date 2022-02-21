@@ -349,7 +349,7 @@ public class WebInterface {
 
     }                       //меню Обмен УС
 
-    public void menuDevelopment(){ //меню Разработка
+    public void menuDevelopment(){  //меню Разработка
         $("#themesCell_theme_11").click();
         $("#cmd_0_0_txt").shouldHave(text("Консоль заданий"));
         $("#cmd_0_1_txt").shouldHave(text("Универсальные подбор и обработка объектов"));
