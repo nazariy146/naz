@@ -1230,7 +1230,7 @@ public class MobileCaseFive extends BaseMobileClass{
         selectionCardPage.inputData("source", "C.1.1.1.47");
         selectionCardPage.inputData("product", "2110047100000");
         selectionCardPage.inputData("destination", "OUT147");
-        selectionCardPage.verifyData("qty", "1.000");
+        selectionCardPage.verifyData("qty", "10.000");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол48

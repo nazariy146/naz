@@ -927,6 +927,7 @@ public class MobileCaseOne extends BaseMobileClass {
         loadingCardPage.inputData("#gate", "OUT.01");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "0", "10");
         loadingCardPage.setSerialCargoInput("9990000000012", "9990000000029", "9990000000036", "9990000000043", "9990000000050", "9990000000067", "9990000000074", "9990000000081", "9990000000098", "9990000000104");
+        loadingCardPage.setSerialCargoInput("9990000000104");
         loadingCardPage.checkLoadingInfo("5", "Костенко", "10", "0");
         loadingCardPage.clickButton("#commit");
     }
