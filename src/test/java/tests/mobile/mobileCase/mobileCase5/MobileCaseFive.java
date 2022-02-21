@@ -27,6 +27,8 @@ public class MobileCaseFive extends BaseMobileClass{
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
+    MobileFormUnit mobileFormUnit = new MobileFormUnit();
+    MobileFormPacking mobileFormPacking = new MobileFormPacking();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -40,46 +42,13 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormBatchProperties.input(true,true,"41Series01","31.12.2022");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","41");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "41");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "41", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "41", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00041 41Series01 31.12.2022 Стол41 IN.01 Quantity 10 шт");    //Eleo - иногда падает на этом месте тест (Не успевает обновлятся форма)
         receptionCardPage.verifyData("package", "41-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -90,66 +59,17 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","00042");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","42");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "42");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "42", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "42", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","42");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","2");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "2");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "42", "5", "4", "2");
+        mobileFormUnit.completeTask("блок", "2", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00042 Стол42 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "42-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -160,8 +80,6 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.inputData("source", "IN.01");
         receptionCardPage.inputData("product","00042");
-
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00042 Стол42 IN.01 Quantity 4 шт");
         receptionCardPage.clickButton("ChoicePacking");
         receptionCardPage.clickButton("Packing42-5-4-2-1");
@@ -176,62 +94,14 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","00043");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","43");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "43");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "43", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "43", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","43");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","2");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "2");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "43", "5", "4", "2");
+        mobileFormUnit.completeTask("блок", "2", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("Choice43-5-4-3-1");
         receptionCardPage.clickButton("DeletePacking");
@@ -240,18 +110,11 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.clickButton("EditPacking");
         receptionCardPage.inputData("group","10");
         receptionCardPage.clickButton("modalDialogOK");
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "10");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+
+        mobileFormUnit.completeTask("блок", "10", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00043 Стол43 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "43-5-4-10-1");
         receptionCardPage.inputData("container","IN1");
@@ -262,24 +125,8 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","00044");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","44");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","5");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "44", "5", "4", "5");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.verifyData("modalDialogTitle", "New unit");
         receptionCardPage.verifyData("skuQty", "5");
@@ -292,18 +139,10 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("Barcode","4400000000001");
         receptionCardPage.clickButton("modalDialogOK");
 
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "44");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormUnit.completeTask("паллета", "44", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00044 Стол44 IN.01 Quantity 10 шт");
         receptionCardPage.inputData("product","4400000000001");
         receptionCardPage.verifyData("package", "44-5-4-5-1");
@@ -315,46 +154,13 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","00045");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","45");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "45");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "45", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "45", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00045 Стол45 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "45-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -365,46 +171,13 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","2110046100000");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","46");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "46");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "46", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "46", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00046 Стол46 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "46-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -415,46 +188,13 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","2110047100000");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","47");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "47");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "47", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "47", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00047 Стол47 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "47-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -468,46 +208,13 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.clickButton("commitSN");                                                              //Eleo - Необходима проверка опознанных СН в таб. части.
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","48");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "48");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "48", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "48", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00048 Стол48 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "48-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -519,46 +226,13 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormSerialNumber.sn("49", 10);
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","49");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "49");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "49", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "49", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00049 Стол49 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "49-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -569,46 +243,13 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("product","00050");
 
         receptionCardPage.clickButton("newSku");
-        receptionCardPage.clickButton("palletFlag");
-        receptionCardPage.inputData("pallet","50");
-        receptionCardPage.clickButton("layerFlag");
-        receptionCardPage.inputData("layer","5");
-        receptionCardPage.clickButton("boxFlag");
-        receptionCardPage.inputData("box","4");
-        receptionCardPage.clickButton("groupFlag");
-        receptionCardPage.inputData("group","3");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "3");
-        receptionCardPage.verifyData("skuName", "блок");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "4");
-        receptionCardPage.verifyData("skuName", "ящик");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("modalDialogTitle", "New unit");
-        receptionCardPage.verifyData("skuQty", "50");
-        receptionCardPage.verifyData("skuName", "паллета");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","0.1");
-        receptionCardPage.inputData("heightSKU","0.1");
-        receptionCardPage.inputData("weightSKU","1");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormPacking.completeTask(true, true, true, true, "50", "5", "4", "3");
+        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("паллета", "50", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
-        Thread.sleep(2000);
         receptionCardPage.verifyData("productInfo", "00050 Стол50 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "50-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
