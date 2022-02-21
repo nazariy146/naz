@@ -34,7 +34,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол41
+//    //Стол41
         receptionCardPage.inputData("source", "IN.01");
         receptionCardPage.inputData("product","00041");
         mobileFormBatchProperties.input(true,true,"41Series01","31.12.2022");
