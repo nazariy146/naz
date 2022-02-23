@@ -53,15 +53,6 @@ public class ReceptionCardPage {
         else if (Field == "tareWeight"){
             return $(By.id("com.abmcloud:id/editTextTareWeight"));
         }
-        else if (Field == "heightSKU"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_unit_parameters_height"));
-        }
-        else if (Field == "widthSKU"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_unit_parameters_width"));
-        }
-        else if (Field == "lenghtSKU"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_unit_parameters_length"));
-        }
         else if (Field == "newSeries"){
             return $(By.id("com.abmcloud:id/et_series"));
         }
@@ -102,9 +93,6 @@ public class ReceptionCardPage {
         else if (Field == "selectBarcode"){
             return $(By.id("com.abmcloud:id/tv_barcode"));
         }
-        else if (Field == "weightSKU"){//MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_unit_parameters_weight"));
-        }
         else if (Field == "clearProductInput"){
             return $(By.xpath("(//android.widget.ImageButton[@content-desc=\"Clear text\"])[1]"));
         }
@@ -123,32 +111,11 @@ public class ReceptionCardPage {
         else if (Field == "newSku"){
             return $(By.id("com.abmcloud:id/ib_add"));
         }
-        else if (Field == "palletFlag"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/sw_pallet"));
-        }
-        else if (Field == "pallet"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_pallet"));
-        }
-        else if (Field == "palletEdit"){
+            else if (Field == "palletEdit"){
             return $(By.id("com.abmcloud:id/ib_pallet"));
-        }
-        else if (Field == "layerFlag"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/sw_layer"));
-        }
-        else if (Field == "layer"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_layer"));
-        }
-        else if (Field == "boxFlag"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/sw_box"));
-        }
-        else if (Field == "box"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_box"));
         }
         else if (Field == "boxEdit"){
             return $(By.id("com.abmcloud:id/ib_box"));
-        }
-        else if (Field == "groupFlag"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/sw_group"));
         }
         else if (Field == "group"){
             return $(By.id("com.abmcloud:id/et_group"));
@@ -161,12 +128,6 @@ public class ReceptionCardPage {
         }
         else if (Field == "base"){
             return $(By.id("com.abmcloud:id/et_base"));
-        }
-        else if (Field == "skuQty"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/et_unit_parameters_ratio"));
-        }
-        else if (Field == "skuName"){ //MNV после Рефакторинга удалить
-            return $(By.id("com.abmcloud:id/tv_base_unit"));//
         }
         else if (Field == "skuName"){
             return $(By.id("com.abmcloud:id/textinput_placeholder"));

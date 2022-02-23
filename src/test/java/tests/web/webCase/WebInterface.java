@@ -2,18 +2,18 @@ package tests.web.webCase;
 
 import org.testng.annotations.Test;
 import tests.web.webSteps.WebSteps;
+import tests.web.webUtils.WebUtils;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class WebInterface {
+    WebSteps webSteps = new WebSteps();
+    WebUtils webUtils = new WebUtils();
 
     @Test
     public void webInterface() {
-        WebSteps webSteps = new WebSteps();
-        WebInterface webInterface = new WebInterface();
-
-        webSteps.webOpen1C();                       //запуск 1с
+        webUtils.webOpen1C();                       //запуск 1с
         this.menuQuick();                   //меню Главное
         this.menuReceiving();               //меню Приход
         this.menuShipment();                //меню Отгрузка
@@ -28,66 +28,23 @@ public class WebInterface {
         this.menuDevelopment();             //меню Разработка
     }                   //старт проверки интерфейса
 
-    public void menuQuick(){                        //меню Главное
-        $("#themesCell_theme_0").click();
-        $("#cmd_0_0_txt").shouldHave(text("Монитор эффективности склада"));
-        $("#cmd_1_0_txt").shouldHave(text("Управление складом"));
+    public void menuQuick(){
+        webSteps.clickMenu(0);
+        webSteps.verifyEverythingData(0, "Монитор эффективности склада");
+        webSteps.verifyEverythingData(1, "Управление складом");
     }                       //меню Главное
 
     public void menuReceiving () { //меню Приход
-        $("#themesCell_theme_1").click();
-        $("#cmd_0_0_txt").shouldHave(text("Контроль поставки"));
-        $("#cmd_0_1_txt").shouldHave(text("РМ Возврата товаров"));
-        $("#cmd_0_2_txt").shouldHave(text("Учет дополнительных работ"));
-    //Документы
-        $("#cmd_0_3_txt").shouldHave(text("Прием товара"));
-        $("#cmd_0_4_txt").shouldHave(text("Проблемная ситуация"));
-        $("#cmd_0_5_txt").shouldHave(text("Рекламация"));
-    //Отчеты
-        $("#cmd_0_6_txt").shouldHave(text("Анализ загруженности склада"));
-        $("#cmd_0_7_txt").shouldHave(text("Загруженность склада"));
-        $("#cmd_0_8_txt").shouldHave(text("Изменения статусов номенклатуры"));
-        $("#cmd_0_9_txt").shouldHave(text("К отбору"));
-        $("#cmd_0_10_txt").shouldHave(text("Логирование изменения движений"));
-        $("#cmd_0_11_txt").shouldHave(text("Назначенные ресурсы документам"));
-        $("#cmd_0_12_txt").shouldHave(text("Резерв размещения"));
-    //Сервис
-        $("#cmd_1_0_txt").shouldHave(text("Генератор временных контейнеров"));
-        $("#cmd_1_1_txt").shouldHave(text("Контроль поставки"));
-        $("#cmd_1_2_txt").shouldHave(text("Дополнительные обработки"));
-        $("#cmd_1_3_txt").shouldHave(text("Дополнительные отчеты"));
-        $("#cmd_1_4_txt").shouldHave(text("Поиск документов по контейнеру / грузоместу"));
-        $("#cmd_1_5_txt").shouldHave(text("Учет дополнительных работ"));
-        $("#cmd_1_6_txt").shouldHave(text("Распределение позиций между ресурсами"));
-    }                 //меню Приход
+        webSteps.clickMenu(1);
+        webSteps.verifyEverythingData(0, "Контроль поставки", "РМ Возврата товаров", "Учет дополнительных работ", "Прием товара", "Проблемная ситуация", "Рекламация", "Анализ загруженности склада", "Загруженность склада", "Изменения статусов номенклатуры", "К отбору", "Логирование изменения движений", "Назначенные ресурсы документам", "Резерв размещения");
+        webSteps.verifyEverythingData(1, "Генератор временных контейнеров", "Контроль поставки", "Дополнительные обработки", "Дополнительные отчеты", "Поиск документов по контейнеру / грузоместу", "Учет дополнительных работ", "Распределение позиций между ресурсами");
+    }
 
     public void menuShipment(){ //меню Отгрузка
-        $("#themesCell_theme_2").click();
-        $("#cmd_0_0_txt").shouldHave(text("Контроль отгрузки"));
-        $("#cmd_0_1_txt").shouldHave(text("Учет дополнительных работ"));
-    //Документы
-        $("#cmd_0_2_txt").shouldHave(text("Отгрузка товара"));
-        $("#cmd_0_3_txt").shouldHave(text("Грузоместо"));
-        $("#cmd_0_4_txt").shouldHave(text("Проблемная ситуация"));
-        $("#cmd_0_5_txt").shouldHave(text("Рекламация"));
-    //Отчеты
-        $("#cmd_0_6_txt").shouldHave(text("Журнал отгрузок"));
-        $("#cmd_0_7_txt").shouldHave(text("К отбору"));
-        $("#cmd_0_8_txt").shouldHave(text("Контроль фактического выполнения распоряжений УС"));
-        $("#cmd_0_9_txt").shouldHave(text("Остаток сравнение с потребностью отгрузки"));
-        $("#cmd_0_10_txt").shouldHave(text("Отчет по документам отгрузки"));
-        $("#cmd_0_11_txt").shouldHave(text("Отчет по нехватке товара"));
-        $("#cmd_0_12_txt").shouldHave(text("Проблемные ситуации"));
-        $("#cmd_0_13_txt").shouldHave(text("Резерв отбора"));
-    //Сервис
-        $("#cmd_1_0_txt").shouldHave(text("Генератор временных контейнеров"));
-        $("#cmd_1_1_txt").shouldHave(text("Корректировка серийных номеров"));
-        $("#cmd_1_2_txt").shouldHave(text("Объединение контейнеров"));
-        $("#cmd_1_3_txt").shouldHave(text("Печать этикеток грузомест"));
-        $("#cmd_1_4_txt").shouldHave(text("Поиск документов по контейнеру / грузоместу"));
-        $("#cmd_1_5_txt").shouldHave(text("Учет дополнительных работ"));
-        $("#cmd_1_6_txt").shouldHave(text("Распределение позиций между ресурсами"));
-        $("#cmd_1_7_txt").shouldHave(text("Контроль контейнеров"));
+        webSteps.clickMenu(2);
+        webSteps.verifyEverythingData(0, "Контроль отгрузки", "Учет дополнительных работ", "Отгрузка товара", "Грузоместо", "Проблемная ситуация", "Рекламация", "Журнал отгрузок", "К отбору", "Контроль фактического выполнения распоряжений УС", "Остаток сравнение с потребностью отгрузки", "Отчет по документам отгрузки", "Отчет по нехватке товара", "Проблемные ситуации", "Резерв отбора");
+        webSteps.verifyEverythingData(1, "Генератор временных контейнеров", "Корректировка серийных номеров", "Объединение контейнеров", "Печать этикеток грузомест", "Поиск документов по контейнеру / грузоместу", "Учет дополнительных работ", "Распределение позиций между ресурсами", "Контроль контейнеров");
+
     }                    //меню Отгрузка
 
     public void menuInventory(){//Запасы
@@ -376,7 +333,6 @@ public class WebInterface {
         $("#cmd_2_9_txt").shouldHave(text("Поиск и замена дублирующихся элементов справочников"));
         $("#cmd_2_10_txt").shouldHave(text("Поиск товаров по серийному номеру"));
         $("#cmd_2_11_txt").shouldHave(text("ТСД"));
-
     }                    //меню Разработка
 
 }
