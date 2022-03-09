@@ -35,7 +35,7 @@ public class MobileFormUnit {
         return null;
     }
 
-    public void completeTask (String dataName, String dataQty, String dataWidth, String dataLenght, String dataHeight, String dataWeight) {
+    public void completeTask (String dataTitle, String dataName, String dataQty, String dataWidth, String dataLenght, String dataHeight, String dataWeight) {
         SelenideElement resourceId_Title, resourceId_Name, resourceId_Qty, resourceId_Width, resourceId_Lenght, resourceId_Height, resourceId_Weight, resourceId_Write;
 
         resourceId_Title = getResourceId("#title");
@@ -48,7 +48,7 @@ public class MobileFormUnit {
         resourceId_Write = getResourceId("#write");
 
         resourceId_Title.shouldBe(visible, Duration.ofSeconds(25));
-        mobileSteps.verifyData (resourceId_Title, "New unit");
+        mobileSteps.verifyData (resourceId_Title, dataTitle);
         mobileSteps.verifyData (resourceId_Name, dataName);
         mobileSteps.verifyData (resourceId_Qty, dataQty);
         mobileSteps.inputData (resourceId_Width, dataWidth);

@@ -1,10 +1,7 @@
 package tests.mobile.mobileCase.mobileCase3;
 
 import org.testng.annotations.Test;
-import tests.mobile.mobileForm.MobileFormAuthorization;
-import tests.mobile.mobileForm.MobileFormBatchProperties;
-import tests.mobile.mobileForm.MobileFormContainer;
-import tests.mobile.mobileForm.MobileFormSettings;
+import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
@@ -32,6 +29,7 @@ public class MobileCaseThree extends BaseMobileClass {
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
+    MobileFormUnit mobileFormUnit = new MobileFormUnit();
 
     @Test
     public void processingNegativeReceptionTaskTest() throws Exception {
@@ -222,11 +220,7 @@ public class MobileCaseThree extends BaseMobileClass {
         receptionCardPage.inputData("product","00030");
         receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
-        receptionCardPage.inputData("widthSKU","0.1");
-        receptionCardPage.inputData("lenghtSKU","20");
-        receptionCardPage.inputData("heightSKU","10");
-        receptionCardPage.inputData("weightSKU","0.4");
-        receptionCardPage.clickButton("modalDialogOK");
+        mobileFormUnit.completeTask("шт", "шт", "1", "0.1", "20", "10", "0.4");
         receptionCardPage.inputData("container","IN1");
         receptionCardPage.inputData("qty","10");
         receptionCardPage.clickButton("commit");

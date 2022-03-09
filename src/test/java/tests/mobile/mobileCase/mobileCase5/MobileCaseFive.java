@@ -43,9 +43,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "41", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "41", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "41", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -60,13 +60,13 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "42", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "42", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "42", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "42", "5", "4", "2");
-        mobileFormUnit.completeTask("блок", "2", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "2", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -95,13 +95,13 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "43", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "43", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "43", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "43", "5", "4", "2");
-        mobileFormUnit.completeTask("блок", "2", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "2", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.clickButton("Choice43-5-4-3-1");
         receptionCardPage.clickButton("DeletePacking");
@@ -111,7 +111,7 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("group","10");
         receptionCardPage.clickButton("modalDialogOK");
 
-        mobileFormUnit.completeTask("блок", "10", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "10", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -126,7 +126,7 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "44", "5", "4", "5");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
 
         receptionCardPage.verifyData("modalDialogTitle", "New unit");
         receptionCardPage.verifyData("skuQty", "5");
@@ -139,7 +139,7 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.inputData("Barcode","4400000000001");
         receptionCardPage.clickButton("modalDialogOK");
 
-        mobileFormUnit.completeTask("паллета", "44", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "44", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -155,9 +155,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "45", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "45", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "45", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -172,9 +172,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "46", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "46", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "46", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -189,9 +189,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "47", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "47", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "47", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -209,9 +209,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "48", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "48", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "48", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -227,9 +227,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "49", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "49", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "49", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 
@@ -244,9 +244,9 @@ public class MobileCaseFive extends BaseMobileClass{
 
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "50", "5", "4", "3");
-        mobileFormUnit.completeTask("блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("паллета", "50", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+        mobileFormUnit.completeTask("New unit","паллета", "50", "0.1", "0.1", "0.1", "1");
         Thread.sleep(2000);
         receptionCardPage.clickButton("modalDialogOK");
 

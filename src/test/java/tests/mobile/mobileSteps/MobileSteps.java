@@ -41,6 +41,9 @@ public class MobileSteps {
         resourceId.shouldBe(visible, Duration.ofSeconds(25));
         resourceId.click();
     }
+    public void selectData(SelenideElement table, String source) {
+        table.find(source).find(source).click();
+    }
 
 //    MNV development
 //    $(By.id("android:id/text1")).find(exactText(source)).getId();

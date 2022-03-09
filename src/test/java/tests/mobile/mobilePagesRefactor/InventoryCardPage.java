@@ -79,6 +79,9 @@ public class InventoryCardPage {
         else if (Field == "qtyViewInfo"){
             return $(By.xpath("//android.widget.ListView/android.view.ViewGroup[2]")).find(By.id("com.abmcloud:id/textViewQtyInv"));
         }
+        else if (Field == "qualityTable"){
+            return $(By.id("android:id/text1"));
+        }
         return null;
     }
 
@@ -105,8 +108,8 @@ public class InventoryCardPage {
 
     //MNV need to refactor
     public void selectData(String field, String source) {
-        getResourceId(field).click();
-        $$(By.id("android:id/text1")).find(exactText(source)).click();
+        SelenideElement resourceId = getResourceId("qualityTable");
+        mobileSteps.selectData(resourceId, source);
     }
     //MNV need to refactor
 
