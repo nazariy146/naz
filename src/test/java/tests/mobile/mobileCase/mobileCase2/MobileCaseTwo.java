@@ -5,6 +5,7 @@ import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
+import tests.mobile.mobileUtils.MobileData;
 
 import java.time.Duration;
 
@@ -31,6 +32,8 @@ public class MobileCaseTwo extends BaseMobileClass {
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
+    MobileData mobileData = new MobileData();
+    MobileFormReception mobileFormReception = new MobileFormReception();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -38,82 +41,38 @@ public class MobileCaseTwo extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
+
+        MobileData stol11 = mobileData.dataReceptionCardPage("stol11");
+        MobileData stol12 = mobileData.dataReceptionCardPage("stol12");
+        MobileData stol13 = mobileData.dataReceptionCardPage("stol13");
+        MobileData stol14 = mobileData.dataReceptionCardPage("stol14");
+        MobileData stol15 = mobileData.dataReceptionCardPage("stol15");
+        MobileData stol16 = mobileData.dataReceptionCardPage("stol16");
+        MobileData stol17 = mobileData.dataReceptionCardPage("stol17");
+        MobileData stol18 = mobileData.dataReceptionCardPage("stol18");
+        MobileData stol19 = mobileData.dataReceptionCardPage("stol19");
+        MobileData stol20 = mobileData.dataReceptionCardPage("stol20");
+
     //Стол11
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","11fragbc");
-        receptionCardPage.verifyData("productInfo", "00011 Стол11 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol11);
     //Стол12
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00012 12Series01 Стол12 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","12fragbc");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol12);
     //Стол13
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00013 31.12.2022 Стол13 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","13fragbc");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol13);
     //Стол14
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00014 Стол14 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","14fragbc");
-        receptionCardPage.verifyData("productInfoSN","00014 Стол14");
-        mobileFormSerialNumber.normal("14", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol14);
     //Стол15
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00015 15series01 31.12.2022 Стол15 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","15fragbc");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol15);
     //Стол16
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00016 16series01 Стол16 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","16fragbc");
-        mobileFormSerialNumber.normal("16", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol16);
     //Стол17
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00017 31.12.2022 Стол17 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","17fragbc");
-        mobileFormSerialNumber.normal("17", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol17);
     //Стол18
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00018 18series01 31.12.2022 Стол18 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","18fragbc");
-        mobileFormSerialNumber.normal("18", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol18);
     //Стол19
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00019 Стол19 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","19fragbc");
-        mobileFormSerialNumber.unique("19", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol19);
     //Стол20
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.verifyData("productInfo", "00020 Стол20 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("product","20fragbc");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol20);
     }
 
     @Test (priority = 1, dependsOnMethods = "processingReceptionTaskTest")
