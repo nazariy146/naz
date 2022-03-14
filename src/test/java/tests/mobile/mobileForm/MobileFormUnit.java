@@ -3,6 +3,7 @@ package tests.mobile.mobileForm;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
+import tests.mobile.mobileUtils.MobileData;
 
 import java.time.Duration;
 
@@ -34,7 +35,6 @@ public class MobileFormUnit {
         }
         return null;
     }
-
     public void completeTask (String dataTitle, String dataName, String dataQty, String dataWidth, String dataLenght, String dataHeight, String dataWeight) {
         SelenideElement resourceId_Title, resourceId_Name, resourceId_Qty, resourceId_Width, resourceId_Lenght, resourceId_Height, resourceId_Weight, resourceId_Write;
 
@@ -55,6 +55,29 @@ public class MobileFormUnit {
         mobileSteps.inputData (resourceId_Lenght, dataLenght);
         mobileSteps.inputData (resourceId_Height, dataHeight);
         mobileSteps.inputData (resourceId_Weight, dataWeight);
+        mobileSteps.clickButton (resourceId_Write);
+    }
+
+    public void completeTask1 (MobileData stolData) {
+        SelenideElement resourceId_Title, resourceId_Name, resourceId_Qty, resourceId_Width, resourceId_Lenght, resourceId_Height, resourceId_Weight, resourceId_Write;
+
+        resourceId_Title = getResourceId("#title");
+        resourceId_Name = getResourceId("#name");
+        resourceId_Qty = getResourceId("#qty");
+        resourceId_Width = getResourceId("#width");
+        resourceId_Lenght = getResourceId("#lenght");
+        resourceId_Height = getResourceId("#height");
+        resourceId_Weight = getResourceId("#weight");
+        resourceId_Write = getResourceId("#write");
+
+        resourceId_Title.shouldBe(visible, Duration.ofSeconds(25));
+        mobileSteps.verifyData (resourceId_Title, stolData.unitName);
+        mobileSteps.verifyData (resourceId_Name, stolData.unitName);
+        mobileSteps.verifyData (resourceId_Qty, stolData.unitQty);
+        mobileSteps.inputData (resourceId_Width, stolData.unitWidth);
+        mobileSteps.inputData (resourceId_Lenght, stolData.unitLenght);
+        mobileSteps.inputData (resourceId_Height, stolData.unitHeight);
+        mobileSteps.inputData (resourceId_Weight, stolData.unitWeight);
         mobileSteps.clickButton (resourceId_Write);
     }
 }

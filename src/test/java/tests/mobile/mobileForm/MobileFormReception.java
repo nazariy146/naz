@@ -1,21 +1,19 @@
 package tests.mobile.mobileForm;
 
 import com.codeborne.selenide.SelenideElement;
-import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import tests.mobile.mobileSteps.MobileSteps;
 import tests.mobile.mobileUtils.MobileData;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static tests.mobile.mobileSteps.MobileSteps.mobileDriver;
 
 public class MobileFormReception {
 
     MobileSteps mobileSteps = new MobileSteps();
     MobileFormBatchProperties mobileFormBatchProperties = new MobileFormBatchProperties();
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
+    MobileFormSku mobileFormSku = new MobileFormSku();
+    MobileFormUnit mobileFormUnit = new MobileFormUnit();
 
     public SelenideElement getResourceId(String field) {
         switch (field) {
@@ -31,13 +29,19 @@ public class MobileFormReception {
                 return $(By.id("com.abmcloud:id/editTextControlQty"));
             case "#commit":
                 return $(By.id("com.abmcloud:id/buttonControlCommit"));
+            case "#palletWeight":
+                return $(By.id("com.abmcloud:id/editTextPalletWeight"));
+            case "#tareQty":
+                return $(By.id("com.abmcloud:id/editTextTareQty"));
+            case "#tareWeight":
+                return $(By.id("com.abmcloud:id/editTextTareWeight"));
         }
         return null;
     }
 
     public void completeTask( MobileData stolData) {
 
-        SelenideElement resourceId_ProductInfo, resourceId_Source, resourceId_Product, resourceId_Container, resourceId_Qty, resourceId_Commit;
+        SelenideElement resourceId_ProductInfo, resourceId_Source, resourceId_Product, resourceId_Container, resourceId_Qty, resourceId_Commit, resourceId_PalletWeight, resourceId_TareQty, resourceId_TareWeight;
 
         resourceId_ProductInfo  = getResourceId("#productInfo");
         resourceId_Source       = getResourceId("#source");
@@ -45,6 +49,9 @@ public class MobileFormReception {
         resourceId_Container    = getResourceId("#container");
         resourceId_Qty          = getResourceId("#qty");
         resourceId_Commit       = getResourceId("#commit");
+        resourceId_PalletWeight = getResourceId("#palletWeight");
+        resourceId_TareQty      = getResourceId("#tareQty");
+        resourceId_TareWeight   = getResourceId("#tareWeight");
 
         if (stolData.series | stolData.shelfLife ){
             if (stolData.declaredSeriesShelfLife){
@@ -54,9 +61,17 @@ public class MobileFormReception {
                 mobileSteps.verifyData (resourceId_ProductInfo, stolData.productInfo);
             }
         }
+        else {
+            mobileSteps.verifyData (resourceId_ProductInfo, stolData.productInfo);
+        }
 
         mobileSteps.inputData (resourceId_Source, stolData.source);
         mobileSteps.inputData (resourceId_Product, stolData.product);
+
+        if (stolData.sku){
+            mobileFormSku.completeTask(stolData);
+            mobileFormUnit.completeTask1(stolData);
+        }
 
         //учет Серий, СГ, СН вводим данные на формах
         if (stolData.series | stolData.shelfLife | stolData.serialNumber){
@@ -71,15 +86,19 @@ public class MobileFormReception {
         }
         mobileSteps.verifyData (resourceId_ProductInfo, stolData.productInfoSeriesShelfLife);
         mobileSteps.inputData (resourceId_Container, stolData.container);
+        if (stolData.sof){
+            mobileSteps.inputData(resourceId_PalletWeight, stolData.palletWeight);
+            mobileSteps.inputData(resourceId_TareQty, stolData.tareQty);
+            mobileSteps.inputData(resourceId_TareWeight, stolData.tareWeight);
+        }
 
         //если Номенклатура.УчетСН, количество заполняется автоматически, делаем проверку количества
-        if (stolData.serialNumber){
+        if (stolData.serialNumber | stolData.weightBarcode){
             mobileSteps.verifyData (resourceId_Qty, stolData.qty);
         }
         else {
             mobileSteps.inputData(resourceId_Qty, stolData.qty);
         }
-
         mobileSteps.clickButton (resourceId_Commit);
     }
 }
