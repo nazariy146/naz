@@ -123,7 +123,7 @@ public class MobileFormSerialNumber {
         mobileSteps.clickButton(resourceId_Commit);
     }
 
-    public void completeTask( MobileData stolData) {
+    public void completeTask(MobileData stolData) {
         MobileData mobileData = new MobileData();
 
         SelenideElement resourceId_SerialNumber, resourceId_TableSerialNumber, resourceId_TableQtyFact, resourceId_Commit;

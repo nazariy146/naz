@@ -5,9 +5,8 @@ import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
-import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
-import static tests.mobile.mobileUtils.ModalDialogs.*;
 
 public class MobileCaseFive extends BaseMobileClass{
     MobileSteps mobileSteps = new MobileSteps();
