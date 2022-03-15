@@ -1,24 +1,16 @@
 package tests.mobile.mobileCase.mobileCase4;
 
 import org.testng.annotations.Test;
-import tests.mobile.mobileForm.MobileFormAuthorization;
-import tests.mobile.mobileForm.MobileFormContainer;
-import tests.mobile.mobileForm.MobileFormSerialNumber;
-import tests.mobile.mobileForm.MobileFormSettings;
+import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
-import tests.mobile.mobileSteps.MobileSteps;
+import tests.mobile.mobileUtils.MobileData;
 
 import static com.codeborne.selenide.Condition.*;
-import static tests.mobile.mobileUtils.ModalDialogs.*;
-import static tests.mobile.mobileUtils.ModalDialogs.clickSetOkYesButton;
 
 public class MobileCaseFour extends BaseMobileClass {
 
-    MobileSteps mobileSteps = new MobileSteps();
     AllTasksPage allTasksPage = new AllTasksPage();
-    ReceptionCardPage receptionCardPage = new ReceptionCardPage();
-    ReceptionCardPage setPalletWeightreceptionCardPage = new ReceptionCardPage();
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
@@ -32,6 +24,8 @@ public class MobileCaseFour extends BaseMobileClass {
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
+    MobileData mobileData = new MobileData();
+    MobileFormReception mobileFormReception = new MobileFormReception();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -39,95 +33,37 @@ public class MobileCaseFour extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
+
+        MobileData stol31 = mobileData.dataReception("stol31");
+        MobileData stol32 = mobileData.dataReception("stol32");
+        MobileData stol33 = mobileData.dataReception("stol33");
+        MobileData stol34 = mobileData.dataReception("stol34");
+        MobileData stol35 = mobileData.dataReception("stol35");
+        MobileData stol36 = mobileData.dataReception("stol36");
+        MobileData stol37 = mobileData.dataReception("stol37");
+        MobileData stol38 = mobileData.dataReception("stol38");
+        MobileData stol39 = mobileData.dataReception("stol39");
+        MobileData stol40 = mobileData.dataReception("stol40");
     //Стол31
-        receptionCardPage.verifyData("productInfo", "00031 Стол31 IN.01 Quantity 10 уп. (5)");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","31FRAGSN31Series013112202200");
-        mobileFormSerialNumber.sn("31", 10);
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol31);
     //Стол32
-        receptionCardPage.verifyData("productInfo", "00032 Стол32 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","32FRAGSN32Series013112202200");
-        receptionCardPage.verifyData("productInfoSN", "00032 32Series01 Стол32");
-        mobileFormSerialNumber.sn("32", 10);
-        receptionCardPage.verifyData("productInfo", "00032 32series01 Стол32 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol32);
     //Стол33
-        receptionCardPage.verifyData("productInfo", "00033 Стол33 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","33FRAGSN33Series013112202200");
-        receptionCardPage.verifyData("productInfoSN", "00033 31.12.2022 Стол33");
-        mobileFormSerialNumber.sn("33", 10);
-        receptionCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol33);
     //Стол34
-        receptionCardPage.verifyData("productInfo", "00034 Стол34 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","34FRAGSN34Series013112202200");
-        mobileFormSerialNumber.sn("34", 10);
-        receptionCardPage.verifyData("productInfo", "00034 34series01 31.12.2022 Стол34 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol34);
     //Стол35
-        receptionCardPage.verifyData("productInfo", "00035 Стол35 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","35FRAGBC35Series013112202200");
-        receptionCardPage.verifyData("productInfo", "00035 Стол35 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol35);
     //Стол36
-        receptionCardPage.verifyData("productInfo", "00036 Стол36 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","36FRAGBC36Series013112202200");
-        receptionCardPage.verifyData("productInfo", "00036 36series01 Стол36 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol36);
     //Стол37
-        receptionCardPage.verifyData("productInfo", "00037 Стол37 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","37FRAGBC37Series013112202200");
-        receptionCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol37);
     //Стол38
-        receptionCardPage.verifyData("productInfo", "00038 Стол38 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","38FRAGBC38Series013112202200");
-        receptionCardPage.verifyData("productInfo", "00038 38series01 31.12.2022 Стол38 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol38);
     //Стол39
-        receptionCardPage.verifyData("productInfo", "00039 Стол39 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","39FRAGSN39Series013112202200");
-        receptionCardPage.verifyData("productInfoSN", "00039 39Series01 31.12.2022 Стол39");
-        mobileFormSerialNumber.uniqueSn("39", 9);
-        receptionCardPage.verifyData("productInfo", "00039 39series01 31.12.2022 Стол39 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol39);
     //Стол40
-        receptionCardPage.verifyData("productInfo", "00040 Стол40 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
-        receptionCardPage.verifyData("productInfoSN", "00040 40Series01 31.12.2022 Стол40");
-        mobileFormSerialNumber.qr("40", 7);
-        receptionCardPage.verifyData("productInfo", "00040 40series01 31.12.2022 Стол40 IN.01 Quantity 10 шт");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.verifyData("qty", "10");
-        receptionCardPage.clickButton("commit");
+        mobileFormReception.completeTask(stol40);
     }
 
     @Test (priority = 1, dependsOnMethods = "processingReceptionTaskTest")

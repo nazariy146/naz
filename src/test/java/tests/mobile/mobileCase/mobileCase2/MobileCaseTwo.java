@@ -7,11 +7,8 @@ import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
 import tests.mobile.mobileUtils.MobileData;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.text;
-import static tests.mobile.mobileUtils.ModalDialogs.*;
 
 public class MobileCaseTwo extends BaseMobileClass {
     MobileSteps mobileSteps = new MobileSteps();
@@ -42,16 +39,16 @@ public class MobileCaseTwo extends BaseMobileClass {
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        MobileData stol11 = mobileData.dataReceptionCardPage("stol11");
-        MobileData stol12 = mobileData.dataReceptionCardPage("stol12");
-        MobileData stol13 = mobileData.dataReceptionCardPage("stol13");
-        MobileData stol14 = mobileData.dataReceptionCardPage("stol14");
-        MobileData stol15 = mobileData.dataReceptionCardPage("stol15");
-        MobileData stol16 = mobileData.dataReceptionCardPage("stol16");
-        MobileData stol17 = mobileData.dataReceptionCardPage("stol17");
-        MobileData stol18 = mobileData.dataReceptionCardPage("stol18");
-        MobileData stol19 = mobileData.dataReceptionCardPage("stol19");
-        MobileData stol20 = mobileData.dataReceptionCardPage("stol20");
+        MobileData stol11 = mobileData.dataReception("stol11");
+        MobileData stol12 = mobileData.dataReception("stol12");
+        MobileData stol13 = mobileData.dataReception("stol13");
+        MobileData stol14 = mobileData.dataReception("stol14");
+        MobileData stol15 = mobileData.dataReception("stol15");
+        MobileData stol16 = mobileData.dataReception("stol16");
+        MobileData stol17 = mobileData.dataReception("stol17");
+        MobileData stol18 = mobileData.dataReception("stol18");
+        MobileData stol19 = mobileData.dataReception("stol19");
+        MobileData stol20 = mobileData.dataReception("stol20");
 
     //Стол11
         mobileFormReception.completeTask(stol11);

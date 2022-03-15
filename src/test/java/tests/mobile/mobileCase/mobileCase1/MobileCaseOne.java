@@ -38,16 +38,16 @@ public class MobileCaseOne extends BaseMobileClass {
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        MobileData stol1 = mobileData.dataReceptionCardPage("stol1");
-        MobileData stol2 = mobileData.dataReceptionCardPage("stol2");
-        MobileData stol3 = mobileData.dataReceptionCardPage("stol3");
-        MobileData stol4 = mobileData.dataReceptionCardPage("stol4");
-        MobileData stol5 = mobileData.dataReceptionCardPage("stol5");
-        MobileData stol6 = mobileData.dataReceptionCardPage("stol6");
-        MobileData stol7 = mobileData.dataReceptionCardPage("stol7");
-        MobileData stol8 = mobileData.dataReceptionCardPage("stol8");
-        MobileData stol9 = mobileData.dataReceptionCardPage("stol9");
-        MobileData stol10 = mobileData.dataReceptionCardPage("stol10");
+        MobileData stol1 = mobileData.dataReception("stol1");
+        MobileData stol2 = mobileData.dataReception("stol2");
+        MobileData stol3 = mobileData.dataReception("stol3");
+        MobileData stol4 = mobileData.dataReception("stol4");
+        MobileData stol5 = mobileData.dataReception("stol5");
+        MobileData stol6 = mobileData.dataReception("stol6");
+        MobileData stol7 = mobileData.dataReception("stol7");
+        MobileData stol8 = mobileData.dataReception("stol8");
+        MobileData stol9 = mobileData.dataReception("stol9");
+        MobileData stol10 = mobileData.dataReception("stol10");
     //Стол1
         mobileFormReception.completeTask(stol1);
     //Стол10
