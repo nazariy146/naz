@@ -40,21 +40,21 @@ public class MobileCaseThree extends BaseMobileClass {
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
 
-        MobileData stol21 = mobileData.dataReceptionCardPage("stol21");
-        MobileData stol22 = mobileData.dataReceptionCardPage("stol22");
-        MobileData stol23_part1 = mobileData.dataReceptionCardPage("stol23_part1");
-        MobileData stol23_part2 = mobileData.dataReceptionCardPage("stol23_part2");
-        MobileData stol23_part3 = mobileData.dataReceptionCardPage("stol23_part3");
-        MobileData stol24_part1 = mobileData.dataReceptionCardPage("stol24_part1");
-        MobileData stol24_part2 = mobileData.dataReceptionCardPage("stol24_part2");
-        MobileData stol24_part3 = mobileData.dataReceptionCardPage("stol24_part3");
-        MobileData stol24 = mobileData.dataReceptionCardPage("stol24");
-        MobileData stol25 = mobileData.dataReceptionCardPage("stol25");
-        MobileData stol26 = mobileData.dataReceptionCardPage("stol26");
-        MobileData stol27 = mobileData.dataReceptionCardPage("stol27");
-        MobileData stol28 = mobileData.dataReceptionCardPage("stol28");
-        MobileData stol29 = mobileData.dataReceptionCardPage("stol29");
-        MobileData stol30 = mobileData.dataReceptionCardPage("stol30");
+        MobileData stol21 = mobileData.dataReception("stol21");
+        MobileData stol22 = mobileData.dataReception("stol22");
+        MobileData stol23_part1 = mobileData.dataReception("stol23_part1");
+        MobileData stol23_part2 = mobileData.dataReception("stol23_part2");
+        MobileData stol23_part3 = mobileData.dataReception("stol23_part3");
+        MobileData stol24_part1 = mobileData.dataReception("stol24_part1");
+        MobileData stol24_part2 = mobileData.dataReception("stol24_part2");
+        MobileData stol24_part3 = mobileData.dataReception("stol24_part3");
+        MobileData stol24 = mobileData.dataReception("stol24");
+        MobileData stol25 = mobileData.dataReception("stol25");
+        MobileData stol26 = mobileData.dataReception("stol26");
+        MobileData stol27 = mobileData.dataReception("stol27");
+        MobileData stol28 = mobileData.dataReception("stol28");
+        MobileData stol29 = mobileData.dataReception("stol29");
+        MobileData stol30 = mobileData.dataReception("stol30");
     //Стол21
         mobileFormReception.completeTask(stol21);
     //Стол22

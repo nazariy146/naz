@@ -76,7 +76,7 @@ public class MobileFormReception {
         //учет Серий, СГ, СН вводим данные на формах
         if (stolData.series | stolData.shelfLife | stolData.serialNumber){
             if (stolData.series | stolData.shelfLife){
-                if (!stolData.declaredSeriesShelfLife){
+                if (!stolData.declaredSeriesShelfLife & !stolData.declaredSeriesShelfLifeSN){
                     mobileFormBatchProperties.input(stolData.series, stolData.shelfLife, stolData.dataSeries, stolData.dataShelfLife);
                 }
             }

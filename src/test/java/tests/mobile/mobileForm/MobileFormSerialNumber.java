@@ -124,7 +124,6 @@ public class MobileFormSerialNumber {
     }
 
     public void completeTask(MobileData stolData) {
-        MobileData mobileData = new MobileData();
 
         SelenideElement resourceId_SerialNumber, resourceId_TableSerialNumber, resourceId_TableQtyFact, resourceId_Commit;
         int tableSerialNumber = 1, tableQty = 2, tableQtyFact = 3;
@@ -143,10 +142,43 @@ public class MobileFormSerialNumber {
                 mobileSteps.verifyData(resourceId_TableSerialNumber, nowSN);
                 mobileSteps.verifyData(resourceId_TableQtyFact, ""+i);
             }
-
         }
         if (stolData.typeSn == "unique"){
             for (int i = 0, row = 2; i < 10; i++, row++) {
+                String nowSN = stolData.dataSerialNumber + "FRAGSN" + stolData.dataSerialNumber + "Series01" + "31122022" + "0" + i;
+                resourceId_TableSerialNumber = getXpathTable(row, tableSerialNumber);
+                resourceId_TableQtyFact = getXpathTable(row, tableQtyFact);
+
+                mobileSteps.inputData(resourceId_SerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableSerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableQtyFact, "1");
+            }
+        }
+        if (stolData.typeSn == "sn"){
+            for (int i = 2, row = 2; i <= 10; i++) {
+
+                String nowSN = stolData.dataSerialNumber + "FRAGSN" + stolData.dataSerialNumber + "Series01" + "31122022" + "00";
+                resourceId_TableSerialNumber = getXpathTable(row, tableSerialNumber);
+                resourceId_TableQtyFact = getXpathTable(row, tableQtyFact);
+
+                mobileSteps.inputData(resourceId_SerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableSerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableQtyFact, ""+i);
+            }
+        }
+        if (stolData.typeSn == "uniqueSn") {
+            for (int i = 1, row = 3; i < 10; i++, row++) {
+                String nowSN = stolData.dataSerialNumber + "FRAGSN" + stolData.dataSerialNumber + "Series01" + "31122022" + "0" + i;
+                resourceId_TableSerialNumber = getXpathTable(row, tableSerialNumber);
+                resourceId_TableQtyFact = getXpathTable(row, tableQtyFact);
+
+                mobileSteps.inputData(resourceId_SerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableSerialNumber, nowSN);
+                mobileSteps.verifyData(resourceId_TableQtyFact, "1");
+            }
+        }
+        if (stolData.typeSn == "qr"){
+            for (int i = 0, row = 5; i < 7; i++, row++) {
                 String nowSN = stolData.dataSerialNumber + "FRAGSN" + stolData.dataSerialNumber + "Series01" + "31122022" + "0" + i;
                 resourceId_TableSerialNumber = getXpathTable(row, tableSerialNumber);
                 resourceId_TableQtyFact = getXpathTable(row, tableQtyFact);

@@ -16,6 +16,7 @@ import static tests.mobile.mobileUtils.AssertionUtils.waitUntilPass;
 
 
 public class AllTasksPage {
+    ReceptionCardPage receptionCardPage = new ReceptionCardPage();
     public SelenideElement getWorkType() {
         return $(By.xpath("//androidx.cardview.widget.CardView[1]")).find(By.id("com.abmcloud:id/text_work_type"));
     }
