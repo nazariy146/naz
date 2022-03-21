@@ -145,7 +145,7 @@ public class MobileFormSerialNumber {
         }
         if (stolData.typeSn == "unique"){
             for (int i = 0, row = 2; i < 10; i++, row++) {
-                String nowSN = stolData.dataSerialNumber + "FRAGSN" + stolData.dataSerialNumber + "Series01" + "31122022" + "0" + i;
+                String nowSN = stolData.dataSerialNumber + "serialnumber0" + i;
                 resourceId_TableSerialNumber = getXpathTable(row, tableSerialNumber);
                 resourceId_TableQtyFact = getXpathTable(row, tableQtyFact);
 

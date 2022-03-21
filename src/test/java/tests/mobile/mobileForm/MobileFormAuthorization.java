@@ -1,13 +1,16 @@
 package tests.mobile.mobileForm;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
 
 import java.time.Duration;
+import java.util.Collection;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class MobileFormAuthorization {
     MobileSteps mobileSteps = new MobileSteps();

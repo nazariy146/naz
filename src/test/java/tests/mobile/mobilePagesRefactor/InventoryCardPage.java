@@ -1,5 +1,6 @@
 package tests.mobile.mobilePagesRefactor;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -85,6 +86,16 @@ public class InventoryCardPage {
         return null;
     }
 
+    public static ElementsCollection getCollectionResourceId(String Field){
+        if (Field == "quality"){
+            return $$(By.id("android:id/text1"));
+        }
+        else if (Field == "product"){
+            return $$(By.id("com.abmcloud:id/textBoxBarcodeInv"));
+        }
+        return null;
+    }
+
     public void inputData(String field, String data) {
         SelenideElement resourceId = getResourceId(field);
         mobileSteps.inputData(resourceId, data);
@@ -108,8 +119,11 @@ public class InventoryCardPage {
 
     //MNV need to refactor
     public void selectData(String field, String source) {
-        SelenideElement resourceId = getResourceId("qualityTable");
-        mobileSteps.selectData(resourceId, source);
+        SelenideElement resourceId = getResourceId(field);
+        ElementsCollection collectionResourceId = getCollectionResourceId(field);
+
+        resourceId.click();
+        mobileSteps.selectData(collectionResourceId, source);
     }
     //MNV need to refactor
 

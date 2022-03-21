@@ -14,6 +14,7 @@ public class MobileFormReception {
     MobileFormSerialNumber mobileFormSerialNumber = new MobileFormSerialNumber();
     MobileFormSku mobileFormSku = new MobileFormSku();
     MobileFormUnit mobileFormUnit = new MobileFormUnit();
+    MobileFormPacking mobileFormPacking = new MobileFormPacking();
 
     public SelenideElement getResourceId(String field) {
         switch (field) {
@@ -68,11 +69,6 @@ public class MobileFormReception {
         mobileSteps.inputData (resourceId_Source, stolData.source);
         mobileSteps.inputData (resourceId_Product, stolData.product);
 
-        if (stolData.sku){
-            mobileFormSku.completeTask(stolData);
-            mobileFormUnit.completeTask1(stolData);
-        }
-
         //учет Серий, СГ, СН вводим данные на формах
         if (stolData.series | stolData.shelfLife | stolData.serialNumber){
             if (stolData.series | stolData.shelfLife){
@@ -84,8 +80,21 @@ public class MobileFormReception {
                 mobileFormSerialNumber.completeTask(stolData);
             }
         }
+
+        if (stolData.skuForm){
+            mobileFormSku.completeTask(stolData);
+            if (stolData.packingNew){
+                mobileFormPacking.completeTask1(stolData);
+            }
+        }
+
+        if (stolData.skuUnit){
+            mobileFormUnit.completeTask1(stolData);
+        }
+
         mobileSteps.verifyData (resourceId_ProductInfo, stolData.productInfoSeriesShelfLife);
         mobileSteps.inputData (resourceId_Container, stolData.container);
+
         if (stolData.sof){
             mobileSteps.inputData(resourceId_PalletWeight, stolData.palletWeight);
             mobileSteps.inputData(resourceId_TareQty, stolData.tareQty);
