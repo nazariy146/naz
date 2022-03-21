@@ -30,6 +30,7 @@ public class AllTasksPage {
                 getWorkType().shouldHave(exactText(taskTitle));
             });
         } else
+            getWorkType().shouldBe(visible, Duration.ofSeconds(50));
             getWorkType().shouldHave(exactText(taskTitle));
     }
 

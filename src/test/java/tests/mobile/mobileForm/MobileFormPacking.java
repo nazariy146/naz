@@ -3,6 +3,7 @@ package tests.mobile.mobileForm;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import tests.mobile.mobileSteps.MobileSteps;
+import tests.mobile.mobileUtils.MobileData;
 
 import java.time.Duration;
 
@@ -68,6 +69,40 @@ public class MobileFormPacking {
         if (groupFlag == true) {
             mobileSteps.clickButton (resourceId_GroupFlag);
             mobileSteps.inputData (resourceId_Group, dataGroup);
+        }
+        mobileSteps.clickButton (resourceId_Write);
+    }
+    public void completeTask1 (MobileData stolData) {
+        SelenideElement resourceId_Title, resourceId_PalletFlag, resourceId_LayerFlag, resourceId_BoxFlag, resourceId_GroupFlag, resourceId_Pallet, resourceId_Layer, resourceId_Box, resourceId_Group, resourceId_Write;
+
+        resourceId_Title = getResourceId("#title");
+        resourceId_PalletFlag = getResourceId("#palletFlag");
+        resourceId_LayerFlag = getResourceId("#layerFlag");
+        resourceId_BoxFlag = getResourceId("#boxFlag");
+        resourceId_GroupFlag = getResourceId("#groupFlag");
+        resourceId_Pallet = getResourceId("#pallet");
+        resourceId_Layer = getResourceId("#layer");
+        resourceId_Box = getResourceId("#box");
+        resourceId_Group = getResourceId("#group");
+        resourceId_Write = getResourceId("#write");
+
+        resourceId_PalletFlag.shouldBe(visible, Duration.ofSeconds(25)); // MNV добавить ИД наименования формы и ожидать ее
+        //mobileSteps.verifyData (resourceId_Title, "New packing"); // MNV добавить проверку наименования формы
+        if (stolData.packingPalletFlag) {
+            mobileSteps.clickButton (resourceId_PalletFlag);
+            mobileSteps.inputData (resourceId_Pallet, stolData.packingDataPallet);
+        }
+        if (stolData.packingLayerFlag) {
+            mobileSteps.clickButton (resourceId_LayerFlag);
+            mobileSteps.inputData (resourceId_Layer, stolData.packingDataLayer);
+        }
+        if (stolData.packingBoxFlag) {
+            mobileSteps.clickButton (resourceId_BoxFlag);
+            mobileSteps.inputData (resourceId_Box, stolData.packingDataBox);
+        }
+        if (stolData.packingGroupFlag) {
+            mobileSteps.clickButton (resourceId_GroupFlag);
+            mobileSteps.inputData (resourceId_Group, stolData.packingDataGroup);
         }
         mobileSteps.clickButton (resourceId_Write);
     }

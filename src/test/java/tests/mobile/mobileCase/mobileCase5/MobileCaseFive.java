@@ -5,6 +5,7 @@ import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileSteps.MobileSteps;
+import tests.mobile.mobileUtils.MobileData;
 
 import static com.codeborne.selenide.Condition.*;
 
@@ -28,6 +29,8 @@ public class MobileCaseFive extends BaseMobileClass{
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
     MobileFormUnit mobileFormUnit = new MobileFormUnit();
     MobileFormPacking mobileFormPacking = new MobileFormPacking();
+    MobileData mobileData = new MobileData();
+    MobileFormReception mobileFormReception = new MobileFormReception();
 
     @Test
     public void processingReceptionTaskTest() throws Exception {
@@ -35,24 +38,37 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
+
+        MobileData stol41 = mobileData.dataReception("stol41");
+        MobileData stol42 = mobileData.dataReception("stol42");
+        MobileData stol43 = mobileData.dataReception("stol43");
+        MobileData stol44 = mobileData.dataReception("stol44");
+        MobileData stol45 = mobileData.dataReception("stol45");
+        MobileData stol46 = mobileData.dataReception("stol46");
+        MobileData stol47 = mobileData.dataReception("stol47");
+        MobileData stol48 = mobileData.dataReception("stol48");
+        MobileData stol49 = mobileData.dataReception("stol49");
+        MobileData stol50 = mobileData.dataReception("stol50");
     //Стол41
-        receptionCardPage.inputData("source", "IN.01");
-        receptionCardPage.inputData("product","00041");
-        mobileFormBatchProperties.input(true,true,"41Series01","31.12.2022");
+        mobileFormReception.completeTask(stol41);
 
-        receptionCardPage.clickButton("newSku");
-        mobileFormPacking.completeTask(true, true, true, true, "41", "5", "4", "3");
-        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
-        mobileFormUnit.completeTask("New unit","паллета", "41", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(2000);
-        receptionCardPage.clickButton("modalDialogOK");
-
-        receptionCardPage.verifyData("productInfo", "00041 41Series01 31.12.2022 Стол41 IN.01 Quantity 10 шт");    //Eleo - иногда падает на этом месте тест (Не успевает обновлятся форма)
-        receptionCardPage.verifyData("package", "41-5-4-3-1");
-        receptionCardPage.inputData("container","IN1");
-        receptionCardPage.inputData("qty","10");
-        receptionCardPage.clickButton("commit");
+//        receptionCardPage.inputData("source", "IN.01");
+//        receptionCardPage.inputData("product","00041");
+//        mobileFormBatchProperties.input(true,true,"41Series01","31.12.2022");
+//
+//        receptionCardPage.clickButton("newSku");
+//        mobileFormPacking.completeTask(true, true, true, true, "41", "5", "4", "3");
+//        mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
+//        mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
+//        mobileFormUnit.completeTask("New unit","паллета", "41", "0.1", "0.1", "0.1", "1");
+//        Thread.sleep(2000);
+//        receptionCardPage.clickButton("modalDialogOK");
+//
+//        receptionCardPage.verifyData("productInfo", "00041 41Series01 31.12.2022 Стол41 IN.01 Quantity 10 шт");    //Eleo - иногда падает на этом месте тест (Не успевает обновлятся форма)
+//        receptionCardPage.verifyData("package", "41-5-4-3-1");
+//        receptionCardPage.inputData("container","IN1");
+//        receptionCardPage.inputData("qty","10");
+//        receptionCardPage.clickButton("commit");
     //Стол42
         receptionCardPage.inputData("source", "IN.01");
         receptionCardPage.inputData("product","00042");

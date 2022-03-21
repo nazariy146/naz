@@ -13,9 +13,7 @@ import static tests.mobile.mobileUtils.ModalDialogs.clickSetOkYesButton;
 
 public class MobileCaseThree extends BaseMobileClass {
 
-    MobileSteps mobileSteps = new MobileSteps();
     AllTasksPage allTasksPage = new AllTasksPage();
-    ReceptionCardPage receptionCardPage = new ReceptionCardPage();
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
@@ -29,7 +27,6 @@ public class MobileCaseThree extends BaseMobileClass {
     MobileFormContainer mobileFormContainer = new MobileFormContainer();
     MobileFormAuthorization mobileFormAuthorization = new MobileFormAuthorization();
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
-    MobileFormUnit mobileFormUnit = new MobileFormUnit();
     MobileData mobileData = new MobileData();
     MobileFormReception mobileFormReception = new MobileFormReception();
 
@@ -48,7 +45,6 @@ public class MobileCaseThree extends BaseMobileClass {
         MobileData stol24_part1 = mobileData.dataReception("stol24_part1");
         MobileData stol24_part2 = mobileData.dataReception("stol24_part2");
         MobileData stol24_part3 = mobileData.dataReception("stol24_part3");
-        MobileData stol24 = mobileData.dataReception("stol24");
         MobileData stol25 = mobileData.dataReception("stol25");
         MobileData stol26 = mobileData.dataReception("stol26");
         MobileData stol27 = mobileData.dataReception("stol27");
@@ -114,7 +110,7 @@ public class MobileCaseThree extends BaseMobileClass {
         accommodationCardPage.inputData("destination","A.1.1.1.1");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("Location was changed. Continue?"));
         clickErrorDialogOkButton();
-        accommodationCardPage.inputData("destination","B.1.1.1.1");
+        accommodationCardPage.inputData("destination","A.1.1.1.21");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("Location was changed. Continue?"));
         clickSetOkYesButton();
 //        receptionCardPage.checkAmountAndPackaging("5.0", "2");MNV id поля надо правильно прописать
@@ -127,7 +123,7 @@ public class MobileCaseThree extends BaseMobileClass {
         getMessageModalDialog().shouldNotBe(visible);
     //Стол22
         accommodationCardPage.inputData("source","IN1");
-        accommodationCardPage.verifyData("productInfo", "00022 Стол22 IN.01 ➡ B.1.1.1.2 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00022 Стол22 IN.01 ➡ A.1.1.1.22 Quantity 10 шт");
         accommodationCardPage.inputData("product","2120021020000");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("Couldn't find the product by code: 2120021020000"));
         clickErrorDialogOkButton();
@@ -138,7 +134,7 @@ public class MobileCaseThree extends BaseMobileClass {
         clickErrorDialogOkButton();
         accommodationCardPage.inputData("product","2110022140000");
         accommodationCardPage.verifyData("qty","16.000");
-        accommodationCardPage.inputData("destination","B.1.1.1.2");
+        accommodationCardPage.inputData("destination","A.1.1.1.22");
         accommodationCardPage.clickButton("commit");
         getMessageModalDialog().shouldBe(visible).shouldHave(text("It is impossible to confirm16. Remaining 10"));
         clickErrorDialogOkButton();
@@ -148,59 +144,60 @@ public class MobileCaseThree extends BaseMobileClass {
         accommodationCardPage.clickButton("commit");
     //Стол23
         accommodationCardPage.inputData("source","IN1");
-        accommodationCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 IN.01 ➡ B.1.1.1.3 Quantity 5.5 шт");
+        accommodationCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 IN.01 ➡ A.1.1.1.23 Quantity 5.5 шт");
         accommodationCardPage.inputData("product","2110023055000");
-        accommodationCardPage.inputData("destination","B.1.1.1.3");
+        accommodationCardPage.inputData("destination","A.1.1.1.23");
         accommodationCardPage.clickButton("commit");
     //Стол23
-        accommodationCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 IN.01 ➡ B.1.1.1.3 Quantity 4.5 шт");
+        accommodationCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 IN.01 ➡ A.1.1.1.23 Quantity 4.5 шт");
         accommodationCardPage.inputData("product","2110023045000");
-        accommodationCardPage.inputData("destination","B.1.1.1.3");
+        accommodationCardPage.inputData("destination","A.1.1.1.23");
         accommodationCardPage.clickButton("commit");
     //Стол24
-        accommodationCardPage.verifyData("productInfo", "00024 24Series01 Стол24 IN.01 ➡ B.1.1.1.4 Quantity 2 шт");
+        accommodationCardPage.verifyData("productInfo", "00024 24Series01 Стол24 IN.01 ➡ A.1.1.1.24 Quantity 2 шт");
         accommodationCardPage.inputData("product","2110024020000");
-        accommodationCardPage.inputData("destination","B.1.1.1.4");
+        accommodationCardPage.inputData("destination","A.1.1.1.24");
         accommodationCardPage.clickButton("commit");
     //Стол24
-        accommodationCardPage.verifyData("productInfo", "00024 24Series02 Стол24 IN.01 ➡ B.1.1.1.4 Quantity 8 шт");
+        accommodationCardPage.inputData("source","IN1");
+        accommodationCardPage.verifyData("productInfo", "00024 24Series02 Стол24 IN.01 ➡ A.1.1.1.24 Quantity 8 шт");
         accommodationCardPage.inputData("product","2110024080000");
-        accommodationCardPage.inputData("destination","B.1.1.1.4");
+        accommodationCardPage.inputData("destination","A.1.1.1.24");
         accommodationCardPage.clickButton("commit");
     //Стол25
-        accommodationCardPage.verifyData("productInfo", "00025 Стол25(0.2) IN.01 ➡ B.1.1.1.5 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00025 Стол25(0.2) IN.01 ➡ A.1.1.1.25 Quantity 10 шт");
         accommodationCardPage.inputData("product","00025");
-        accommodationCardPage.inputData("destination","B.1.1.1.5");
+        accommodationCardPage.inputData("destination","A.1.1.1.25");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол26
-        accommodationCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) IN.01 ➡ B.1.1.1.6 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) IN.01 ➡ A.1.1.1.26 Quantity 10 шт");
         accommodationCardPage.inputData("product","00026");
-        accommodationCardPage.inputData("destination","B.1.1.1.6");
+        accommodationCardPage.inputData("destination","A.1.1.1.26");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол27
-        accommodationCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) IN.01 ➡ B.1.1.1.7 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) IN.01 ➡ A.1.1.1.27 Quantity 10 шт");
         accommodationCardPage.inputData("product","00027");
-        accommodationCardPage.inputData("destination","B.1.1.1.7");
+        accommodationCardPage.inputData("destination","A.1.1.1.27");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол28
-        accommodationCardPage.verifyData("productInfo", "00028 Стол28 IN.01 ➡ B.1.1.1.8 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00028 Стол28 IN.01 ➡ A.1.1.1.28 Quantity 10 шт");
         accommodationCardPage.inputData("product","00028");
-        accommodationCardPage.inputData("destination","B.1.1.1.8");
+        accommodationCardPage.inputData("destination","A.1.1.1.28");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол29
-        accommodationCardPage.verifyData("productInfo", "00029 29Series01 Стол29 IN.01 ➡ B.1.1.1.9 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00029 29Series01 Стол29 IN.01 ➡ A.1.1.1.29 Quantity 10 шт");
         accommodationCardPage.inputData("product","00029");
-        accommodationCardPage.inputData("destination","B.1.1.1.9");
+        accommodationCardPage.inputData("destination","A.1.1.1.29");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол30
-        accommodationCardPage.verifyData("productInfo", "00030 Стол30 IN.01 ➡ B.1.1.1.10 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00030 Стол30 IN.01 ➡ A.1.1.1.30 Quantity 10 шт");
         accommodationCardPage.inputData("product","00030");
-        accommodationCardPage.inputData("destination","B.1.1.1.10");
+        accommodationCardPage.inputData("destination","A.1.1.1.30");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
         }
@@ -213,63 +210,63 @@ public class MobileCaseThree extends BaseMobileClass {
     //Стол21
         findRestsPage.inputData("product", "00002102");
         findRestsPage.verifyData("productInfo", "00021 Стол21");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.1");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.21");
         findRestsPage.verifyData("qty", "10");
     //Стол22
         findRestsPage.inputData("product", "2110022020000");
         findRestsPage.verifyData("productInfo", "00022 Стол22");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.2");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.22");
         findRestsPage.verifyData("qty", "10");
     //Стол23
         findRestsPage.inputData("product", "2110023055000");
         findRestsPage.verifyData("productInfo", "00023 Стол23");
-        findRestsPage.verifyData("checkLocationString1", "B.1.1.1.3");
+        findRestsPage.verifyData("checkLocationString1", "A.1.1.1.23");
         findRestsPage.verifyData("shelfLifeInfoString1", "30.12.2022");
         findRestsPage.verifyData("qtyString1", "5.5");
-        findRestsPage.verifyData("checkLocationString2", "B.1.1.1.3");
+        findRestsPage.verifyData("checkLocationString2", "A.1.1.1.23");
         findRestsPage.verifyData("shelfLifeInfoString2", "31.12.2022");
         findRestsPage.verifyData("qtyString2", "4.5");
     //Стол24
         findRestsPage.inputData("product", "00024");
         findRestsPage.verifyData("productInfo", "00024 Стол24");
-        findRestsPage.verifyData("sourceInfo","B.1.1.1.4");
+        findRestsPage.verifyData("sourceInfo","A.1.1.1.24");
         findRestsPage.verifyData("shelfLifeInfoString1", "24Series01");
         findRestsPage.verifyData("qtyString1", "2");
-        findRestsPage.verifyData("checkLocationString2", "B.1.1.1.4");
+        findRestsPage.verifyData("checkLocationString2", "A.1.1.1.24");
         findRestsPage.verifyData("shelfLifeInfoString2", "24Series02");
         findRestsPage.verifyData("qtyString2", "8");
     //Стол25
         findRestsPage.inputData("product", "00025");
         findRestsPage.verifyData("productInfo", "00025 Стол25");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.5");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.25");
         findRestsPage.verifyData("qty", "10");
     //Стол26
         findRestsPage.inputData("product", "00026");
         findRestsPage.verifyData("productInfo", "00026 Стол26");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.6");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.26");
         //findRestsPage.verifyData("shelfLifeInfoString1", "26series01");
         findRestsPage.verifyData("qty", "10");
     //Стол27
         findRestsPage.inputData("product", "00027");
         findRestsPage.verifyData("productInfo", "00027 Стол27");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.7");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.27");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfoString1", "31.12.2022");
     //Стол28
         findRestsPage.inputData("product", "00028");
         findRestsPage.verifyData("productInfo", "00028 Стол28");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.8");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.28");
         findRestsPage.verifyData("qty", "10");
     //Стол29
         findRestsPage.inputData("product", "00029");
         findRestsPage.verifyData("productInfo", "00029 Стол29");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.9");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.29");
         //findRestsPage.verifyData("shelfLifeInfoString1", "29Series01");
         findRestsPage.verifyData("qty", "10");
     //Стол30
         findRestsPage.inputData("product", "00030");
         findRestsPage.verifyData("productInfo", "00030 Стол30");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.10");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.30");
         findRestsPage.verifyData("qty", "10");
     }
 
@@ -279,7 +276,7 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.getStringTasks(2).click();
     //Стол21
-        inventoryCardPage.inputData("source", "B.1.1.1.1");
+        inventoryCardPage.inputData("source", "A.1.1.1.21");
         inventoryCardPage.inputData("product", "00002102");
         inventoryCardPage.verifyData("productInfo", "00021 Стол21");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -289,7 +286,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол22
-        inventoryCardPage.inputData("source", "B.1.1.1.2");
+        inventoryCardPage.inputData("source", "A.1.1.1.22");
         inventoryCardPage.inputData("product", "2110022100000");
         inventoryCardPage.verifyData("productInfo", "00022 Стол22");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -299,7 +296,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("itemViewInfo", "00022 Стол22");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол23
-        inventoryCardPage.inputData("source", "B.1.1.1.3");
+        inventoryCardPage.inputData("source", "A.1.1.1.23");
         inventoryCardPage.inputData("product", "2110023055000");
         mobileFormBatchProperties.select(false,true,"","30.12.2022");
         inventoryCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23");
@@ -321,7 +318,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "4.5");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол24
-        inventoryCardPage.inputData("source", "B.1.1.1.4");
+        inventoryCardPage.inputData("source", "A.1.1.1.24");
         inventoryCardPage.inputData("product", "2110024020000");
         mobileFormBatchProperties.select(true, false,"24Series01","");
         inventoryCardPage.verifyData("productInfo", "00024 24Series01 Стол24");
@@ -332,7 +329,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
         inventoryCardPage.verifyData("qtyViewInfo", "2.0");
     //Стол24
-        inventoryCardPage.inputData("source", "B.1.1.1.4");
+        inventoryCardPage.inputData("source", "A.1.1.1.24");
         inventoryCardPage.inputData("product", "2110024080000");
         mobileFormBatchProperties.select(true, false,"24Series02","");
         inventoryCardPage.verifyData("productInfo", "00024 24Series02 Стол24");
@@ -344,7 +341,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "8.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол25
-        inventoryCardPage.inputData("source", "B.1.1.1.5");
+        inventoryCardPage.inputData("source", "A.1.1.1.25");
         inventoryCardPage.inputData("product", "00025");
         inventoryCardPage.verifyData("productInfo", "00025 Стол25");
         inventoryCardPage.inputData("palletWeight", "2");
@@ -357,7 +354,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол26
-        inventoryCardPage.inputData("source", "B.1.1.1.6");
+        inventoryCardPage.inputData("source", "A.1.1.1.26");
         inventoryCardPage.inputData("product", "00026");
         mobileFormBatchProperties.select(true, false,"26series01","");
         inventoryCardPage.verifyData("productInfo", "00026 26Series01 Стол26");
@@ -371,7 +368,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол27
-        inventoryCardPage.inputData("source", "B.1.1.1.7");
+        inventoryCardPage.inputData("source", "A.1.1.1.27");
         inventoryCardPage.inputData("product", "00027");
         mobileFormBatchProperties.select(false,true,"","31.12.2022");
         inventoryCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27");
@@ -385,7 +382,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол28
-        inventoryCardPage.inputData("source", "B.1.1.1.8");
+        inventoryCardPage.inputData("source", "A.1.1.1.28");
         inventoryCardPage.inputData("product", "00028");
         inventoryCardPage.verifyData("productInfo", "00028 Стол28");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -394,7 +391,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол29
-        inventoryCardPage.inputData("source", "B.1.1.1.9");
+        inventoryCardPage.inputData("source", "A.1.1.1.29");
         inventoryCardPage.inputData("product", "00029");
         mobileFormBatchProperties.select(true, false,"29series01","");
         inventoryCardPage.verifyData("productInfo", "00029 29Series01 Стол29");
@@ -405,7 +402,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол30
-        inventoryCardPage.inputData("source", "B.1.1.1.10");
+        inventoryCardPage.inputData("source", "A.1.1.1.30");
         inventoryCardPage.inputData("product", "00030");
         inventoryCardPage.verifyData("productInfo", "00030 Стол30");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -423,29 +420,29 @@ public class MobileCaseThree extends BaseMobileClass {
         //Стол21
         findRestsPage.inputData("product", "00002102");
         findRestsPage.verifyData("productInfo", "00021 Стол21");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.1");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.21");
         findRestsPage.verifyData("qty", "10");
         //Стол22
         findRestsPage.inputData("product", "2110022020000");
         findRestsPage.verifyData("productInfo", "00022 Стол22");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.2");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.22");
         findRestsPage.verifyData("qty", "10");
         //Стол23
         findRestsPage.inputData("product", "2110023055000");
         findRestsPage.verifyData("productInfo", "00023 Стол23");
-        findRestsPage.verifyData("checkLocationString1", "B.1.1.1.3");
+        findRestsPage.verifyData("checkLocationString1", "A.1.1.1.23");
         findRestsPage.verifyData("shelfLifeInfoString1", "30.12.2022");
         findRestsPage.verifyData("qtyString1", "5.5");
-        findRestsPage.verifyData("checkLocationString2", "B.1.1.1.3");
+        findRestsPage.verifyData("checkLocationString2", "A.1.1.1.23");
         findRestsPage.verifyData("shelfLifeInfoString2", "31.12.2022");
         findRestsPage.verifyData("qtyString2", "4.5");
         //Стол24
         findRestsPage.inputData("product", "00024");
         findRestsPage.verifyData("productInfo", "00024 Стол24");
-        findRestsPage.verifyData("sourceInfo","B.1.1.1.4");
+        findRestsPage.verifyData("sourceInfo","A.1.1.1.24");
         findRestsPage.verifyData("shelfLifeInfoString1", "24Series01");
         findRestsPage.verifyData("qtyString1", "2");
-        findRestsPage.verifyData("checkLocationString2", "B.1.1.1.4");
+        findRestsPage.verifyData("checkLocationString2", "A.1.1.1.24");
         findRestsPage.verifyData("shelfLifeInfoString2", "24Series02");
         findRestsPage.verifyData("qtyString2", "8");
         //Стол25

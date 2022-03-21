@@ -1,5 +1,6 @@
 package tests.mobile.mobileSteps;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,7 +27,7 @@ public class MobileSteps {
     }
 
     public void verifyData(SelenideElement resourceId, String data) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(25));
+        resourceId.shouldBe(visible, Duration.ofSeconds(50));
         resourceId.shouldHave(text(data));
     }
 
@@ -41,8 +42,8 @@ public class MobileSteps {
         resourceId.shouldBe(visible, Duration.ofSeconds(25));
         resourceId.click();
     }
-    public void selectData(SelenideElement table, String source) {
-        table.find(source).find(source).click();
+    public void selectData(ElementsCollection table, String source) {
+        table.find(exactText(source)).click();
     }
 
 //    MNV development

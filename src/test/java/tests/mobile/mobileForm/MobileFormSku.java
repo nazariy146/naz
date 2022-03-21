@@ -14,6 +14,8 @@ public class MobileFormSku {
         switch (field) {
             case "#title":
                 return $(By.id("com.abmcloud:id/alertTitle"));
+            case "#new":
+                return $(By.id("com.abmcloud:id/ib_add"));
             case "#write":
                 return $(By.id("android:id/button1"));
         }
@@ -21,12 +23,18 @@ public class MobileFormSku {
     }
 
     public void completeTask (MobileData stolData) {
-        SelenideElement resourceId_Title, resourceId_Write;
+        SelenideElement resourceId_Title, resourceId_New, resourceId_Write;
 
         resourceId_Title = getResourceId("#title");
+        resourceId_New = getResourceId("#new");
         resourceId_Write = getResourceId("#write");
 
         mobileSteps.verifyData(resourceId_Title, "SKU info");
-        mobileSteps.clickButton (resourceId_Write);
+        if (stolData.skuNew){
+            mobileSteps.clickButton (resourceId_New);
+        }
+        if(stolData.skuEdit){
+            mobileSteps.clickButton (resourceId_Write);
+        }
     }
 }

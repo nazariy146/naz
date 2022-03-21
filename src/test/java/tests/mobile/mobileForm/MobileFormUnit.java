@@ -70,7 +70,6 @@ public class MobileFormUnit {
         resourceId_Weight = getResourceId("#weight");
         resourceId_Write = getResourceId("#write");
 
-        resourceId_Title.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.verifyData (resourceId_Title, stolData.unitName);
         mobileSteps.verifyData (resourceId_Name, stolData.unitName);
         mobileSteps.verifyData (resourceId_Qty, stolData.unitQty);
