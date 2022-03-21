@@ -37,10 +37,10 @@ public class MobileFormSettings {
         resourceId_settings.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.mobileDriver(resourceId_settings);
         mobileSteps.clickButton(resourceId_settings);
-        mobileSteps.inputData(resourceId_connection, "http://dmz.abmretail.com:8080/wms_qa_mazv/hs/TSDExchange");
-        mobileSteps.inputData(resourceId_license, "wms_qa_mazv");
-//        mobileSteps.inputData(resourceId_connection, "http://dmz.abmretail.com:8080/wms_regress_mikn/hs/TSDExchange");
-//        mobileSteps.inputData(resourceId_license, "wms_regress_mikn");
+//        mobileSteps.inputData(resourceId_connection, "http://dmz.abmretail.com:8080/wms_qa_mazv/hs/TSDExchange");
+//        mobileSteps.inputData(resourceId_license, "wms_qa_mazv");
+        mobileSteps.inputData(resourceId_connection, "http://dmz.abmretail.com:8080/wms_regress_mikn/hs/TSDExchange");
+        mobileSteps.inputData(resourceId_license, "wms_regress_mikn");
         mobileSteps.clickButton(resourceId_save);
     }
 }
