@@ -301,7 +301,7 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormBatchProperties.select(false,true,"","30.12.2022");
         inventoryCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23");
         inventoryCardPage.selectData("quality", "Кондиция");
-        inventoryCardPage.verifyData("qty", "5.500");
+        inventoryCardPage.verifyData("qty", "5.5");
         inventoryCardPage.inputData("qty","5.5");
         inventoryCardPage.verifyData("itemViewInfo", "00023 30.12.2022 Стол23");
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
@@ -311,7 +311,7 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormBatchProperties.select(false,true,"","31.12.2022");
         inventoryCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23");
         inventoryCardPage.selectData("quality", "Кондиция");
-        inventoryCardPage.verifyData("qty", "4.500");
+        inventoryCardPage.verifyData("qty", "4.5");
         inventoryCardPage.inputData("qty","4.5");
         inventoryCardPage.verifyData("itemViewInfo", "00023 31.12.2022 Стол23");
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
@@ -323,7 +323,7 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormBatchProperties.select(true, false,"24Series01","");
         inventoryCardPage.verifyData("productInfo", "00024 24Series01 Стол24");
         inventoryCardPage.selectData("quality", "Кондиция");
-        inventoryCardPage.verifyData("qty", "2.000");
+        inventoryCardPage.verifyData("qty", "2");
         inventoryCardPage.inputData("qty","2");
         inventoryCardPage.verifyData("itemViewInfo", "00024 24Series01 Стол24");
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
@@ -334,7 +334,7 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormBatchProperties.select(true, false,"24Series02","");
         inventoryCardPage.verifyData("productInfo", "00024 24Series02 Стол24");
         inventoryCardPage.selectData("quality", "Кондиция");
-        inventoryCardPage.verifyData("qty", "8.000");
+        inventoryCardPage.verifyData("qty", "8");
         inventoryCardPage.inputData("qty","8");
         inventoryCardPage.verifyData("itemViewInfo", "00024 24Series02 Стол24");
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
@@ -417,17 +417,17 @@ public class MobileCaseThree extends BaseMobileClass {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.selectFindRestsMenu();
-        //Стол21
+    //Стол21
         findRestsPage.inputData("product", "00002102");
         findRestsPage.verifyData("productInfo", "00021 Стол21");
         findRestsPage.verifyData("sourceInfo", "A.1.1.1.21");
         findRestsPage.verifyData("qty", "10");
-        //Стол22
+    //Стол22
         findRestsPage.inputData("product", "2110022020000");
         findRestsPage.verifyData("productInfo", "00022 Стол22");
         findRestsPage.verifyData("sourceInfo", "A.1.1.1.22");
         findRestsPage.verifyData("qty", "10");
-        //Стол23
+    //Стол23
         findRestsPage.inputData("product", "2110023055000");
         findRestsPage.verifyData("productInfo", "00023 Стол23");
         findRestsPage.verifyData("checkLocationString1", "A.1.1.1.23");
@@ -436,7 +436,7 @@ public class MobileCaseThree extends BaseMobileClass {
         findRestsPage.verifyData("checkLocationString2", "A.1.1.1.23");
         findRestsPage.verifyData("shelfLifeInfoString2", "31.12.2022");
         findRestsPage.verifyData("qtyString2", "4.5");
-        //Стол24
+    //Стол24
         findRestsPage.inputData("product", "00024");
         findRestsPage.verifyData("productInfo", "00024 Стол24");
         findRestsPage.verifyData("sourceInfo","A.1.1.1.24");
@@ -445,38 +445,38 @@ public class MobileCaseThree extends BaseMobileClass {
         findRestsPage.verifyData("checkLocationString2", "A.1.1.1.24");
         findRestsPage.verifyData("shelfLifeInfoString2", "24Series02");
         findRestsPage.verifyData("qtyString2", "8");
-        //Стол25
+    //Стол25
         findRestsPage.inputData("product", "00025");
         findRestsPage.verifyData("productInfo", "00025 Стол25");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.5");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.25");
         findRestsPage.verifyData("qty", "10");
-        //Стол26
+    //Стол26
         findRestsPage.inputData("product", "00026");
         findRestsPage.verifyData("productInfo", "00026 Стол26");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.6");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.26");
         findRestsPage.verifyData("qty", "10");
         //findRestsPage.verifyData("seriesInfoString1", "26series01");
-        //Стол27
+    //Стол27
         findRestsPage.inputData("product", "00027");
         findRestsPage.verifyData("productInfo", "00027 Стол27");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.7");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.27");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfoString1", "31.12.2022");
-        //Стол28
+    //Стол28
         findRestsPage.inputData("product", "00028");
         findRestsPage.verifyData("productInfo", "00028 Стол28");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.8");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.28");
         findRestsPage.verifyData("qty", "10");
-        //Стол29
+    //Стол29
         findRestsPage.inputData("product", "00029");
         findRestsPage.verifyData("productInfo", "00029 Стол29");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.9");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.29");
         findRestsPage.verifyData("qty", "10");
         //findRestsPage.verifyData("seriesInfoString1", "29Series01");
-        //Стол30
+    //Стол30
         findRestsPage.inputData("product", "00030");
         findRestsPage.verifyData("productInfo", "00030 Стол30");
-        findRestsPage.verifyData("sourceInfo", "B.1.1.1.10");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.30");
         findRestsPage.verifyData("qty", "10");
     }
 
@@ -487,64 +487,64 @@ public class MobileCaseThree extends BaseMobileClass {
         allTasksPage.checkWorkType("Moving");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол21
-        relocationCardPage.verifyData("productInfo", "00021 Стол21 B.1.1.1.1 ➡ B.1.1.2.1 Quantity 10 уп. (5)");
-        relocationCardPage.inputData("source", "B.1.1.1.1");
+        relocationCardPage.verifyData("productInfo", "00021 Стол21 A.1.1.1.21 ➡ B.1.1.1.21 Quantity 10 уп. (5)");
+        relocationCardPage.inputData("source", "A.1.1.1.21");
         relocationCardPage.inputData("product", "00002102");
-        relocationCardPage.inputData("destination", "B.1.1.2.1");
+        relocationCardPage.inputData("destination", "B.1.1.1.21");
         relocationCardPage.inputData("qty", "2");
         relocationCardPage.verifyData("unitAmount", "5.0");
         relocationCardPage.verifyData("unitPackaging", "2");
         relocationCardPage.clickButton("commit");
     //Стол22
-        relocationCardPage.verifyData("productInfo", "00022 Стол22 B.1.1.1.2 ➡ B.1.1.2.2 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.2");
+        relocationCardPage.verifyData("productInfo", "00022 Стол22 A.1.1.1.22 ➡ B.1.1.1.22 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.22");
         relocationCardPage.inputData("product", "2110022100000");
-        relocationCardPage.inputData("destination", "B.1.1.2.2");
+        relocationCardPage.inputData("destination", "B.1.1.1.22");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол23
-        relocationCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 B.1.1.1.3 ➡ B.1.1.2.3 Quantity 5.5 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.3");
+        relocationCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 A.1.1.1.23 ➡ B.1.1.1.23 Quantity 5.5 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.23");
         relocationCardPage.inputData("product", "2110023055000");
-        relocationCardPage.inputData("destination", "B.1.1.2.3");
+        relocationCardPage.inputData("destination", "B.1.1.1.23");
         relocationCardPage.inputData("qty", "5.5");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "5.5");
         relocationCardPage.clickButton("commit");
     //Стол23
-        relocationCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 B.1.1.1.3 ➡ B.1.1.2.3 Quantity 4.5 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.3");
+        relocationCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 A.1.1.1.23 ➡ B.1.1.1.23 Quantity 4.5 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.23");
         relocationCardPage.inputData("product", "2110023045000");
-        relocationCardPage.inputData("destination", "B.1.1.2.3");
+        relocationCardPage.inputData("destination", "B.1.1.1.23");
         relocationCardPage.inputData("qty", "4.5");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "4.5");
         relocationCardPage.clickButton("commit");
     //Стол24
-        relocationCardPage.verifyData("productInfo", "00024 24Series01 Стол24 B.1.1.1.4 ➡ B.1.1.2.4 Quantity 2 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.4");
+        relocationCardPage.verifyData("productInfo", "00024 24Series01 Стол24 A.1.1.1.24 ➡ B.1.1.1.24 Quantity 2 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.24");
         relocationCardPage.inputData("product", "2110024020000");
-        relocationCardPage.inputData("destination", "B.1.1.2.4");
+        relocationCardPage.inputData("destination", "B.1.1.1.24");
         relocationCardPage.inputData("qty", "2");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "2");
         relocationCardPage.clickButton("commit");
     //Стол24
-        relocationCardPage.verifyData("productInfo", "00024 24Series02 Стол24 B.1.1.1.4 ➡ B.1.1.2.4 Quantity 8 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.4");
+        relocationCardPage.verifyData("productInfo", "00024 24Series02 Стол24 A.1.1.1.24 ➡ B.1.1.1.24 Quantity 8 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.24");
         relocationCardPage.inputData("product", "2110024080000");
-        relocationCardPage.inputData("destination", "B.1.1.2.4");
+        relocationCardPage.inputData("destination", "B.1.1.1.24");
         relocationCardPage.inputData("qty", "8");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "8");
         relocationCardPage.clickButton("commit");
     //Стол25
-        relocationCardPage.verifyData("productInfo", "00025 Стол25(0.2) B.1.1.1.5 ➡ B.1.1.2.5 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.5");
+        relocationCardPage.verifyData("productInfo", "00025 Стол25(0.2) A.1.1.1.25 ➡ B.1.1.1.25 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.25");
         relocationCardPage.inputData("product", "00025");
-        relocationCardPage.inputData("destination", "B.1.1.2.5");
+        relocationCardPage.inputData("destination", "B.1.1.1.25");
         relocationCardPage.inputData("qty", "10");//TODO не учитывается вес тары
         relocationCardPage.inputData("tareQty", "5");
         relocationCardPage.inputData("tareWeight", "0.2");
@@ -552,10 +552,10 @@ public class MobileCaseThree extends BaseMobileClass {
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол26
-        relocationCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) B.1.1.1.6 ➡ B.1.1.2.6 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.6");
+        relocationCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) A.1.1.1.26 ➡ B.1.1.1.26 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.26");
         relocationCardPage.inputData("product", "00026");
-        relocationCardPage.inputData("destination", "B.1.1.2.6");
+        relocationCardPage.inputData("destination", "B.1.1.1.26");
         relocationCardPage.inputData("qty", "10");//TODO не учитывается вес тары
         relocationCardPage.inputData("tareQty", "5");
         relocationCardPage.inputData("tareWeight", "0.2");
@@ -563,10 +563,10 @@ public class MobileCaseThree extends BaseMobileClass {
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол27
-        relocationCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) B.1.1.1.7 ➡ B.1.1.2.7 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.7");
+        relocationCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) A.1.1.1.27 ➡ B.1.1.1.27 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.27");
         relocationCardPage.inputData("product", "00027");
-        relocationCardPage.inputData("destination", "B.1.1.2.7");
+        relocationCardPage.inputData("destination", "B.1.1.1.27");
         relocationCardPage.inputData("qty", "10");//TODO не учитывается вес тары
         relocationCardPage.inputData("tareQty", "5");
         relocationCardPage.inputData("tareWeight", "0.2");
@@ -574,28 +574,28 @@ public class MobileCaseThree extends BaseMobileClass {
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол28
-        relocationCardPage.verifyData("productInfo", "00028 Стол28 B.1.1.1.8 ➡ B.1.1.2.8 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.8");
+        relocationCardPage.verifyData("productInfo", "00028 Стол28 A.1.1.1.28 ➡ B.1.1.1.28 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.28");
         relocationCardPage.inputData("product", "00028");
-        relocationCardPage.inputData("destination", "B.1.1.2.8");
+        relocationCardPage.inputData("destination", "B.1.1.1.28");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол29
-        relocationCardPage.verifyData("productInfo", "00029 29Series01 Стол29 B.1.1.1.9 ➡ B.1.1.2.9 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.9");
+        relocationCardPage.verifyData("productInfo", "00029 29Series01 Стол29 A.1.1.1.29 ➡ B.1.1.1.29 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.29");
         relocationCardPage.inputData("product", "00029");
-        relocationCardPage.inputData("destination", "B.1.1.2.9");
+        relocationCardPage.inputData("destination", "B.1.1.1.29");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол30
-        relocationCardPage.verifyData("productInfo", "00030 Стол30 B.1.1.1.10 ➡ B.1.1.2.10 Quantity 10 шт");
-        relocationCardPage.inputData("source", "B.1.1.1.10");
+        relocationCardPage.verifyData("productInfo", "00030 Стол30 A.1.1.1.30 ➡ B.1.1.1.30 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.30");
         relocationCardPage.inputData("product", "00030");
-        relocationCardPage.inputData("destination", "B.1.1.2.10");
+        relocationCardPage.inputData("destination", "B.1.1.1.30");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
@@ -609,134 +609,133 @@ public class MobileCaseThree extends BaseMobileClass {
         relocationTSDCardPage.clickButton("rightMenu");
         relocationTSDCardPage.clickButton("relocation");
     //Стол21
-        relocationTSDCardPage.inputData("source", "B.1.1.2.1");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.21");
         relocationTSDCardPage.inputData("product", "00002102");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.1 ➡ 00021 Стол21");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.21 ➡ 00021 Стол21");
         relocationTSDCardPage.inputData("qty", "2");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.1 ➡ 00021 Стол21 Quantity 2");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.1");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.1 ➡ B.1.1.3.1 00021 Стол21 Quantity 2");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.21 ➡ 00021 Стол21 Quantity 2");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.21");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.21 ➡ C.1.1.1.21 00021 Стол21 Quantity 2");
         relocationTSDCardPage.clickButton("moving");
     //Стол22
-        relocationTSDCardPage.inputData("source", "B.1.1.2.2");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.22");
         relocationTSDCardPage.inputData("product", "2110022100000");//TODO не распознает весовой ШК
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.2 ➡ 00022 Стол22");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.22 ➡ 00022 Стол22");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.2");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.2 ➡ B.1.1.3.2 00022 Стол22 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.22");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.22 ➡ C.1.1.1.22 00022 Стол22 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол23
-        relocationTSDCardPage.inputData("source", "B.1.1.2.3");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.23");
         relocationTSDCardPage.inputData("product", "2110023055000");//TODO не распознает весовой ШК
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("shelfLife", "30.12.2022");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ 00023 30.12.2022 Стол23");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ 00023 30.12.2022 Стол23");
         relocationTSDCardPage.inputData("qty", "5.5");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ 00023 30.12.2022 Стол23 Quantity 5.5");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.3");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ B.1.1.3.3 00023 30.12.2022 Стол23 Quantity 5.5");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ 00023 30.12.2022 Стол23 Quantity 5.5");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.23");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ C.1.1.1.23 00023 30.12.2022 Стол23 Quantity 5.5");
         relocationTSDCardPage.clickButton("moving");
     //Стол23
-        relocationTSDCardPage.inputData("source", "B.1.1.2.3");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.23");
         relocationTSDCardPage.inputData("product", "2110023045000");//TODO не распознает весовой ШК
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("shelfLife", "31.12.2022");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ 00023 31.12.2022 Стол23");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ 00023 31.12.2022 Стол23");
         relocationTSDCardPage.inputData("qty", "4.5");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ 00023 31.12.2022 Стол23 Quantity 4.5");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.3");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.3 ➡ B.1.1.3.3 00023 31.12.2022 Стол23 Quantity 4.5");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ 00023 31.12.2022 Стол23 Quantity 4.5");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.23");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.23 ➡ C.1.1.1.23 00023 31.12.2022 Стол23 Quantity 4.5");
         relocationTSDCardPage.clickButton("moving");
     //Стол24
-        relocationTSDCardPage.inputData("source", "B.1.1.2.4");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.24");
         relocationTSDCardPage.inputData("product", "2110024080000");//TODO не распознает весовой ШК
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("series", "24Series02");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ 00024 24Series02 Стол24");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ 00024 24Series02 Стол24");
         relocationTSDCardPage.inputData("qty", "8");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ 00024 24Series02 Стол24 Quantity 8");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.4");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ B.1.1.3.4 00024 24Series02 Стол24 Quantity 8");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ 00024 24Series02 Стол24 Quantity 8");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.24");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ C.1.1.1.24 00024 24Series02 Стол24 Quantity 8");
         relocationTSDCardPage.clickButton("moving");
     //Стол24
-        relocationTSDCardPage.inputData("source", "B.1.1.2.4");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.24");
         relocationTSDCardPage.inputData("product", "2110024020000");//TODO не распознает весовой ШК
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("series", "24Series01");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ 00024 24Series01 Стол24");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ 00024 24Series01 Стол24");
         relocationTSDCardPage.inputData("qty", "2");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ 00024 24Series01 Стол24 Quantity 2");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.4");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.4 ➡ B.1.1.3.4 00024 24Series01 Стол24 Quantity 2");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ 00024 24Series01 Стол24 Quantity 2");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.24");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.24 ➡ C.1.1.1.24 00024 24Series01 Стол24 Quantity 2");
         relocationTSDCardPage.clickButton("moving");
     //Стол25
-        relocationTSDCardPage.inputData("source", "B.1.1.2.5");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.25");
         relocationTSDCardPage.inputData("product", "00025");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.5 ➡ 00025 Стол25");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.25 ➡ 00025 Стол25");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.5 ➡ 00025 Стол25 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.5");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.5 ➡ B.1.1.3.5 00025 Стол25 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.25 ➡ 00025 Стол25 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.25");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.25 ➡ C.1.1.1.25 00025 Стол25 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол26
-        relocationTSDCardPage.inputData("source", "B.1.1.2.6");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.26");
         relocationTSDCardPage.inputData("product", "00026");
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("series", "26series01");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.6 ➡ 00026 26series01 Стол26");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.26 ➡ 00026 26series01 Стол26");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.6 ➡ 00026 26series01 Стол26 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.6");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.6 ➡ B.1.1.3.6 00026 26series01 Стол26 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.26 ➡ 00026 26series01 Стол26 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.26");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.26 ➡ C.1.1.1.26 00026 26series01 Стол26 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол27
-        relocationTSDCardPage.inputData("source", "B.1.1.2.7");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.27");
         relocationTSDCardPage.inputData("product", "00027");
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("shelfLife", "31.12.2022");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.7 ➡ 00027 31.12.2022 Стол27");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.27 ➡ 00027 31.12.2022 Стол27");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.7 ➡ 00027 31.12.2022 Стол27 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.7");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.7 ➡ B.1.1.3.7 00027 31.12.2022 Стол27 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.27 ➡ 00027 31.12.2022 Стол27 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.27");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.27 ➡ C.1.1.1.27 00027 31.12.2022 Стол27 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол28
-        relocationTSDCardPage.inputData("source", "B.1.1.2.8");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.28");
         relocationTSDCardPage.inputData("product", "00028");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.8 ➡ 00028 Стол28");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.28 ➡ 00028 Стол28");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.8 ➡ 00028 Стол28 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.8");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.8 ➡ B.1.1.3.8 00028 Стол28 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.28 ➡ 00028 Стол28 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.28");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.28 ➡ C.1.1.1.28 00028 Стол28 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол29
-        relocationTSDCardPage.inputData("source", "B.1.1.2.9");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.29");
         relocationTSDCardPage.inputData("product", "00029");
         relocationTSDCardPage.verifyData("modalDialogTitle", "Batch properties");
         relocationTSDCardPage.selectData("series", "29Series01");
         relocationTSDCardPage.clickButton("modalDialogOK");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.9 ➡ 00029 29Series01 Стол29");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.29 ➡ 00029 29Series01 Стол29");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.9 ➡ 00029 29Series01 Стол29 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.9");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.9 ➡ B.1.1.3.9 00029 29Series01 Стол29 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.29 ➡ 00029 29Series01 Стол29 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.29");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.29 ➡ C.1.1.1.29 00029 29Series01 Стол29 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол30
-        relocationTSDCardPage.inputData("source", "B.1.1.2.10");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.30");
         relocationTSDCardPage.inputData("product", "00030");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.10 ➡ 00030 Стол30");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.30 ➡ 00030 Стол30");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.10 ➡ 00030 Стол30 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "B.1.1.3.10");
-        relocationTSDCardPage.verifyData("productInfo", "B.1.1.2.10 ➡ B.1.1.3.10 00030 Стол30 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.30 ➡ 00030 Стол30 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.30");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.30 ➡ C.1.1.1.30 00030 Стол30 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
-        Thread.sleep(30000);
     }
 
     @Test (priority = 7, dependsOnMethods = "processingAccommodationTaskTest")
@@ -746,88 +745,88 @@ public class MobileCaseThree extends BaseMobileClass {
         allTasksPage.checkWorkType("Selection");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол21
-        selectionCardPage.verifyData("productInfo", "00021 Стол21 B.1.1.3.1 ➡ KT1.01.01.01.01 Quantity 10 уп. (5)");
-        selectionCardPage.inputData("source", "B.1.1.3.1");
+        selectionCardPage.verifyData("productInfo", "00021 Стол21 C.1.1.1.21 ➡ KT1.01.01.01.01 Quantity 10 уп. (5)");
+        selectionCardPage.inputData("source", "C.1.1.1.21");
         selectionCardPage.inputData("product", "00021");
         selectionCardPage.inputData("destination", "OUT121");
         selectionCardPage.inputData("qty", "2");
         selectionCardPage.clickButton("commit");
     //Стол22
-        selectionCardPage.verifyData("productInfo", "00022 Стол22 B.1.1.3.2 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.2");
+        selectionCardPage.verifyData("productInfo", "00022 Стол22 C.1.1.1.22 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.22");
         selectionCardPage.inputData("product", "2110022100000");
         selectionCardPage.inputData("destination", "OUT122");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол23
-        selectionCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 B.1.1.3.3 ➡ KT1.01.01.01.01 Quantity 5.5 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.3");
+        selectionCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 C.1.1.1.23 ➡ KT1.01.01.01.01 Quantity 5.5 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.23");
         selectionCardPage.inputData("product", "2110023055000");
         selectionCardPage.inputData("destination", "OUT123");
         selectionCardPage.inputData("qty", "5.5");
         selectionCardPage.clickButton("commit");
     //Стол23
-        selectionCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 B.1.1.3.3 ➡ KT1.01.01.01.01 Quantity 4.5 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.3");
+        selectionCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 C.1.1.1.23 ➡ KT1.01.01.01.01 Quantity 4.5 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.23");
         selectionCardPage.inputData("product", "2110023045000");
         selectionCardPage.inputData("destination", "OUT123");
         selectionCardPage.inputData("qty", "4.5");
         selectionCardPage.clickButton("commit");
     //Стол24
-        selectionCardPage.verifyData("productInfo", "00024 24Series01 Стол24 B.1.1.3.4 ➡ KT1.01.01.01.01 Quantity 2 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.4");
+        selectionCardPage.verifyData("productInfo", "00024 24Series01 Стол24 C.1.1.1.24 ➡ KT1.01.01.01.01 Quantity 2 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.24");
         selectionCardPage.inputData("product", "2110024020000");
         selectionCardPage.inputData("destination", "OUT124");
         selectionCardPage.inputData("qty", "2");
         selectionCardPage.clickButton("commit");
     //Стол24
-        selectionCardPage.verifyData("productInfo", "00024 24Series02 Стол24 B.1.1.3.4 ➡ KT1.01.01.01.01 Quantity 8 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.4");
+        selectionCardPage.verifyData("productInfo", "00024 24Series02 Стол24 C.1.1.1.24 ➡ KT1.01.01.01.01 Quantity 8 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.24");
         selectionCardPage.inputData("product", "2110024080000");
         selectionCardPage.inputData("destination", "OUT124");
         selectionCardPage.inputData("qty", "8");
         selectionCardPage.clickButton("commit");
     //Стол25
-        selectionCardPage.verifyData("productInfo", "00025 Стол25(0.2) B.1.1.3.5 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.5");
+        selectionCardPage.verifyData("productInfo", "00025 Стол25(0.2) C.1.1.1.25 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.25");
         selectionCardPage.inputData("product", "00025");
         selectionCardPage.inputData("destination", "OUT125");
         selectionCardPage.inputData("qty", "12");
         selectionCardPage.inputData("tareQty", "10");
         selectionCardPage.clickButton("commit");
     //Стол26
-        selectionCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) B.1.1.3.6 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.6");
+        selectionCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) C.1.1.1.26 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.26");
         selectionCardPage.inputData("product", "00026");
         selectionCardPage.inputData("destination", "OUT126");
         selectionCardPage.inputData("qty", "12");
         selectionCardPage.inputData("tareQty", "10");
         selectionCardPage.clickButton("commit");
     //Стол27
-        selectionCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) B.1.1.3.7 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.7");
+        selectionCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) C.1.1.1.27 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.27");
         selectionCardPage.inputData("product", "00027");
         selectionCardPage.inputData("destination", "OUT127");
         selectionCardPage.inputData("qty", "12");
         selectionCardPage.inputData("tareQty", "10");
         selectionCardPage.clickButton("commit");
     //Стол28
-        selectionCardPage.verifyData("productInfo", "00028 Стол28 B.1.1.3.8 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.8");
+        selectionCardPage.verifyData("productInfo", "00028 Стол28 C.1.1.1.28 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.28");
         selectionCardPage.inputData("product", "00028");
         selectionCardPage.inputData("destination", "OUT128");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол29
-        selectionCardPage.verifyData("productInfo", "00029 29Series01 Стол29 B.1.1.3.9 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.9");
+        selectionCardPage.verifyData("productInfo", "00029 29Series01 Стол29 C.1.1.1.29 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.29");
         selectionCardPage.inputData("product", "00029");
         selectionCardPage.inputData("destination", "OUT129");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол30
-        selectionCardPage.verifyData("productInfo", "00030 Стол30 B.1.1.3.10 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "B.1.1.3.10");
+        selectionCardPage.verifyData("productInfo", "00030 Стол30 C.1.1.1.30 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.30");
         selectionCardPage.inputData("product", "00030");
         selectionCardPage.inputData("destination", "OUT130");
         selectionCardPage.inputData("qty", "10");
@@ -998,18 +997,16 @@ public class MobileCaseThree extends BaseMobileClass {
         allTasksPage.getWorkTypeTasksQuantity().click();
 
         packagingCardPage.inputData("#container", "KT1.01.01.01.01");
-        /*                                                                                                    /Eleo - Падение теста - ролблема скорее всего с xpath списка таб части
-        packagingCardPage.checkCellProductInfoInRow2(1, "OUT121", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(2, "OUT122", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(3, "OUT123", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(4, "OUT124", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(5, "OUT125", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(6, "OUT126", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(7, "OUT127", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(8, "OUT128", "10", "0.1", "0.1", "1", "1");
-        packagingCardPage.checkCellProductInfoInRow2(9, "OUT129", "10", "0.1", "0.1", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(1, "OUT121", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(2, "OUT122", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(3, "OUT123", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(4, "OUT124", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(5, "OUT125", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(6, "OUT126", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(7, "OUT127", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(8, "OUT128", "10", "0.1", "10", "1", "1");
+        packagingCardPage.checkCellProductInfoInRow2(9, "OUT129", "10", "0.1", "10", "1", "1");
         packagingCardPage.checkCellProductInfoInRow2(10, "OUT130", "10", "0.0002", "4", "1", "1");
-         */
         packagingCardPage.clickButton("#createCargo");
         packagingCardPage.verifyData("#modalMessage", "Cargo slots will be created. Continue?");
         packagingCardPage.clickButton("#modalOk");
