@@ -36,7 +36,5 @@ public class MobileFormContainer {
         mobileSteps.inputData(resourceId_container, container);
         mobileSteps.inputData(resourceId_destination, destination);
         mobileSteps.clickButton(resourceId_commit);
-
-
     }
 }

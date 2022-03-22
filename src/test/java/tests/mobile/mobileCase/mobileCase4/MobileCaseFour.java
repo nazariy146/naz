@@ -73,73 +73,73 @@ public class MobileCaseFour extends BaseMobileClass {
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол31
-        accommodationCardPage.verifyData("productInfo", "00031 Стол31 IN.01 ➡ C.1.1.1.1 Quantity 10 уп. (5)");
+        accommodationCardPage.verifyData("productInfo", "00031 Стол31 IN.01 ➡ A.1.1.1.31 Quantity 10 уп. (5)");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","31FRAGSN31Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.1");
+        accommodationCardPage.inputData("destination","A.1.1.1.31");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол32
-        accommodationCardPage.verifyData("productInfo", "00032 32series01 Стол32 IN.01 ➡ C.1.1.1.2 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00032 32series01 Стол32 IN.01 ➡ A.1.1.1.32 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","32FRAGSN32Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.2");
+        accommodationCardPage.inputData("destination","A.1.1.1.32");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол33
-        accommodationCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 IN.01 ➡ C.1.1.1.3 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 IN.01 ➡ A.1.1.1.33 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","33FRAGSN33Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.3");
+        accommodationCardPage.inputData("destination","A.1.1.1.33");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол34
-        accommodationCardPage.verifyData("productInfo", "00034 34series01 31.12.2022 Стол34 IN.01 ➡ C.1.1.1.4 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00034 34series01 31.12.2022 Стол34 IN.01 ➡ A.1.1.1.34 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","34FRAGSN34Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.4");
+        accommodationCardPage.inputData("destination","A.1.1.1.34");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол35
-        accommodationCardPage.verifyData("productInfo", "00035 Стол35 IN.01 ➡ C.1.1.1.5 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00035 Стол35 IN.01 ➡ A.1.1.1.35 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","35FRAGBC35Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.5");
+        accommodationCardPage.inputData("destination","A.1.1.1.35");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол36
-        accommodationCardPage.verifyData("productInfo", "00036 36series01 Стол36 IN.01 ➡ C.1.1.1.6 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00036 36series01 Стол36 IN.01 ➡ A.1.1.1.36 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","36FRAGBC36Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.6");
+        accommodationCardPage.inputData("destination","A.1.1.1.36");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол37
-        accommodationCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 IN.01 ➡ C.1.1.1.7 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 IN.01 ➡ A.1.1.1.37 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","37FRAGBC37Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.7");
+        accommodationCardPage.inputData("destination","A.1.1.1.37");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол38
-        accommodationCardPage.verifyData("productInfo", "00038 38series01 31.12.2022 Стол38 IN.01 ➡ C.1.1.1.8 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00038 38series01 31.12.2022 Стол38 IN.01 ➡ A.1.1.1.38 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","38FRAGBC38Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.8");
+        accommodationCardPage.inputData("destination","A.1.1.1.38");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол39
-        accommodationCardPage.verifyData("productInfo", "00039 39series01 31.12.2022 Стол39 IN.01 ➡ C.1.1.1.9 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00039 39series01 31.12.2022 Стол39 IN.01 ➡ A.1.1.1.39 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","39FRAGSN39Series013112202200");
-        accommodationCardPage.inputData("destination","C.1.1.1.9");
+        accommodationCardPage.inputData("destination","A.1.1.1.39");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     //Стол40
-        accommodationCardPage.verifyData("productInfo", "00040 40series01 31.12.2022 Стол40 IN.01 ➡ C.1.1.1.10 Quantity 10 шт");
+        accommodationCardPage.verifyData("productInfo", "00040 40series01 31.12.2022 Стол40 IN.01 ➡ A.1.1.1.40 Quantity 10 шт");
         accommodationCardPage.inputData("source","IN1");
         accommodationCardPage.inputData("product","40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");//MNV лучше сканировать QR
-        accommodationCardPage.inputData("destination","C.1.1.1.10");
+        accommodationCardPage.inputData("destination","A.1.1.1.40");
         accommodationCardPage.inputData("qty","10");
         accommodationCardPage.clickButton("commit");
     }
@@ -152,62 +152,62 @@ public class MobileCaseFour extends BaseMobileClass {
     //Стол31
         findRestsPage.inputData("product", "31FRAGSN31Series013112202200");
         findRestsPage.verifyData("productInfo", "00031 Стол31");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.1");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.31");
         findRestsPage.verifyData("qty", "10");
     //Стол32
         findRestsPage.inputData("product", "32FRAGSN32Series013112202200");
         findRestsPage.verifyData("productInfo", "00032 Стол32");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.2");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.32");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "32Series01");
     //Стол33
         findRestsPage.inputData("product", "33FRAGSN33Series013112202200");
         findRestsPage.verifyData("productInfo", "00033 Стол33");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.3");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.33");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол34
         findRestsPage.inputData("product", "34FRAGSN34Series013112202200");
         findRestsPage.verifyData("productInfo", "00034 Стол34");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.4");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.34");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "34Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол35
         findRestsPage.inputData("product", "35FRAGBC35Series013112202200");
         findRestsPage.verifyData("productInfo", "00035 Стол35");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.5");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.35");
         findRestsPage.verifyData("qty", "10");
     //Стол36
         findRestsPage.inputData("product", "36FRAGBC36Series013112202200");
         findRestsPage.verifyData("productInfo", "00036 Стол36");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.6");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.36");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "36Series01");
     //Стол37
         findRestsPage.inputData("product", "37FRAGBC37Series013112202200");
         findRestsPage.verifyData("productInfo", "00037 Стол37");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.7");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.37");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол38
         findRestsPage.inputData("product", "38FRAGBC38Series013112202200");
         findRestsPage.verifyData("productInfo", "00038 Стол38");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.8");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.38");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "38Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол39
         findRestsPage.inputData("product", "39FRAGSN39Series013112202200");
         findRestsPage.verifyData("productInfo", "00039 Стол39");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.9");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.39");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "39Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол40
         findRestsPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
         findRestsPage.verifyData("productInfo", "00040 Стол40");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.10");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.40");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "40Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
@@ -219,7 +219,7 @@ public class MobileCaseFour extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.getStringTasks(2).click();
     //Стол 31
-        inventoryCardPage.inputData("source", "C.1.1.1.1");
+        inventoryCardPage.inputData("source", "A.1.1.1.31");
         inventoryCardPage.inputData("product", "31FRAGSN31Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00031 Стол31"); MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00031 31Series01 2022-12-31T00:00:00 Стол31"); //MNV TODO bag серия и СГ не должны быть в описании по номенклатуре не ведется учет
@@ -229,7 +229,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 32
-        inventoryCardPage.inputData("source", "C.1.1.1.2");
+        inventoryCardPage.inputData("source", "A.1.1.1.32");
         inventoryCardPage.inputData("product", "32FRAGSN32Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00032 32Series01 Стол32"); MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00032 32Series01 2022-12-31T00:00:00 Стол32"); //MNV TODO bag СГ не должен быть в описании по номенклатуре не ведется учет
@@ -239,7 +239,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 33
-        inventoryCardPage.inputData("source", "C.1.1.1.3");
+        inventoryCardPage.inputData("source", "A.1.1.1.33");
         inventoryCardPage.inputData("product", "33FRAGSN33Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00033 2022-12-31T00:00:00 Стол33"); MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00033 33Series01 2022-12-31T00:00:00 Стол33");//MNV TODO bag Серия не должена быть в описании по номенклатуре не ведется учет
@@ -249,7 +249,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 34
-        inventoryCardPage.inputData("source", "C.1.1.1.4");
+        inventoryCardPage.inputData("source", "A.1.1.1.34");
         inventoryCardPage.inputData("product", "34FRAGSN34Series013112202200");
         inventoryCardPage.verifyData("productInfo", "00034 34Series01 2022-12-31T00:00:00 Стол34");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -258,7 +258,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 35
-        inventoryCardPage.inputData("source", "C.1.1.1.5");
+        inventoryCardPage.inputData("source", "A.1.1.1.35");
         inventoryCardPage.inputData("product", "35FRAGBC35Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00035 Стол35");MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00035 35Series01 2022-12-31T00:00:00 Стол35");//MNV TODO bag Серия и СГ не должена быть в описании по номенклатуре не ведется учет
@@ -268,7 +268,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 36
-        inventoryCardPage.inputData("source", "C.1.1.1.6");
+        inventoryCardPage.inputData("source", "A.1.1.1.36");
         inventoryCardPage.inputData("product", "36FRAGBC36Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00036 36Series01 Стол36"); MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00036 36Series01 2022-12-31T00:00:00 Стол36"); //MNV TODO bag Серия и СГ не должена быть в описании по номенклатуре не ведется учет
@@ -278,7 +278,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 37
-        inventoryCardPage.inputData("source", "C.1.1.1.7");
+        inventoryCardPage.inputData("source", "A.1.1.1.37");
         inventoryCardPage.inputData("product", "37FRAGBC37Series013112202200");
         //inventoryCardPage.verifyData("productInfo", "00037 2022-12-31T00:00:00 Стол37"); MNV TODO правильно
         inventoryCardPage.verifyData("productInfo", "00037 37Series01 2022-12-31T00:00:00 Стол37"); //MNV TODO bag Серия не должена быть в описании по номенклатуре не ведется учет
@@ -288,7 +288,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 38
-        inventoryCardPage.inputData("source", "C.1.1.1.8");
+        inventoryCardPage.inputData("source", "A.1.1.1.38");
         inventoryCardPage.inputData("product", "38FRAGBC38Series013112202200");
         inventoryCardPage.verifyData("productInfo", "00038 38Series01 2022-12-31T00:00:00 Стол38");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -297,7 +297,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 39
-        inventoryCardPage.inputData("source", "C.1.1.1.9");
+        inventoryCardPage.inputData("source", "A.1.1.1.39");
         inventoryCardPage.inputData("product", "39FRAGSN39Series01311220220001");
         inventoryCardPage.verifyData("productInfo", "00039 39Series01 2022-12-31T00:00:00 Стол39");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -306,7 +306,7 @@ public class MobileCaseFour extends BaseMobileClass {
         inventoryCardPage.verifyData("qtyViewInfo", "10.0");
         inventoryCardPage.clickButtonAndConfirm("inventory");
     //Стол 40
-        inventoryCardPage.inputData("source", "C.1.1.1.10");
+        inventoryCardPage.inputData("source", "A.1.1.1.40");
         inventoryCardPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
         inventoryCardPage.verifyData("productInfo", "00040 40Series01 2022-12-31T00:00:00 Стол40");
         inventoryCardPage.selectData("quality", "Кондиция");
@@ -324,62 +324,62 @@ public class MobileCaseFour extends BaseMobileClass {
     //Стол31
         findRestsPage.inputData("product", "31FRAGSN31Series013112202200");
         findRestsPage.verifyData("productInfo", "00031 Стол31");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.1");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.31");
         findRestsPage.verifyData("qty", "10");
     //Стол32
         findRestsPage.inputData("product", "32FRAGSN32Series013112202200");
         findRestsPage.verifyData("productInfo", "00032 Стол32");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.2");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.32");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "32Series01");
     //Стол33
         findRestsPage.inputData("product", "33FRAGSN33Series013112202200");
         findRestsPage.verifyData("productInfo", "00033 Стол33");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.3");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.33");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол34
         findRestsPage.inputData("product", "34FRAGSN34Series013112202200");
         findRestsPage.verifyData("productInfo", "00034 Стол34");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.4");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.34");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "34Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол35
         findRestsPage.inputData("product", "35FRAGBC35Series013112202200");
         findRestsPage.verifyData("productInfo", "00035 Стол35");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.5");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.35");
         findRestsPage.verifyData("qty", "10");
     //Стол36
         findRestsPage.inputData("product", "36FRAGBC36Series013112202200");
         findRestsPage.verifyData("productInfo", "00036 Стол36");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.6");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.36");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "36Series01");
     //Стол37
         findRestsPage.inputData("product", "37FRAGBC37Series013112202200");
         findRestsPage.verifyData("productInfo", "00037 Стол37");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.7");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.37");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол38
         findRestsPage.inputData("product", "38FRAGBC38Series013112202200");
         findRestsPage.verifyData("productInfo", "00038 Стол38");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.8");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.38");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "38Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол39
         findRestsPage.inputData("product", "39FRAGSN39Series013112202200");
         findRestsPage.verifyData("productInfo", "00039 Стол39");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.9");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.39");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "39Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
     //Стол40
         findRestsPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
         findRestsPage.verifyData("productInfo", "00040 Стол40");
-        findRestsPage.verifyData("sourceInfo", "C.1.1.1.10");
+        findRestsPage.verifyData("sourceInfo", "A.1.1.1.40");
         findRestsPage.verifyData("qty", "10");
         findRestsPage.verifyData("seriesInfo", "40Series01");
         findRestsPage.verifyData("shelfLifeInfo", "31.12.2022");
@@ -392,91 +392,91 @@ public class MobileCaseFour extends BaseMobileClass {
         allTasksPage.checkWorkType("Moving");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол31
-        relocationCardPage.verifyData("productInfo", "00031 Стол31 C.1.1.1.1 ➡ C.1.1.2.1 Quantity 10 уп. (5)");
-        relocationCardPage.inputData("source", "C.1.1.1.1");
+        relocationCardPage.verifyData("productInfo", "00031 Стол31 A.1.1.1.31 ➡ B.1.1.1.31 Quantity 10 уп. (5)");
+        relocationCardPage.inputData("source", "A.1.1.1.31");
         relocationCardPage.inputData("product", "31FRAGSN31Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.1");
+        relocationCardPage.inputData("destination", "B.1.1.1.31");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол32
-        relocationCardPage.verifyData("productInfo", "00032 32Series01 Стол32 C.1.1.1.2 ➡ C.1.1.2.2 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.2");
+        relocationCardPage.verifyData("productInfo", "00032 32Series01 Стол32 A.1.1.1.32 ➡ B.1.1.1.32 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.32");
         relocationCardPage.inputData("product", "32FRAGSN32Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.2");
+        relocationCardPage.inputData("destination", "B.1.1.1.32");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол33
-        relocationCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 C.1.1.1.3 ➡ C.1.1.2.3 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.3");
+        relocationCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 A.1.1.1.33 ➡ B.1.1.1.33 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.33");
         relocationCardPage.inputData("product", "33FRAGSN33Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.3");
+        relocationCardPage.inputData("destination", "B.1.1.1.33");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол34
-        relocationCardPage.verifyData("productInfo", "00034 34Series01 31.12.2022 Стол34 C.1.1.1.4 ➡ C.1.1.2.4 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.4");
+        relocationCardPage.verifyData("productInfo", "00034 34Series01 31.12.2022 Стол34 A.1.1.1.34 ➡ B.1.1.1.34 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.34");
         relocationCardPage.inputData("product", "34FRAGSN34Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.4");
+        relocationCardPage.inputData("destination", "B.1.1.1.34");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол35
-        relocationCardPage.verifyData("productInfo", "00035 Стол35 C.1.1.1.5 ➡ C.1.1.2.5 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.5");
+        relocationCardPage.verifyData("productInfo", "00035 Стол35 A.1.1.1.35 ➡ B.1.1.1.35 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.35");
         relocationCardPage.inputData("product", "35FRAGBC35Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.5");
+        relocationCardPage.inputData("destination", "B.1.1.1.35");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол36
-        relocationCardPage.verifyData("productInfo", "00036 36Series01 Стол36 C.1.1.1.6 ➡ C.1.1.2.6 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.6");
+        relocationCardPage.verifyData("productInfo", "00036 36Series01 Стол36 A.1.1.1.36 ➡ B.1.1.1.36 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.36");
         relocationCardPage.inputData("product", "36FRAGBC36Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.6");
+        relocationCardPage.inputData("destination", "B.1.1.1.36");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол37
-        relocationCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 C.1.1.1.7 ➡ C.1.1.2.7 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.7");
+        relocationCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 A.1.1.1.37 ➡ B.1.1.1.37 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.37");
         relocationCardPage.inputData("product", "37FRAGBC37Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.7");
+        relocationCardPage.inputData("destination", "B.1.1.1.37");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол38
-        relocationCardPage.verifyData("productInfo", "00038 38Series01 31.12.2022 Стол38 C.1.1.1.8 ➡ C.1.1.2.8 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.8");
+        relocationCardPage.verifyData("productInfo", "00038 38Series01 31.12.2022 Стол38 A.1.1.1.38 ➡ B.1.1.1.38 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.38");
         relocationCardPage.inputData("product", "38FRAGBC38Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.8");
+        relocationCardPage.inputData("destination", "B.1.1.1.38");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол39
-        relocationCardPage.verifyData("productInfo", "00039 39Series01 31.12.2022 Стол39 C.1.1.1.9 ➡ C.1.1.2.9 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.9");
+        relocationCardPage.verifyData("productInfo", "00039 39Series01 31.12.2022 Стол39 A.1.1.1.39 ➡ B.1.1.1.39 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.39");
         relocationCardPage.inputData("product", "39FRAGSN39Series013112202200");
-        relocationCardPage.inputData("destination", "C.1.1.2.9");
+        relocationCardPage.inputData("destination", "B.1.1.1.39");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
         relocationCardPage.clickButton("commit");
     //Стол40
-        relocationCardPage.verifyData("productInfo", "00040 40Series01 31.12.2022 Стол40 C.1.1.1.10 ➡ C.1.1.2.10 Quantity 10 шт");
-        relocationCardPage.inputData("source", "C.1.1.1.10");
+        relocationCardPage.verifyData("productInfo", "00040 40Series01 31.12.2022 Стол40 A.1.1.1.40 ➡ B.1.1.1.40 Quantity 10 шт");
+        relocationCardPage.inputData("source", "A.1.1.1.40");
         relocationCardPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
-        relocationCardPage.inputData("destination", "C.1.1.2.10");
+        relocationCardPage.inputData("destination", "B.1.1.1.40");
         relocationCardPage.inputData("qty", "10");
         relocationCardPage.verifyData("unitAmount", "1.0");
         relocationCardPage.verifyData("unitPackaging", "10");
@@ -490,94 +490,94 @@ public class MobileCaseFour extends BaseMobileClass {
         relocationTSDCardPage.clickButton("rightMenu");
         relocationTSDCardPage.clickButton("relocation");
     //Стол31
-        relocationTSDCardPage.inputData("source", "C.1.1.2.1");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.31");
         relocationTSDCardPage.inputData("product", "31FRAGSN31Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.1 ➡ 00031 Стол31");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.31 ➡ 00031 Стол31");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.1 ➡ 00031 Стол31 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.1");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.1 ➡ C.1.1.3.1 00031 Стол31 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.31 ➡ 00031 Стол31 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.31");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.31 ➡ C.1.1.1.31 00031 Стол31 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол32
-        relocationTSDCardPage.inputData("source", "C.1.1.2.2");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.32");
         relocationTSDCardPage.inputData("product", "32FRAGSN32Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.2 ➡ 00032 32Series01 Стол32");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.32 ➡ 00032 32Series01 Стол32");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.2 ➡ 00032 32Series01 Стол32 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.2");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.2 ➡ C.1.1.3.2 00032 32Series01 Стол32 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.32 ➡ 00032 32Series01 Стол32 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.32");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.32 ➡ C.1.1.1.32 00032 32Series01 Стол32 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол33
-        relocationTSDCardPage.inputData("source", "C.1.1.2.3");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.33");
         relocationTSDCardPage.inputData("product", "33FRAGSN33Series01311220220003");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.3 ➡ 00033 2022-12-31T00:00:00 Стол33");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.33 ➡ 00033 31.12.2022 Стол33");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.3 ➡ 00033 2022-12-31T00:00:00 Стол33 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.3");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.3 ➡ C.1.1.3.3 00033 2022-12-31T00:00:00 Стол33 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.33 ➡ 00033 31.12.2022 Стол33 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.33");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.33 ➡ C.1.1.1.33 00033 31.12.2022 Стол33 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол34
-        relocationTSDCardPage.inputData("source", "C.1.1.2.4");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.34");
         relocationTSDCardPage.inputData("product", "34FRAGSN34Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.4 ➡ 00034 34Series01 2022-12-31T00:00:00 Стол34");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.34 ➡ 00034 34Series01 31.12.2022 Стол34");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.4 ➡ 00034 34Series01 2022-12-31T00:00:00 Стол34 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.4");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.4 ➡ C.1.1.3.4 00034 34Series01 2022-12-31T00:00:00 Стол34 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.34 ➡ 00034 34Series01 31.12.2022 Стол34 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.34");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.34 ➡ C.1.1.1.34 00034 34Series01 31.12.2022 Стол34 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол35
-        relocationTSDCardPage.inputData("source", "C.1.1.2.5");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.35");
         relocationTSDCardPage.inputData("product", "35FRAGBC35Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.5 ➡ 00035 Стол35");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.35 ➡ 00035 Стол35");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.5 ➡ 00035 Стол35 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.5");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.5 ➡ C.1.1.3.5 00035 Стол35 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.35 ➡ 00035 Стол35 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.35");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.35 ➡ C.1.1.1.35 00035 Стол35 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол36
-        relocationTSDCardPage.inputData("source", "C.1.1.2.6");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.36");
         relocationTSDCardPage.inputData("product", "36FRAGBC36Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.6 ➡ 00036 36Series01 Стол36");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.36 ➡ 00036 36Series01 Стол36");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.6 ➡ 00036 36Series01 Стол36 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.6");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.6 ➡ C.1.1.3.6 00036 36Series01 Стол36 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.36 ➡ 00036 36Series01 Стол36 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.36");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.36 ➡ C.1.1.1.36 00036 36Series01 Стол36 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол37
-        relocationTSDCardPage.inputData("source", "C.1.1.2.7");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.37");
         relocationTSDCardPage.inputData("product", "37FRAGBC37Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.7 ➡ 00037 2022-12-31T00:00:00 Стол37");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.37 ➡ 00037 31.12.2022 Стол37");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.7 ➡ 00037 2022-12-31T00:00:00 Стол37 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.7");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.7 ➡ C.1.1.3.7 00037 2022-12-31T00:00:00 Стол37 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.37 ➡ 00037 31.12.2022 Стол37 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.37");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.37 ➡ C.1.1.1.37 00037 31.12.2022 Стол37 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол38
-        relocationTSDCardPage.inputData("source", "C.1.1.2.8");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.38");
         relocationTSDCardPage.inputData("product", "38FRAGBC38Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.8 ➡ 00038 38Series01 2022-12-31T00:00:00 Стол38");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.38 ➡ 00038 38Series01 31.12.2022 Стол38");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.8 ➡ 00038 38Series01 2022-12-31T00:00:00 Стол38 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.8");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.8 ➡ C.1.1.3.8 00038 38Series01 2022-12-31T00:00:00 Стол38 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.38 ➡ 00038 38Series01 31.12.2022 Стол38 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.38");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.38 ➡ C.1.1.1.38 00038 38Series01 31.12.2022 Стол38 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол39
-        relocationTSDCardPage.inputData("source", "C.1.1.2.9");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.39");
         relocationTSDCardPage.inputData("product", "39FRAGSN39Series013112202200");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.9 ➡ 00039 39Series01 2022-12-31T00:00:00 Стол39");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.39 ➡ 00039 39Series01 31.12.2022 Стол39");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.9 ➡ 00039 39Series01 2022-12-31T00:00:00 Стол39 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.9");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.9 ➡ C.1.1.3.9 00039 39Series01 2022-12-31T00:00:00 Стол39 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.39 ➡ 00039 39Series01 31.12.2022 Стол39 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.39");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.39 ➡ C.1.1.1.39 00039 39Series01 31.12.2022 Стол39 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     //Стол40
-        relocationTSDCardPage.inputData("source", "C.1.1.2.10");
+        relocationTSDCardPage.inputData("source", "B.1.1.1.40");
         relocationTSDCardPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.10 ➡ 00040 40Series01 2022-12-31T00:00:00 Стол40");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.40 ➡ 00040 40Series01 31.12.2022 Стол40");
         relocationTSDCardPage.inputData("qty", "10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.10 ➡ 00040 40Series01 2022-12-31T00:00:00 Стол40 Quantity 10");
-        relocationTSDCardPage.inputData("destination", "C.1.1.3.10");
-        relocationTSDCardPage.verifyData("productInfo", "C.1.1.2.10 ➡ C.1.1.3.10 00040 40Series01 2022-12-31T00:00:00 Стол40 Quantity 10");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.40 ➡ 00040 40Series01 31.12.2022 Стол40 Quantity 10");
+        relocationTSDCardPage.inputData("destination", "C.1.1.1.40");
+        relocationTSDCardPage.verifyData("productInfo", "B.1.1.1.40 ➡ C.1.1.1.40 00040 40Series01 31.12.2022 Стол40 Quantity 10");
         relocationTSDCardPage.clickButton("moving");
     }
 
@@ -588,76 +588,76 @@ public class MobileCaseFour extends BaseMobileClass {
         allTasksPage.checkWorkType("Selection");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол31
-        selectionCardPage.verifyData("productInfo", "00031 Стол31 C.1.1.3.1 ➡ KT1.01.01.01.01 Quantity 10 уп. (5)");
-        selectionCardPage.inputData("source", "C.1.1.3.1");
+        selectionCardPage.verifyData("productInfo", "00031 Стол31 C.1.1.1.31 ➡ KT1.01.01.01.01 Quantity 10 уп. (5)");
+        selectionCardPage.inputData("source", "C.1.1.1.31");
         selectionCardPage.inputData("product", "31FRAGSN31Series013112202200");
         mobileFormSerialNumber.sn("31", 10);
         selectionCardPage.inputData("destination", "OUT131");
         selectionCardPage.verifyData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол32
-        selectionCardPage.verifyData("productInfo", "00032 32series01 Стол32 C.1.1.3.2 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.2");
+        selectionCardPage.verifyData("productInfo", "00032 32series01 Стол32 C.1.1.1.32 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.32");
         selectionCardPage.inputData("product", "32FRAGSN32Series013112202200");
         mobileFormSerialNumber.sn("32", 10);
         selectionCardPage.inputData("destination", "OUT132");
         selectionCardPage.verifyData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол33
-        selectionCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 C.1.1.3.3 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.3");
+        selectionCardPage.verifyData("productInfo", "00033 31.12.2022 Стол33 C.1.1.1.33 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.33");
         selectionCardPage.inputData("product", "33FRAGSN33Series013112202200");
         mobileFormSerialNumber.sn("33", 10);
         selectionCardPage.inputData("destination", "OUT133");
         selectionCardPage.verifyData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол34
-        selectionCardPage.verifyData("productInfo", "00034 34series01 31.12.2022 Стол34 C.1.1.3.4 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.4");
+        selectionCardPage.verifyData("productInfo", "00034 34series01 31.12.2022 Стол34 C.1.1.1.34 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.34");
         selectionCardPage.inputData("product", "34FRAGSN34Series013112202200");
         mobileFormSerialNumber.sn("34", 10);
         selectionCardPage.inputData("destination", "OUT134");
         selectionCardPage.verifyData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол35
-        selectionCardPage.verifyData("productInfo", "00035 Стол35 C.1.1.3.5 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.5");
+        selectionCardPage.verifyData("productInfo", "00035 Стол35 C.1.1.1.35 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.35");
         selectionCardPage.inputData("product", "35FRAGBC35Series013112202200");
         selectionCardPage.inputData("destination", "OUT135");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол36
-        selectionCardPage.verifyData("productInfo", "00036 36series01 Стол36 C.1.1.3.6 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.6");
+        selectionCardPage.verifyData("productInfo", "00036 36series01 Стол36 C.1.1.1.36 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.36");
         selectionCardPage.inputData("product", "36FRAGBC36Series013112202200");
         selectionCardPage.inputData("destination", "OUT136");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол37
-        selectionCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 C.1.1.3.7 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.7");
+        selectionCardPage.verifyData("productInfo", "00037 31.12.2022 Стол37 C.1.1.1.37 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.37");
         selectionCardPage.inputData("product", "37FRAGBC37Series013112202200");
         selectionCardPage.inputData("destination", "OUT137");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол38
-        selectionCardPage.verifyData("productInfo", "00038 38series01 31.12.2022 Стол38 C.1.1.3.8 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.8");
+        selectionCardPage.verifyData("productInfo", "00038 38series01 31.12.2022 Стол38 C.1.1.1.38 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.38");
         selectionCardPage.inputData("product", "38FRAGBC38Series013112202200");
         selectionCardPage.inputData("destination", "OUT138");
         selectionCardPage.inputData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол39
-        selectionCardPage.verifyData("productInfo", "00039 39series01 31.12.2022 Стол39 C.1.1.3.9 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.9");
+        selectionCardPage.verifyData("productInfo", "00039 39series01 31.12.2022 Стол39 C.1.1.1.39 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.39");
         selectionCardPage.inputData("product", "39FRAGSN39Series013112202200");
         mobileFormSerialNumber.uniqueSn("39", 9);
         selectionCardPage.inputData("destination", "OUT139");
         selectionCardPage.verifyData("qty", "10");
         selectionCardPage.clickButton("commit");
     //Стол40
-        selectionCardPage.verifyData("productInfo", "00040 40Series01 31.12.2022 Стол40 C.1.1.3.10 ➡ KT1.01.01.01.01 Quantity 10 шт");
-        selectionCardPage.inputData("source", "C.1.1.3.10");
+        selectionCardPage.verifyData("productInfo", "00040 40Series01 31.12.2022 Стол40 C.1.1.1.40 ➡ KT1.01.01.01.01 Quantity 10 шт");
+        selectionCardPage.inputData("source", "C.1.1.1.40");
         selectionCardPage.inputData("product", "40FRAGSN40Series013112202207 40FRAGSN40Series013112202208 40FRAGSN40Series013112202209");
         mobileFormSerialNumber.qr("40", 7);
         selectionCardPage.inputData("destination", "OUT140");

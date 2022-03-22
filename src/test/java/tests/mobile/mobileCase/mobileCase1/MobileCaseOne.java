@@ -5,7 +5,6 @@ import tests.mobile.mobileForm.MobileFormBatchProperties;
 import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
-import tests.mobile.mobileSteps.MobileSteps;
 import tests.mobile.mobileUtils.MobileData;
 
 import static com.codeborne.selenide.Condition.*;
@@ -30,7 +29,7 @@ public class MobileCaseOne extends BaseMobileClass {
     MobileFormReception mobileFormReception = new MobileFormReception();
 
     @Test
-    public void processingReceptionTaskTest() throws Exception {
+    public void taskReception() throws Exception {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
@@ -69,8 +68,8 @@ public class MobileCaseOne extends BaseMobileClass {
         mobileFormReception.completeTask(stol9);
     }
 
-    @Test (priority = 1, dependsOnMethods = "processingReceptionTaskTest")
-    public void processingAccommodationTaskTest() throws Exception {
+    @Test (priority = 1, dependsOnMethods = "taskReception")
+    public void taskAccommodation() throws Exception {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
@@ -147,7 +146,7 @@ public class MobileCaseOne extends BaseMobileClass {
         accommodationCardPage.clickButton("commit");
     }
 
-    @Test (priority = 2, dependsOnMethods = "processingAccommodationTaskTest")
+    @Test (priority = 2, dependsOnMethods = "taskAccommodation")
     public void checkingFreeAmountTest() {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
@@ -212,7 +211,7 @@ public class MobileCaseOne extends BaseMobileClass {
         findRestsPage.verifyData("qty", "10");
     }
 
-    @Test (priority = 3, dependsOnMethods = "processingAccommodationTaskTest")
+    @Test (priority = 3, dependsOnMethods = "taskAccommodation")
     public void processingInventoryTaskTest() throws Exception {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
@@ -591,7 +590,7 @@ public class MobileCaseOne extends BaseMobileClass {
         relocationTSDCardPage.clickButton("moving");
     }
 
-    @Test (priority = 7, dependsOnMethods = "processingAccommodationTaskTest")
+    @Test (priority = 7, dependsOnMethods = "taskAccommodation")
     public void processingSelectionTaskTest() throws Exception {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
