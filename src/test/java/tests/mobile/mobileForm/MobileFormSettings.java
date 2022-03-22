@@ -29,10 +29,10 @@ public class MobileFormSettings {
 
         SelenideElement resourceId_settings, resourceId_connection, resourceId_license, resourceId_save;
 
-        resourceId_settings = mobileFormAuthorization.getResourceId("#settings");
-        resourceId_connection = getResourceId("#connection");
-        resourceId_license = getResourceId("#license");
-        resourceId_save = getResourceId("#save");
+        resourceId_settings =       mobileFormAuthorization.getResourceId("#settings");
+        resourceId_connection =     getResourceId("#connection");
+        resourceId_license =        getResourceId("#license");
+        resourceId_save =           getResourceId("#save");
 
         resourceId_settings.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.mobileDriver(resourceId_settings);

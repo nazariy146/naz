@@ -25,9 +25,9 @@ public class MobileFormSku {
     public void completeTask (MobileData stolData) {
         SelenideElement resourceId_Title, resourceId_New, resourceId_Write;
 
-        resourceId_Title = getResourceId("#title");
-        resourceId_New = getResourceId("#new");
-        resourceId_Write = getResourceId("#write");
+        resourceId_Title =  getResourceId("#title");
+        resourceId_New =    getResourceId("#new");
+        resourceId_Write =  getResourceId("#write");
 
         mobileSteps.verifyData(resourceId_Title, "SKU info");
         if (stolData.skuNew){

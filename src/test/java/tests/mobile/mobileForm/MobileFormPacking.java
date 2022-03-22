@@ -75,16 +75,16 @@ public class MobileFormPacking {
     public void completeTask1 (MobileData stolData) {
         SelenideElement resourceId_Title, resourceId_PalletFlag, resourceId_LayerFlag, resourceId_BoxFlag, resourceId_GroupFlag, resourceId_Pallet, resourceId_Layer, resourceId_Box, resourceId_Group, resourceId_Write;
 
-        resourceId_Title = getResourceId("#title");
+        resourceId_Title =      getResourceId("#title");
         resourceId_PalletFlag = getResourceId("#palletFlag");
-        resourceId_LayerFlag = getResourceId("#layerFlag");
-        resourceId_BoxFlag = getResourceId("#boxFlag");
-        resourceId_GroupFlag = getResourceId("#groupFlag");
-        resourceId_Pallet = getResourceId("#pallet");
-        resourceId_Layer = getResourceId("#layer");
-        resourceId_Box = getResourceId("#box");
-        resourceId_Group = getResourceId("#group");
-        resourceId_Write = getResourceId("#write");
+        resourceId_LayerFlag =  getResourceId("#layerFlag");
+        resourceId_BoxFlag =    getResourceId("#boxFlag");
+        resourceId_GroupFlag =  getResourceId("#groupFlag");
+        resourceId_Pallet =     getResourceId("#pallet");
+        resourceId_Layer =      getResourceId("#layer");
+        resourceId_Box =        getResourceId("#box");
+        resourceId_Group =      getResourceId("#group");
+        resourceId_Write =      getResourceId("#write");
 
         resourceId_PalletFlag.shouldBe(visible, Duration.ofSeconds(25)); // MNV добавить ИД наименования формы и ожидать ее
         //mobileSteps.verifyData (resourceId_Title, "New packing"); // MNV добавить проверку наименования формы

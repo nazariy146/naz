@@ -1,5 +1,8 @@
 package tests.mobile.mobileUtils;
 
+import tests.mobile.mobileForm.MobileFormUnit;
+import tests.mobile.mobileSteps.MobileSteps;
+
 public class MobileData {
 
     public String   article, name, productInfo, productInfoSeriesShelfLife, source, product, container, qty, qtyTotal, dataSeries, dataShelfLife, dataSerialNumber, typeSn, unit, palletWeight, tareQty, tareWeight,
@@ -1082,14 +1085,14 @@ public class MobileData {
                 stolData.packingGroupFlag = true;
                 stolData.packingDataGroup = "3";
 
-                DataUnit unit1 = new DataUnit();
-                unit1.dataTitle = "New unit";
-                unit1.dataName = "блок";
-                unit1.dataQty = "3";
-                unit1.dataWidth = "0.1";
-                unit1.dataLenght = "0.1";
-                unit1.dataHeight = "0.1";
-                unit1.dataWeight = "1";
+//                DataUnit unit1 = new DataUnit();
+//                unit1.dataTitle = "New unit";
+//                unit1.dataName = "блок";
+//                unit1.dataQty = "3";
+//                unit1.dataWidth = "0.1";
+//                unit1.dataLenght = "0.1";
+//                unit1.dataHeight = "0.1";
+//                unit1.dataWeight = "1";
 
                 stolData.unitName = "";
                 stolData.unitQty = "";
