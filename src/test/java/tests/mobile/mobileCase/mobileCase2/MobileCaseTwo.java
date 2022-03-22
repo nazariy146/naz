@@ -11,9 +11,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.text;
 
 public class MobileCaseTwo extends BaseMobileClass {
-    MobileSteps mobileSteps = new MobileSteps();
     AllTasksPage allTasksPage = new AllTasksPage();
-    ReceptionCardPage receptionCardPage = new ReceptionCardPage();
     AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
@@ -896,7 +894,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         packagingCardPage.clickButton("#modalOk2");
     }
 
-    @Test (priority = 11, dependsOnMethods = "processingPackagingTaskTest")
+    @Test //(priority = 11, dependsOnMethods = "processingPackagingTaskTest")
     public void processingConsolidateContainerTask() {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
