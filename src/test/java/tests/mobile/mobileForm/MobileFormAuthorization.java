@@ -34,10 +34,10 @@ public class MobileFormAuthorization {
     public void completeTask(){
         SelenideElement resourceId_user, resourceId_login, resourceId_password, resourceId_settings;
 
-        resourceId_user = getResourceId("#user");
-        resourceId_login = getResourceId("#login");
-        resourceId_password = getResourceId("#password");
-        resourceId_settings = getResourceId("#settings");
+        resourceId_user =       getResourceId("#user");
+        resourceId_login =      getResourceId("#login");
+        resourceId_password =   getResourceId("#password");
+        resourceId_settings =   getResourceId("#settings");
 
         resourceId_settings.shouldBe(visible, Duration.ofSeconds(25));
         mobileSteps.inputData(resourceId_user, "Admin");

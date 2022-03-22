@@ -6,6 +6,7 @@ import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileUtils.MobileData;
+import tests.web.webCase.WebDownloadMobileTest;
 
 import static com.codeborne.selenide.Condition.*;
 
@@ -27,9 +28,12 @@ public class MobileCaseOne extends BaseMobileClass {
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
     MobileData mobileData = new MobileData();
     MobileFormReception mobileFormReception = new MobileFormReception();
+    WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
 
     @Test
     public void taskReception() throws Exception {
+        webDownloadMobileTest.completeTask();
+
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");

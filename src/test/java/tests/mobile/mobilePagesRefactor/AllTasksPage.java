@@ -22,7 +22,7 @@ public class AllTasksPage {
     }
 
     public void checkWorkType(String taskTitle) throws Exception {
-        if (getRelaxMessage().isDisplayed()) {
+        if (!getRelaxMessage().isDisplayed()) {
             waitUntilPass(WAIT_TASK_TIMEOUT, () -> {
                 refreshPage($(By.id("com.abmcloud:id/top_app_bar")));
                 $(By.id("com.abmcloud:id/text_work_type")).shouldBe(visible, Duration.ofSeconds(60));
@@ -31,6 +31,7 @@ public class AllTasksPage {
             });
         } else
             getWorkType().shouldBe(visible, Duration.ofSeconds(50));
+//            refreshPage($(By.id("com.abmcloud:id/top_app_bar")));
             getWorkType().shouldHave(exactText(taskTitle));
     }
 

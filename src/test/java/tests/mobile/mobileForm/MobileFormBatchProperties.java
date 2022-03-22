@@ -28,10 +28,10 @@ public class MobileFormBatchProperties {
     public void input (boolean seriesOn, boolean shelfLifeOn, String dataSeries, String dataShelfLife) {
         SelenideElement resourceId_Title, resourceId_Series, resourceId_ShelfLife, resourceId_Ok;
 
-        resourceId_Title = getResourceId("#title");
-        resourceId_Series = getResourceId("#series");
-        resourceId_ShelfLife = getResourceId("#shelfLife");
-        resourceId_Ok = getResourceId("#ok");
+        resourceId_Title =      getResourceId("#title");
+        resourceId_Series =     getResourceId("#series");
+        resourceId_ShelfLife =  getResourceId("#shelfLife");
+        resourceId_Ok =         getResourceId("#ok");
 
         mobileSteps.verifyData(resourceId_Title, "Batch properties");
             if (seriesOn == true) {

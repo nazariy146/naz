@@ -32,14 +32,14 @@ public class MobileSteps {
     }
 
     public void inputData(SelenideElement resourceId, String data) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(25));
+        resourceId.shouldBe(visible, Duration.ofSeconds(50));
         resourceId.click();
         resourceId.val(data);
         mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
 
     public void clickButton(SelenideElement resourceId) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(25));
+        resourceId.shouldBe(visible, Duration.ofSeconds(50));
         resourceId.click();
     }
     public void selectData(ElementsCollection table, String source) {

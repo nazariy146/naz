@@ -29,8 +29,8 @@ public class MobileFormSerialNumber {
         SelenideElement resourceId_SerialNumber, resourceId_TableSerialNumber, resourceId_TableQtyFact, resourceId_Commit;
         int tableSerialNumber = 1, tableQty = 2, tableQtyFact = 3;
 
-        resourceId_SerialNumber = getResourceId("#serialNumber");
-        resourceId_Commit = getResourceId("#commit");
+        resourceId_SerialNumber =   getResourceId("#serialNumber");
+        resourceId_Commit =         getResourceId("#commit");
 
         for (int i = 0, row = 2; i < qtySN; i++, row++) {
             String nowSN = SN + "serialnumber0" + i;

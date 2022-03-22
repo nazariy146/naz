@@ -27,10 +27,10 @@ public class MobileFormContainer {
 
         SelenideElement resourceId_container, resourceId_info, resourceId_destination, resourceId_commit;
 
-        resourceId_container = getResourceId("#container");
-        resourceId_info = getResourceId("#info");
-        resourceId_destination = getResourceId("#destination");
-        resourceId_commit = getResourceId("#commit");
+        resourceId_container =      getResourceId("#container");
+        resourceId_info =           getResourceId("#info");
+        resourceId_destination =    getResourceId("#destination");
+        resourceId_commit =         getResourceId("#commit");
 
         mobileSteps.verifyData(resourceId_info, info);
         mobileSteps.inputData(resourceId_container, container);

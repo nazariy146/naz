@@ -53,6 +53,15 @@ public class ReceptionCardPage {
         else if (Field == "tareWeight"){
             return $(By.id("com.abmcloud:id/editTextTareWeight"));
         }
+        else if (Field == "heightSKU"){
+            return $(By.id("com.abmcloud:id/et_unit_parameters_height"));
+        }
+        else if (Field == "widthSKU"){
+            return $(By.id("com.abmcloud:id/et_unit_parameters_width"));
+        }
+        else if (Field == "lenghtSKU"){
+            return $(By.id("com.abmcloud:id/et_unit_parameters_length"));
+        }
         else if (Field == "newSeries"){
             return $(By.id("com.abmcloud:id/et_series"));
         }
@@ -93,6 +102,9 @@ public class ReceptionCardPage {
         else if (Field == "selectBarcode"){
             return $(By.id("com.abmcloud:id/tv_barcode"));
         }
+        else if (Field == "weightSKU"){
+            return $(By.id("com.abmcloud:id/et_unit_parameters_weight"));
+        }
         else if (Field == "clearProductInput"){
             return $(By.xpath("(//android.widget.ImageButton[@content-desc=\"Clear text\"])[1]"));
         }
@@ -129,6 +141,12 @@ public class ReceptionCardPage {
         else if (Field == "base"){
             return $(By.id("com.abmcloud:id/et_base"));
         }
+        else if (Field == "skuQty"){
+            return $(By.id("com.abmcloud:id/et_unit_parameters_ratio"));
+        }
+        else if (Field == "skuName"){
+            return $(By.id("com.abmcloud:id/tv_base_unit"));
+        }
         else if (Field == "skuName"){
             return $(By.id("com.abmcloud:id/textinput_placeholder"));
         }
@@ -159,7 +177,7 @@ public class ReceptionCardPage {
         else if (Field == "EditGroup"){  //eleo кнопка редактирования состовляющей "group" упаковки
             return $(By.id("com.abmcloud:id/ib_group"));
         }
-        else if (Field == "Barcode"){   //eleo выбор поля создания штрихкода
+        else if (Field == "barcode"){   //eleo выбор поля создания штрихкода
             return $(By.id("com.abmcloud:id/et_unit_parameters_barcode"));
         }
         else if (Field == "commitSN"){   //MNV после Рефакторинга удалить
