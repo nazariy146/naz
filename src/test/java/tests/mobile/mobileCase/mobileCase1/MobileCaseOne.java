@@ -54,6 +54,7 @@ public class MobileCaseOne extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
+
     //Стол1
         mobileFormReception.completeTask(stol1);
     //Стол10
