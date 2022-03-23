@@ -5,11 +5,13 @@ import tests.mobile.mobileSteps.MobileSteps;
 
 public class MobileData {
 
-    public String   article, name, productInfo, productInfoSeriesShelfLife, source, product, container, qty, qtyTotal, dataSeries, dataShelfLife, dataSerialNumber, typeSn, unit, palletWeight, tareQty, tareWeight,
-                    unitName, unitQty, unitWidth, unitLenght, unitHeight, unitWeight,
-                    packingDataPallet, packingDataLayer, packingDataBox, packingDataGroup;
-    public boolean  weightBarcode, series, shelfLife, declaredSeriesShelfLife, declaredSeriesShelfLifeSN, serialNumber, sof, skuEdit, skuNew, packingNew, skuForm, skuUnit,
-                    packingPalletFlag, packingLayerFlag, packingBoxFlag, packingGroupFlag;
+    public String article, name, productInfo, productInfoSeriesShelfLife, source, product, container, qty, qtyTotal, dataSeries, dataShelfLife, dataSerialNumber, typeSn, unit, palletWeight, tareQty, tareWeight,
+            unitName, unitQty, unitWidth, unitLenght, unitHeight, unitWeight,
+            packingDataPallet, packingDataLayer, packingDataBox, packingDataGroup,
+            batchPropertiesAction,
+            destination;
+    public boolean weightBarcode, series, shelfLife, declaredSeriesShelfLife, declaredSeriesShelfLifeSN, serialNumber, sof, skuEdit, skuNew, packingNew, skuForm, skuUnit,
+            packingPalletFlag, packingLayerFlag, packingBoxFlag, packingGroupFlag;
 
     public MobileData dataReception(String stol) {
 
@@ -20,6 +22,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.article = "0001";
                 stolData.name = "Стол1";
                 stolData.source = "IN.01";
@@ -27,16 +30,17 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol2":
                 stolData.series = true;
                 stolData.shelfLife = false;
-                stolData.serialNumber = false;
                 stolData.dataSeries = "02series01";
                 stolData.dataShelfLife = "";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.article = "0002";
                 stolData.name = "Стол2";
                 stolData.source = "IN.01";
@@ -44,16 +48,18 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol3":
+                stolData.serialNumber = false;
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
+                stolData.batchPropertiesAction = "input";
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
                 stolData.article = "0003";
@@ -63,14 +69,14 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol4":
+                stolData.serialNumber = true;
                 stolData.series = false;
                 stolData.shelfLife = false;
-                stolData.serialNumber = true;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.typeSn = "normal";
@@ -82,14 +88,15 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol5":
+                stolData.serialNumber = false;
                 stolData.series = true;
                 stolData.shelfLife = true;
-                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "05series01";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.typeSn = "";
@@ -101,14 +108,15 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol6":
+                stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.series = true;
                 stolData.shelfLife = false;
-                stolData.serialNumber = true;
                 stolData.dataSeries = "06series01";
                 stolData.dataShelfLife = "";
                 stolData.typeSn = "normal";
@@ -120,14 +128,15 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol7":
+                stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.series = false;
                 stolData.shelfLife = true;
-                stolData.serialNumber = true;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.typeSn = "normal";
@@ -139,14 +148,15 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol8":
+                stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.series = true;
                 stolData.shelfLife = true;
-                stolData.serialNumber = true;
                 stolData.dataSeries = "08series01";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.typeSn = "normal";
@@ -158,14 +168,15 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol9":
+                stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "";
                 stolData.series = false;
                 stolData.shelfLife = false;
-                stolData.serialNumber = true;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.typeSn = "unique";
@@ -177,7 +188,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -185,6 +196,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.article = "00010";
                 stolData.name = "Стол10";
                 stolData.source = "IN.01";
@@ -192,7 +204,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -200,6 +212,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.typeSn = "";
@@ -211,7 +224,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -219,6 +232,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "12Series01";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = true;
@@ -231,7 +245,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -239,6 +253,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = true;
@@ -251,7 +266,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -259,6 +274,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.typeSn = "normal";
@@ -270,7 +286,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -278,6 +294,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "15series01";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = true;
@@ -290,7 +307,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -298,6 +315,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "16series01";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = true;
@@ -310,7 +328,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -318,6 +336,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = true;
@@ -330,7 +349,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -338,6 +357,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = true;
                 stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "18series01";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = true;
@@ -350,7 +370,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -358,6 +378,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = true;
+                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = true;
@@ -370,7 +391,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -380,6 +401,7 @@ public class MobileData {
                 stolData.serialNumber = false;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
+                stolData.batchPropertiesAction = "input";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -390,7 +412,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -398,6 +420,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -410,7 +433,7 @@ public class MobileData {
                 stolData.unit = "уп. (5)";
                 stolData.container = "IN1";
                 stolData.qty = "2";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -418,6 +441,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -431,7 +455,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -439,6 +463,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = false;
@@ -452,7 +477,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "2";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -460,6 +485,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "30.12.2022";
                 stolData.declaredSeriesShelfLife = false;
@@ -473,7 +499,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "5.5";
-                stolData.qtyTotal  = "8";
+                stolData.qtyTotal = "8";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -481,6 +507,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = false;
@@ -494,7 +521,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "2.5";
-                stolData.qtyTotal  = "2.5";
+                stolData.qtyTotal = "2.5";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -502,6 +529,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "24Series01";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -515,7 +543,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "2";
-                stolData.qtyTotal  = "10";
+                stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -523,6 +551,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "24Series02";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -536,7 +565,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "7.5";
-                stolData.qtyTotal  = "8";
+                stolData.qtyTotal = "8";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -544,6 +573,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "24Series02";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -557,7 +587,7 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "0.5";
-                stolData.qtyTotal  = "0.5";
+                stolData.qtyTotal = "0.5";
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
@@ -565,6 +595,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.sof = true;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
@@ -579,10 +610,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "13";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "2";
-                stolData.tareQty  = "5";
-                stolData.tareWeight  = "0.2";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "2";
+                stolData.tareQty = "5";
+                stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -591,6 +622,7 @@ public class MobileData {
                 stolData.series = true;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.sof = true;
                 stolData.dataSeries = "26series01";
                 stolData.dataShelfLife = "";
@@ -605,10 +637,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "13";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "2";
-                stolData.tareQty  = "5";
-                stolData.tareWeight  = "0.2";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "2";
+                stolData.tareQty = "5";
+                stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -617,6 +649,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = true;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.sof = true;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
@@ -631,10 +664,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "13";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "2";
-                stolData.tareQty  = "5";
-                stolData.tareWeight  = "0.2";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "2";
+                stolData.tareQty = "5";
+                stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -643,6 +676,7 @@ public class MobileData {
                 stolData.series = false;
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.sof = false;
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
@@ -657,10 +691,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -670,6 +704,7 @@ public class MobileData {
                 stolData.shelfLife = false;
                 stolData.serialNumber = false;
                 stolData.sof = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "29Series01";
                 stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
@@ -683,10 +718,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -700,6 +735,7 @@ public class MobileData {
                 stolData.skuNew = false;
                 stolData.skuEdit = true;
                 stolData.skuUnit = true;
+                stolData.batchPropertiesAction = "";
                 stolData.unitName = "шт";
                 stolData.unitQty = "1";
                 stolData.unitWidth = "0.1";
@@ -719,10 +755,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -733,6 +769,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -752,10 +789,10 @@ public class MobileData {
                 stolData.unit = "уп. (5)";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -766,6 +803,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -786,10 +824,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -800,6 +838,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -820,10 +859,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -834,6 +873,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -854,10 +894,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -868,6 +908,7 @@ public class MobileData {
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -888,10 +929,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -902,6 +943,7 @@ public class MobileData {
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -922,10 +964,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -936,6 +978,7 @@ public class MobileData {
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -956,10 +999,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -970,6 +1013,7 @@ public class MobileData {
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -990,10 +1034,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -1004,6 +1048,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -1024,10 +1069,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -1038,6 +1083,7 @@ public class MobileData {
                 stolData.serialNumber = true;
                 stolData.sof = false;
                 stolData.skuEdit = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.unitName = "";
                 stolData.unitQty = "";
                 stolData.unitWidth = "";
@@ -1058,10 +1104,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -1114,10 +1160,10 @@ public class MobileData {
                 stolData.unit = "шт";
                 stolData.container = "IN1";
                 stolData.qty = "10";
-                stolData.qtyTotal  = "10";
-                stolData.palletWeight  = "";
-                stolData.tareQty  = "";
-                stolData.tareWeight  = "";
+                stolData.qtyTotal = "10";
+                stolData.palletWeight = "";
+                stolData.tareQty = "";
+                stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
                 stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
@@ -1126,25 +1172,22 @@ public class MobileData {
         return null;
     }
 
-    String productInfo(MobileData stolData){
-       String productInfo = " " + stolData.name + " " + stolData.source + " Quantity" + " " + stolData.qtyTotal + " " + stolData.unit;
-       return productInfo;
+    String productInfo(MobileData stolData) {
+        String productInfo = " " + stolData.name + " " + stolData.source + " Quantity" + " " + stolData.qtyTotal + " " + stolData.unit;
+        return productInfo;
     }
 
-    String productInfoSeriesShelfLife(MobileData stolData){
+    String productInfoSeriesShelfLife(MobileData stolData) {
 
         if (stolData.series || stolData.shelfLife) {
-            if (stolData.series & stolData.shelfLife){
+            if (stolData.series & stolData.shelfLife) {
                 productInfoSeriesShelfLife = " " + stolData.dataSeries + " " + stolData.dataShelfLife;
-            }
-            else if (stolData.series){
-                productInfoSeriesShelfLife = " " + stolData.dataSeries ;
-            }
-            else if (stolData.shelfLife){
+            } else if (stolData.series) {
+                productInfoSeriesShelfLife = " " + stolData.dataSeries;
+            } else if (stolData.shelfLife) {
                 productInfoSeriesShelfLife = " " + stolData.dataShelfLife;
             }
-        }
-        else{
+        } else {
             productInfoSeriesShelfLife = "";
         }
         return productInfoSeriesShelfLife;
@@ -1159,6 +1202,168 @@ public class MobileData {
         public String dataHeight;
         public String dataWeight;
     }
+
+    public MobileData dataAccommodation(String stol) {
+        MobileData stolData = new MobileData();
+        switch (stol) {
+            case "stol1":
+                stolData.article = "0001";
+                stolData.product = "0001";
+                stolData.name = "Стол1";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.1";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol2":
+                stolData.article = "0002";
+                stolData.product = "0002";
+                stolData.name = "Стол2";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "02series01";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.2";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol3":
+                stolData.article = "0003";
+                stolData.product = "0003";
+                stolData.name = "Стол3";
+                stolData.shelfLife = true;
+                stolData.serialNumber = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.3";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol4":
+                stolData.article = "0004";
+                stolData.product = "0004";
+                stolData.name = "Стол4";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.4";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol5":
+                stolData.article = "0005";
+                stolData.product = "0005";
+                stolData.name = "Стол5";
+                stolData.series = true;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "05series01";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.5";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol6":
+                stolData.article = "0006";
+                stolData.product = "0006";
+                stolData.name = "Стол6";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "06series01";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.6";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol7":
+                stolData.article = "0007";
+                stolData.product = "0007";
+                stolData.name = "Стол7";
+                stolData.series = false;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.7";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol8":
+                stolData.article = "0008";
+                stolData.product = "0008";
+                stolData.name = "Стол8";
+                stolData.series = true;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "08series01";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.8";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol9":
+                stolData.article = "0009";
+                stolData.product = "0009";
+                stolData.name = "Стол9";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.9";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol10":
+                stolData.article = "00010";
+                stolData.product = "00010";
+                stolData.name = "Стол10";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.10";
+                stolData.qtyTotal = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+        }
+        return null;
+    }
+
+    String productInfoAccommodation(MobileData stolData) {
+
+        String infoSeriesShelfLife = productInfoSeriesShelfLife(stolData);
+        String productInfo = "" + stolData.article + infoSeriesShelfLife + " " + stolData.name + " " + stolData.source + " ➡ " + stolData.destination + " Quantity" + " " + stolData.qtyTotal + " " + stolData.unit;
+        return productInfo;
+    }
 }
-
-

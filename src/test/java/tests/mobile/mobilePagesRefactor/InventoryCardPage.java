@@ -86,7 +86,7 @@ public class InventoryCardPage {
         return null;
     }
 
-    public static ElementsCollection getCollectionResourceId(String Field){
+    public static ElementsCollection getTableResourceId(String Field){
         if (Field == "quality"){
             return $$(By.id("android:id/text1"));
         }
@@ -120,13 +120,9 @@ public class InventoryCardPage {
     //MNV need to refactor
     public void selectData(String field, String source) {
         SelenideElement resourceId = getResourceId(field);
-        ElementsCollection collectionResourceId = getCollectionResourceId(field);
+        ElementsCollection collectionResourceId = getTableResourceId(field);
 
         resourceId.click();
         mobileSteps.selectData(collectionResourceId, source);
     }
-    //MNV need to refactor
-
-    //MNV need to dell
-    //MNV need to dell
 }

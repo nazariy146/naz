@@ -13,7 +13,7 @@ public class WebInterface {
 
     @Test
     public void webInterface() {
-        webUtils.webOpen1C();                       //запуск 1с
+        webUtils.webRunBrowser();                       //запуск 1с
         this.menuQuick();                   //меню Главное
         this.menuReceiving();               //меню Приход
         this.menuShipment();                //меню Отгрузка

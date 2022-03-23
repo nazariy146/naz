@@ -42,7 +42,7 @@ public class BaseMobileClass implements WebDriverProvider {
     @BeforeMethod
     public void setUp() {
         closeWebDriver();
-        Configuration.startMaximized = false;
+        Configuration.startMaximized = true;
         Configuration.browserSize = null;
         Configuration.browser = BaseMobileClass.class.getName();
 
@@ -51,4 +51,5 @@ public class BaseMobileClass implements WebDriverProvider {
         open();
         clickErrorDialogOkButton();
     }
+
 }

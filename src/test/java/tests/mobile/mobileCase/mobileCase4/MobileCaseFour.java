@@ -1,10 +1,12 @@
 package tests.mobile.mobileCase.mobileCase4;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tests.mobile.mobileForm.*;
 import tests.mobile.mobileUtils.BaseMobileClass;
 import tests.mobile.mobilePagesRefactor.*;
 import tests.mobile.mobileUtils.MobileData;
+import tests.web.webCase.WebDownloadMobileTest;
 
 import static com.codeborne.selenide.Condition.*;
 
@@ -26,6 +28,12 @@ public class MobileCaseFour extends BaseMobileClass {
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
     MobileData mobileData = new MobileData();
     MobileFormReception mobileFormReception = new MobileFormReception();
+    WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
+
+    @BeforeClass
+    public void taskWeb() {
+        webDownloadMobileTest.completeTask("4");
+    }
 
     @Test
     public void taskReception() throws Exception {

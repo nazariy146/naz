@@ -73,7 +73,8 @@ public class MobileFormReception {
         if (stolData.series | stolData.shelfLife | stolData.serialNumber){
             if (stolData.series | stolData.shelfLife){
                 if (!stolData.declaredSeriesShelfLife & !stolData.declaredSeriesShelfLifeSN){
-                    mobileFormBatchProperties.input(stolData.series, stolData.shelfLife, stolData.dataSeries, stolData.dataShelfLife);
+//                    mobileFormBatchProperties.input(stolData.series, stolData.shelfLife, stolData.dataSeries, stolData.dataShelfLife); MNV-удалить после рефакторинга
+                    mobileFormBatchProperties.completeTask(stolData);
                 }
             }
             if (stolData.serialNumber){
