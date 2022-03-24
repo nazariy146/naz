@@ -1343,7 +1343,7 @@ public class MobileData {
                 return stolData;
             case "stol10":
                 stolData.article = "00010";
-                stolData.product = "10fragbc";
+                stolData.product = "00010";
                 stolData.name = "Стол10";
                 stolData.series = false;
                 stolData.shelfLife = false;
