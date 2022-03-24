@@ -137,7 +137,7 @@ public class MobileCaseThree extends BaseMobileClass {
         accommodationCardPage.inputData("product","2110022020000");
         accommodationCardPage.verifyData("qty","2.000");
         accommodationCardPage.inputData("product","2110023020000");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("The entered BC does not correspond to the current task!"));
+        getMessageModalDialog().shouldBe(visible).shouldHave(text("The product doesn't match the task: 00023 [series] [use] [shelf_life]"));
         clickErrorDialogOkButton();
         accommodationCardPage.inputData("product","2110022140000");
         accommodationCardPage.verifyData("qty","16.000");
