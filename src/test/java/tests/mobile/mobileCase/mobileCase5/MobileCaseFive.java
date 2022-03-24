@@ -35,7 +35,7 @@ public class MobileCaseFive extends BaseMobileClass{
 
     @BeforeClass
     public void taskWeb() {
-        webDownloadMobileTest.completeTask("2");
+        webDownloadMobileTest.completeTask("5");
     }
 
     @Test

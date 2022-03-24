@@ -11,7 +11,7 @@ public class AssertionUtils {
 
     private static final int DEFAULT_POLL_INTERVAL = Math.toIntExact(Duration.ofSeconds(10).toMillis());
 
-    public static final int WAIT_TASK_TIMEOUT = Math.toIntExact(Duration.ofSeconds(200).toMillis());
+    public static final int WAIT_TASK_TIMEOUT = Math.toIntExact(Duration.ofSeconds(20000).toMillis());
 
     public static void waitUntilPass(int timeout, URunnable task) throws Exception {
         waitUntilPass(timeout, DEFAULT_POLL_INTERVAL, task);
