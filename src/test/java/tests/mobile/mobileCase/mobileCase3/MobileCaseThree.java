@@ -314,6 +314,7 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
         inventoryCardPage.verifyData("qtyViewInfo", "5.5");
     //Стол23
+        inventoryCardPage.inputData("source", "A.1.1.1.23");
         inventoryCardPage.inputData("product", "2110023045000");
         mobileFormBatchProperties.select(false,true,"","31.12.2022");
         inventoryCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23");
