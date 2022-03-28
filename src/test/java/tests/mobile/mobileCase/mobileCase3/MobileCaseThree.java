@@ -15,7 +15,6 @@ import static tests.mobile.mobileUtils.ModalDialogs.clickSetOkYesButton;
 public class MobileCaseThree extends BaseMobileClass {
 
     AllTasksPage allTasksPage = new AllTasksPage();
-    AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();
@@ -31,6 +30,7 @@ public class MobileCaseThree extends BaseMobileClass {
     MobileData mobileData = new MobileData();
     MobileFormReception mobileFormReception = new MobileFormReception();
     WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
+    MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
 
     @BeforeClass
     public void taskWeb() {
@@ -86,127 +86,45 @@ public class MobileCaseThree extends BaseMobileClass {
 
     @Test (priority = 1, dependsOnMethods = "taskReception")
     public void taskAccommodation() throws Exception{
+        MobileData stol21 = mobileData.dataAccommodation("stol21");
+        MobileData stol22 = mobileData.dataAccommodation("stol22");
+        MobileData stol23_part1 = mobileData.dataAccommodation("stol23_part1");
+        MobileData stol23_part2 = mobileData.dataAccommodation("stol23_part2");
+        MobileData stol24_part1 = mobileData.dataAccommodation("stol24_part1");
+        MobileData stol24_part2 = mobileData.dataAccommodation("stol24_part2");
+        MobileData stol25 = mobileData.dataAccommodation("stol25");
+        MobileData stol26 = mobileData.dataAccommodation("stol26");
+        MobileData stol27 = mobileData.dataAccommodation("stol27");
+        MobileData stol28 = mobileData.dataAccommodation("stol28");
+        MobileData stol29 = mobileData.dataAccommodation("stol29");
+        MobileData stol30 = mobileData.dataAccommodation("stol30");
+
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол21
-        accommodationCardPage.inputData("source","IN.02");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Source does not match the task"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.verifyData("productInfo", "00021 Стол21 IN.01 ➡ R.1.1.1.1 Quantity 10 уп. (5)");
-        accommodationCardPage.inputData("source","IN");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Source does not match the task"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("source","IN.01");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Source does not match the task"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("source","IN1");
-        getMessageModalDialog().shouldNotBe(visible);
-        accommodationCardPage.inputData("product","IN.01");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Couldn't find the product by code: IN.01"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("product","IN");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Couldn't find the product by code: IN"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("product","00001");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Couldn't find the product by code: 00001"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("product","00002102");
-        getMessageModalDialog().shouldNotBe(visible);
-        accommodationCardPage.inputData("destination","A.1.1.1.1");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Location was changed. Continue?"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("destination","A.1.1.1.21");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Location was changed. Continue?"));
-        clickSetOkYesButton();
-//        receptionCardPage.checkAmountAndPackaging("5.0", "2");MNV id поля надо правильно прописать
-        accommodationCardPage.inputData("qty","3");
-        accommodationCardPage.clickButton("commit");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("It is impossible to confirm15. Remaining 10"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("qty","2");
-        accommodationCardPage.clickButton("commit");
-        getMessageModalDialog().shouldNotBe(visible);
+        mobileFormAccommodation.completeTask(stol21);
     //Стол22
-        accommodationCardPage.inputData("source","IN1");
-        accommodationCardPage.verifyData("productInfo", "00022 Стол22 IN.01 ➡ A.1.1.1.22 Quantity 10 шт");
-        accommodationCardPage.inputData("product","2120021020000");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("Couldn't find the product by code: 2120021020000"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("product","2110022020000");
-        accommodationCardPage.verifyData("qty","2.000");
-        accommodationCardPage.inputData("product","2110023020000");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("The product doesn't match the task: 00023 [series] [use] [shelf_life]"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("product","2110022140000");
-        accommodationCardPage.verifyData("qty","16.000");
-        accommodationCardPage.inputData("destination","A.1.1.1.22");
-        accommodationCardPage.clickButton("commit");
-        getMessageModalDialog().shouldBe(visible).shouldHave(text("It is impossible to confirm16. Remaining 10"));
-        clickErrorDialogOkButton();
-        accommodationCardPage.inputData("qty", "");
-        accommodationCardPage.inputData("product","2110022100000");
-        accommodationCardPage.verifyData("qty","10.000");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol22);
     //Стол23
-        accommodationCardPage.inputData("source","IN1");
-        accommodationCardPage.verifyData("productInfo", "00023 30.12.2022 Стол23 IN.01 ➡ A.1.1.1.23 Quantity 5.5 шт");
-        accommodationCardPage.inputData("product","2110023055000");
-        accommodationCardPage.inputData("destination","A.1.1.1.23");
-        accommodationCardPage.clickButton("commit");
-    //Стол23
-        accommodationCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23 IN.01 ➡ A.1.1.1.23 Quantity 4.5 шт");
-        accommodationCardPage.inputData("product","2110023045000");
-        accommodationCardPage.inputData("destination","A.1.1.1.23");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol23_part1);
+        mobileFormAccommodation.completeTask(stol23_part2);
     //Стол24
-        accommodationCardPage.verifyData("productInfo", "00024 24Series01 Стол24 IN.01 ➡ A.1.1.1.24 Quantity 2 шт");
-        accommodationCardPage.inputData("product","2110024020000");
-        accommodationCardPage.inputData("destination","A.1.1.1.24");
-        accommodationCardPage.clickButton("commit");
-    //Стол24
-        accommodationCardPage.inputData("source","IN1");
-        accommodationCardPage.verifyData("productInfo", "00024 24Series02 Стол24 IN.01 ➡ A.1.1.1.24 Quantity 8 шт");
-        accommodationCardPage.inputData("product","2110024080000");
-        accommodationCardPage.inputData("destination","A.1.1.1.24");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol24_part1);
+        mobileFormAccommodation.completeTask(stol24_part2);
     //Стол25
-        accommodationCardPage.verifyData("productInfo", "00025 Стол25(0.2) IN.01 ➡ A.1.1.1.25 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00025");
-        accommodationCardPage.inputData("destination","A.1.1.1.25");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol25);
     //Стол26
-        accommodationCardPage.verifyData("productInfo", "00026 26series01 Стол26(0.2) IN.01 ➡ A.1.1.1.26 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00026");
-        accommodationCardPage.inputData("destination","A.1.1.1.26");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol26);
     //Стол27
-        accommodationCardPage.verifyData("productInfo", "00027 31.12.2022 Стол27(0.2) IN.01 ➡ A.1.1.1.27 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00027");
-        accommodationCardPage.inputData("destination","A.1.1.1.27");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol27);
     //Стол28
-        accommodationCardPage.verifyData("productInfo", "00028 Стол28 IN.01 ➡ A.1.1.1.28 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00028");
-        accommodationCardPage.inputData("destination","A.1.1.1.28");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol28);
     //Стол29
-        accommodationCardPage.verifyData("productInfo", "00029 29Series01 Стол29 IN.01 ➡ A.1.1.1.29 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00029");
-        accommodationCardPage.inputData("destination","A.1.1.1.29");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol29);
     //Стол30
-        accommodationCardPage.verifyData("productInfo", "00030 Стол30 IN.01 ➡ A.1.1.1.30 Quantity 10 шт");
-        accommodationCardPage.inputData("product","00030");
-        accommodationCardPage.inputData("destination","A.1.1.1.30");
-        accommodationCardPage.inputData("qty","10");
-        accommodationCardPage.clickButton("commit");
+        mobileFormAccommodation.completeTask(stol30);
         }
 
     @Test (priority = 2, dependsOnMethods = "taskAccommodation")
@@ -314,7 +232,6 @@ public class MobileCaseThree extends BaseMobileClass {
         inventoryCardPage.verifyData("qualityInfo", "Кондиция");
         inventoryCardPage.verifyData("qtyViewInfo", "5.5");
     //Стол23
-        inventoryCardPage.inputData("source", "A.1.1.1.23");
         inventoryCardPage.inputData("product", "2110023045000");
         mobileFormBatchProperties.select(false,true,"","31.12.2022");
         inventoryCardPage.verifyData("productInfo", "00023 31.12.2022 Стол23");
