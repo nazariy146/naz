@@ -43,7 +43,7 @@ public class MobileFormAccommodation {
                 mobileSteps.inputData(resourceId_Source, stolData.container);
                 mobileSteps.inputData(resourceId_Product, stolData.product);
                 mobileSteps.inputData(resourceId_Destination, stolData.destination);
-                mobileSteps.inputData(resourceId_Qty, stolData.qtyTotal);
+                mobileSteps.inputData(resourceId_Qty, stolData.qty);
                 mobileSteps.clickButton(resourceId_Commit);
         }
 }

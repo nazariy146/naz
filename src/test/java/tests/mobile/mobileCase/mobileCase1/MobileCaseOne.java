@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Condition.*;
 
 public class MobileCaseOne extends BaseMobileClass {
     AllTasksPage allTasksPage = new AllTasksPage();
-    AccommodationCardPage accommodationCardPage = new AccommodationCardPage();
     FindRestsPage findRestsPage = new FindRestsPage();
     SelectionCardPage selectionCardPage = new SelectionCardPage();
     ControlCardPage controlCardPage = new ControlCardPage();

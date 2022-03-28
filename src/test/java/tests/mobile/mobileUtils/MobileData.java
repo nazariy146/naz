@@ -1,15 +1,13 @@
 package tests.mobile.mobileUtils;
 
-import tests.mobile.mobileForm.MobileFormUnit;
-import tests.mobile.mobileSteps.MobileSteps;
-
 public class MobileData {
 
     public String article, name, productInfo, productInfoSeriesShelfLife, source, product, container, qty, qtyTotal, dataSeries, dataShelfLife, dataSerialNumber, typeSn, unit, palletWeight, tareQty, tareWeight,
             unitName, unitQty, unitWidth, unitLenght, unitHeight, unitWeight,
             packingDataPallet, packingDataLayer, packingDataBox, packingDataGroup,
             batchPropertiesAction,
-            destination;
+            destination,
+            packing, infoPacking;
     public boolean weightBarcode, series, shelfLife, declaredSeriesShelfLife, declaredSeriesShelfLifeSN, serialNumber, sof, skuEdit, skuNew, packingNew, skuForm, skuUnit,
             packingPalletFlag, packingLayerFlag, packingBoxFlag, packingGroupFlag;
 
@@ -32,7 +30,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol2":
                 stolData.series = true;
@@ -50,7 +48,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol3":
                 stolData.serialNumber = false;
@@ -71,7 +69,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol4":
                 stolData.serialNumber = true;
@@ -90,7 +88,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol5":
                 stolData.serialNumber = false;
@@ -110,7 +108,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol6":
                 stolData.serialNumber = true;
@@ -130,7 +128,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol7":
                 stolData.serialNumber = true;
@@ -150,7 +148,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol8":
                 stolData.serialNumber = true;
@@ -170,7 +168,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol9":
                 stolData.serialNumber = true;
@@ -190,7 +188,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol10":
                 stolData.series = false;
@@ -206,7 +204,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol11":
                 stolData.series = false;
@@ -226,7 +224,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol12":
                 stolData.series = true;
@@ -247,7 +245,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol13":
                 stolData.series = false;
@@ -268,7 +266,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol14":
                 stolData.series = false;
@@ -288,7 +286,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol15":
                 stolData.series = true;
@@ -309,7 +307,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol16":
                 stolData.series = true;
@@ -330,7 +328,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol17":
                 stolData.series = false;
@@ -351,7 +349,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol18":
                 stolData.series = true;
@@ -372,7 +370,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol19":
                 stolData.series = false;
@@ -393,7 +391,7 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol20":
                 stolData.series = false;
@@ -414,15 +412,15 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol21":
                 stolData.series = false;
                 stolData.shelfLife = false;
-                stolData.serialNumber = false;
-                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -435,15 +433,15 @@ public class MobileData {
                 stolData.qty = "2";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol22":
                 stolData.series = false;
                 stolData.shelfLife = false;
-                stolData.serialNumber = false;
-                stolData.batchPropertiesAction = "";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -457,15 +455,15 @@ public class MobileData {
                 stolData.qty = "10";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol23_part1":
                 stolData.series = false;
                 stolData.shelfLife = true;
-                stolData.serialNumber = false;
-                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "31.12.2022";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -479,15 +477,15 @@ public class MobileData {
                 stolData.qty = "2";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol23_part2":
                 stolData.series = false;
                 stolData.shelfLife = true;
-                stolData.serialNumber = false;
-                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "";
                 stolData.dataShelfLife = "30.12.2022";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -501,7 +499,7 @@ public class MobileData {
                 stolData.qty = "5.5";
                 stolData.qtyTotal = "8";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol23_part3":
                 stolData.series = false;
@@ -523,15 +521,15 @@ public class MobileData {
                 stolData.qty = "2.5";
                 stolData.qtyTotal = "2.5";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol24_part1":
                 stolData.series = true;
                 stolData.shelfLife = false;
-                stolData.serialNumber = false;
-                stolData.batchPropertiesAction = "input";
                 stolData.dataSeries = "24Series01";
                 stolData.dataShelfLife = "";
+                stolData.serialNumber = false;
+                stolData.batchPropertiesAction = "input";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -545,7 +543,7 @@ public class MobileData {
                 stolData.qty = "2";
                 stolData.qtyTotal = "10";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol24_part2":
                 stolData.series = true;
@@ -567,7 +565,7 @@ public class MobileData {
                 stolData.qty = "7.5";
                 stolData.qtyTotal = "8";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol24_part3":
                 stolData.series = true;
@@ -589,16 +587,16 @@ public class MobileData {
                 stolData.qty = "0.5";
                 stolData.qtyTotal = "0.5";
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol25":
                 stolData.series = false;
                 stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
                 stolData.serialNumber = false;
                 stolData.batchPropertiesAction = "";
                 stolData.sof = true;
-                stolData.dataSeries = "";
-                stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -616,16 +614,16 @@ public class MobileData {
                 stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol26":
                 stolData.series = true;
                 stolData.shelfLife = false;
+                stolData.dataSeries = "26series01";
+                stolData.dataShelfLife = "";
                 stolData.serialNumber = false;
                 stolData.batchPropertiesAction = "input";
                 stolData.sof = true;
-                stolData.dataSeries = "26series01";
-                stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -643,16 +641,16 @@ public class MobileData {
                 stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol27":
                 stolData.series = false;
                 stolData.shelfLife = true;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "31.12.2022";
                 stolData.serialNumber = false;
                 stolData.batchPropertiesAction = "input";
                 stolData.sof = true;
-                stolData.dataSeries = "";
-                stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -670,16 +668,16 @@ public class MobileData {
                 stolData.tareWeight = "0.2";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol28":
                 stolData.series = false;
                 stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
                 stolData.serialNumber = false;
                 stolData.batchPropertiesAction = "";
                 stolData.sof = false;
-                stolData.dataSeries = "";
-                stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -697,16 +695,16 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol29":
                 stolData.series = true;
                 stolData.shelfLife = false;
+                stolData.dataSeries = "29Series01";
+                stolData.dataShelfLife = "";
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.batchPropertiesAction = "input";
-                stolData.dataSeries = "29Series01";
-                stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -724,11 +722,13 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol30":
                 stolData.series = false;
                 stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuForm = true;
@@ -742,8 +742,6 @@ public class MobileData {
                 stolData.unitLenght = "20";
                 stolData.unitHeight = "10";
                 stolData.unitWeight = "0.4";
-                stolData.dataSeries = "";
-                stolData.dataShelfLife = "";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.typeSn = "";
                 stolData.dataSerialNumber = "";
@@ -761,7 +759,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol31":
                 stolData.series = false;
@@ -795,7 +793,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol32":
                 stolData.series = true;
@@ -830,7 +828,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol33":
                 stolData.series = false;
@@ -865,7 +863,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol34":
                 stolData.series = true;
@@ -900,7 +898,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol35":
                 stolData.series = false;
@@ -935,7 +933,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol36":
                 stolData.series = true;
@@ -970,7 +968,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol37":
                 stolData.series = false;
@@ -1005,7 +1003,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol38":
                 stolData.series = true;
@@ -1040,7 +1038,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol39":
                 stolData.series = true;
@@ -1075,7 +1073,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol40":
                 stolData.series = true;
@@ -1110,11 +1108,13 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
             case "stol41":
                 stolData.series = true;
                 stolData.shelfLife = true;
+                stolData.dataSeries = "41Series01";
+                stolData.dataShelfLife = "31.12.2022";
                 stolData.serialNumber = false;
                 stolData.sof = false;
                 stolData.skuUnit = true;
@@ -1146,8 +1146,6 @@ public class MobileData {
                 stolData.unitLenght = "";
                 stolData.unitHeight = "";
                 stolData.unitWeight = "";
-                stolData.dataSeries = "41Series01";
-                stolData.dataShelfLife = "31.12.2022";
                 stolData.declaredSeriesShelfLife = false;
                 stolData.declaredSeriesShelfLifeSN = false;
                 stolData.typeSn = "";
@@ -1166,7 +1164,7 @@ public class MobileData {
                 stolData.tareWeight = "";
 
                 stolData.productInfo = stolData.article + productInfo(stolData);
-                stolData.productInfoSeriesShelfLife = stolData.article + productInfoSeriesShelfLife(stolData) + productInfo(stolData);
+                stolData.productInfoSeriesShelfLife = stolData.article + infoSeriesShelfLife(stolData) + productInfo(stolData);
                 return stolData;
         }
         return null;
@@ -1177,7 +1175,7 @@ public class MobileData {
         return productInfo;
     }
 
-    String productInfoSeriesShelfLife(MobileData stolData) {
+    String infoSeriesShelfLife(MobileData stolData) {
 
         if (stolData.series || stolData.shelfLife) {
             if (stolData.series & stolData.shelfLife) {
@@ -1218,6 +1216,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.1";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1233,6 +1232,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.2";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1248,6 +1248,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.3";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1263,6 +1264,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.4";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1278,6 +1280,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.5";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1293,6 +1296,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.6";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1308,6 +1312,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.7";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1323,6 +1328,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.8";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1338,6 +1344,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.9";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1353,6 +1360,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.10";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1368,6 +1376,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.11";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1383,6 +1392,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.12";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1398,6 +1408,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.13";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1413,6 +1424,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.14";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1428,6 +1440,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.15";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1443,6 +1456,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.16";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1458,6 +1472,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.17";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1473,6 +1488,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.18";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1488,6 +1504,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.19";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1503,6 +1520,199 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.20";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol21":
+                stolData.article = "00021";
+                stolData.product = "00002102";
+                stolData.name = "Стол21";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.21";
+                stolData.qtyTotal = "10";
+                stolData.qty = "2";
+                stolData.unit = "уп. (5)";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol22":
+                stolData.article = "00022";
+                stolData.product = "2110022100000";
+                stolData.name = "Стол22";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.22";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol23_part1":
+                stolData.article = "00023";
+                stolData.product = "2110023055000";
+                stolData.name = "Стол23";
+                stolData.series = false;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "30.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.23";
+                stolData.qtyTotal = "5.5";
+                stolData.qty = "5.5";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol23_part2":
+                stolData.article = "00023";
+                stolData.product = "2110023020000";
+                stolData.name = "Стол23";
+                stolData.series = false;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.23";
+                stolData.qtyTotal = "4.5";
+                stolData.qty = "4.5";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol24_part1":
+                stolData.article = "00024";
+                stolData.product = "2110024020000";
+                stolData.name = "Стол24";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "24Series01";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.24";
+                stolData.qtyTotal = "2";
+                stolData.qty = "2";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol24_part2":
+                stolData.article = "00024";
+                stolData.product = "2110024080000";
+                stolData.name = "Стол24";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "24Series02";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.24";
+                stolData.qtyTotal = "8";
+                stolData.qty = "8";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol25":
+                stolData.article = "00025";
+                stolData.product = "00025";
+                stolData.name = "Стол25(0.2)";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.25";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol26":
+                stolData.article = "00026";
+                stolData.product = "00026";
+                stolData.name = "Стол26(0.2)";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "26series01";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.26";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol27":
+                stolData.article = "00027";
+                stolData.product = "00027";
+                stolData.name = "Стол27(0.2)";
+                stolData.series = false;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.27";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol28":
+                stolData.article = "00028";
+                stolData.product = "00028";
+                stolData.name = "Стол28";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.28";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol29":
+                stolData.article = "00029";
+                stolData.product = "00029";
+                stolData.name = "Стол29";
+                stolData.series = true;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "29Series01";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.29";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol30":
+                stolData.article = "00030";
+                stolData.product = "00030";
+                stolData.name = "Стол30";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.30";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1518,6 +1728,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.31";
                 stolData.qtyTotal = "10";
+                stolData.qty = "2";
                 stolData.unit = "уп. (5)";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1533,6 +1744,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.32";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1548,6 +1760,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.33";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1563,6 +1776,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.34";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1578,6 +1792,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.35";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1593,6 +1808,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.36";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1608,6 +1824,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.37";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1623,6 +1840,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.38";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1638,6 +1856,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.39";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1653,6 +1872,194 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.40";
                 stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol41":
+                stolData.article = "00041";
+                stolData.product = "00041";
+                stolData.name = "Стол41";
+                stolData.series = true;
+                stolData.shelfLife = true;
+                stolData.dataSeries = "41Series01";
+                stolData.dataShelfLife = "31.12.2022";
+                stolData.packing = "41-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.41";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol42_part1":
+                stolData.article = "00042";
+                stolData.product = "00042";
+                stolData.name = "Стол42";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "42-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.42";
+                stolData.qtyTotal = "10";
+                stolData.qty = "6";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol42_part2":
+                stolData.article = "00042";
+                stolData.product = "00042";
+                stolData.name = "Стол42";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "42-5-4-2-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.42";
+                stolData.qtyTotal = "4";
+                stolData.qty = "4";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol43":
+                stolData.article = "00043";
+                stolData.product = "00043";
+                stolData.name = "Стол43";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "43-5-4-10-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.43";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol44":
+                stolData.article = "00044";
+                stolData.product = "00044";
+                stolData.name = "Стол44";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "44-5-4-5-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.44";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol45":
+                stolData.article = "00045";
+                stolData.product = "00045";
+                stolData.name = "Стол45";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "45-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.45";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol46":
+                stolData.article = "00046";
+                stolData.product = "2110046100000";
+                stolData.name = "Стол46";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "46-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.46";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol47":
+                stolData.article = "00047";
+                stolData.product = "2110047100000";
+                stolData.name = "Стол47";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "47-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.47";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol48":
+                stolData.article = "00048";
+                stolData.product = "00048";
+                stolData.name = "Стол48";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "48-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.48";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol49":
+                stolData.article = "00049";
+                stolData.product = "49FRAGSN49Series013112202200";
+                stolData.name = "Стол49";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "49-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.49";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
+                stolData.unit = "шт";
+                stolData.productInfo = productInfoAccommodation(stolData);
+                return stolData;
+            case "stol50":
+                stolData.article = "00050";
+                stolData.product = "00050";
+                stolData.name = "Стол50(0.2)";
+                stolData.series = false;
+                stolData.shelfLife = false;
+                stolData.dataSeries = "";
+                stolData.dataShelfLife = "";
+                stolData.packing = "50-5-4-3-1";
+                stolData.source = "IN.01";
+                stolData.container = "IN1";
+                stolData.destination = "A.1.1.1.50";
+                stolData.qtyTotal = "10";
+                stolData.qty = "10";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1662,8 +2069,19 @@ public class MobileData {
 
     String productInfoAccommodation(MobileData stolData) {
 
-        String infoSeriesShelfLife = productInfoSeriesShelfLife(stolData);
-        String productInfo = "" + stolData.article + infoSeriesShelfLife + " " + stolData.name + " " + stolData.source + " ➡ " + stolData.destination + " Quantity" + " " + stolData.qtyTotal + " " + stolData.unit;
+        String infoSeriesShelfLife = infoSeriesShelfLife(stolData);
+        String infoPacking = infoPacking(stolData);
+        String productInfo = "" + stolData.article + infoSeriesShelfLife + " " + stolData.name + " " + stolData.source + " ➡ " + stolData.destination + infoPacking + " Quantity" + " " + stolData.qtyTotal + " " + stolData.unit;
         return productInfo;
+    }
+
+    String infoPacking(MobileData stolData) {
+        if (stolData.packing == ""|| stolData.packing == null) {
+            infoPacking = "";
+        }
+        else {
+            infoPacking = " " + "Packing"  + " " + stolData.packing;
+        }
+        return infoPacking;
     }
 }
