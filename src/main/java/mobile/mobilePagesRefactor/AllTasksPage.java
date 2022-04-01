@@ -57,8 +57,8 @@ public class AllTasksPage {
 
     public void selectConsolidateContainerMenu() {
         clickMenuIcon();
-        $(By.id("com.abmcloud:id/design_navigation_view")).shouldBe(visible);
-        $(By.id("com.abmcloud:id/design_navigation_view")).find(byId("com.abmcloud:id/consolidate_container")).click();
+        $(By.id("com.abmcloud:id/navigation_more")).shouldBe(visible);
+        $(By.id("com.abmcloud:id/navigation_more")).find(byId("com.abmcloud:id/consolidate_container")).click();
     }
 
     public SelenideElement getStringTasks(int row) {

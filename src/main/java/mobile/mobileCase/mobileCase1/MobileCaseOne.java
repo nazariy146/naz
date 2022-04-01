@@ -28,7 +28,7 @@ public class MobileCaseOne extends BaseMobileClass {
     MobileFormSettings mobileFormSettings = new MobileFormSettings();
     MobileData mobileData = new MobileData();
     MobileFormReception mobileFormReception = new MobileFormReception();
-    WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
+    public WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
 
     @BeforeClass
@@ -38,80 +38,79 @@ public class MobileCaseOne extends BaseMobileClass {
 
     @Test
     public void taskReception() throws Exception {
-        MobileData stol1 = mobileData.dataReception("stol1");
-        MobileData stol2 = mobileData.dataReception("stol2");
-        MobileData stol3 = mobileData.dataReception("stol3");
-        MobileData stol4 = mobileData.dataReception("stol4");
-        MobileData stol5 = mobileData.dataReception("stol5");
-        MobileData stol6 = mobileData.dataReception("stol6");
-        MobileData stol7 = mobileData.dataReception("stol7");
-        MobileData stol8 = mobileData.dataReception("stol8");
-        MobileData stol9 = mobileData.dataReception("stol9");
-        MobileData stol10 = mobileData.dataReception("stol10");
 
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Reception");
         allTasksPage.getWorkTypeTasksQuantity().click();
-
     //Стол1
+        MobileData stol1 = mobileData.dataReception("stol1");
         mobileFormReception.completeTask(stol1);
     //Стол10
+        MobileData stol10 = mobileData.dataReception("stol10");
         mobileFormReception.completeTask(stol10);
     //Стол2
+        MobileData stol2 = mobileData.dataReception("stol2");
         mobileFormReception.completeTask(stol2);
     //Стол3
+        MobileData stol3 = mobileData.dataReception("stol3");
         mobileFormReception.completeTask(stol3);
     //Стол4
+        MobileData stol4 = mobileData.dataReception("stol4");
         mobileFormReception.completeTask(stol4);
     //Стол5
+        MobileData stol5 = mobileData.dataReception("stol5");
         mobileFormReception.completeTask(stol5);
     //Стол6
+        MobileData stol6 = mobileData.dataReception("stol6");
         mobileFormReception.completeTask(stol6);
     //Стол7
+        MobileData stol7 = mobileData.dataReception("stol7");
         mobileFormReception.completeTask(stol7);
     //Стол8
+        MobileData stol8 = mobileData.dataReception("stol8");
         mobileFormReception.completeTask(stol8);
     //Стол9
+        MobileData stol9 = mobileData.dataReception("stol9");
         mobileFormReception.completeTask(stol9);
     }
 
     @Test (priority = 1, dependsOnMethods = "taskReception")
     public void taskAccommodation() throws Exception {
-        MobileData stol1 = mobileData.dataAccommodation("stol1");
-        MobileData stol2 = mobileData.dataAccommodation("stol2");
-        MobileData stol3 = mobileData.dataAccommodation("stol3");
-        MobileData stol4 = mobileData.dataAccommodation("stol4");
-        MobileData stol5 = mobileData.dataAccommodation("stol5");
-        MobileData stol6 = mobileData.dataAccommodation("stol6");
-        MobileData stol7 = mobileData.dataAccommodation("stol7");
-        MobileData stol8 = mobileData.dataAccommodation("stol8");
-        MobileData stol9 = mobileData.dataAccommodation("stol9");
-        MobileData stol10 = mobileData.dataAccommodation("stol10");
 
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
     //Стол1
+        MobileData stol1 = mobileData.dataAccommodation("stol1");
         mobileFormAccommodation.completeTask(stol1);
     //Стол2
+        MobileData stol2 = mobileData.dataAccommodation("stol2");
         mobileFormAccommodation.completeTask(stol2);
     //Стол3
+        MobileData stol3 = mobileData.dataAccommodation("stol3");
         mobileFormAccommodation.completeTask(stol3);
     //Стол4
+        MobileData stol4 = mobileData.dataAccommodation("stol4");
         mobileFormAccommodation.completeTask(stol4);
     //Стол5
+        MobileData stol5 = mobileData.dataAccommodation("stol5");
         mobileFormAccommodation.completeTask(stol5);
     //Стол6
+        MobileData stol6 = mobileData.dataAccommodation("stol6");
         mobileFormAccommodation.completeTask(stol6);
     //Стол7
+        MobileData stol7 = mobileData.dataAccommodation("stol7");
         mobileFormAccommodation.completeTask(stol7);
     //Стол8
+        MobileData stol8 = mobileData.dataAccommodation("stol8");
         mobileFormAccommodation.completeTask(stol8);
     //Стол9
+        MobileData stol9 = mobileData.dataAccommodation("stol9");
         mobileFormAccommodation.completeTask(stol9);
     //Стол10
+        MobileData stol10 = mobileData.dataAccommodation("stol10");
         mobileFormAccommodation.completeTask(stol10);
     }
 
