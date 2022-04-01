@@ -27,19 +27,19 @@ public class MobileSteps {
     }
 
     public void verifyData(SelenideElement resourceId, String data) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(50));
+        resourceId.shouldBe(visible, Duration.ofSeconds(200));
         resourceId.shouldHave(text(data));
     }
 
     public void inputData(SelenideElement resourceId, String data) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(50));
+        resourceId.shouldBe(visible, Duration.ofSeconds(200));
         resourceId.click();
         resourceId.val(data);
         mobileDriver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
 
     public void clickButton(SelenideElement resourceId) {
-        resourceId.shouldBe(visible, Duration.ofSeconds(50));
+        resourceId.shouldBe(visible, Duration.ofSeconds(200));
         resourceId.click();
     }
     public void selectData(ElementsCollection table, String source) {

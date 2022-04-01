@@ -183,6 +183,9 @@ public class ReceptionCardPage {
         else if (Field == "commitSN"){   //MNV после Рефакторинга удалить
             return $(By.id("com.abmcloud:id/buttonSNCommit"));
         }
+        else if (Field == "title_template"){   //MNV после Рефакторинга удалить
+            return $(By.id("com.abmcloud:id/alertTitle"));
+        }
         return null;
     }
 

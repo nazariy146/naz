@@ -32,10 +32,10 @@ public class MobileCaseTwo extends BaseMobileClass {
     WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
 
-    @BeforeClass
-    public void taskWeb() {
-        webDownloadMobileTest.completeTask("2");
-    }
+//    @BeforeClass
+//    public void taskWeb() {
+//        webDownloadMobileTest.completeTask("2");
+//    }
 
     @Test
     public void taskReception() throws Exception {
@@ -116,7 +116,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         mobileFormAccommodation.completeTask(stol20);
     }
 
-    @Test (priority = 2, dependsOnMethods = "taskAccommodation")
+    @Test //(priority = 2, dependsOnMethods = "taskAccommodation")
     public void taskFindRests() {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();

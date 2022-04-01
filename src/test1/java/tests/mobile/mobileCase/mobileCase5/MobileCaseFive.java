@@ -58,7 +58,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "41", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00041 41Series01 31.12.2022 Стол41 IN.01 Quantity 10 шт");    //Eleo - иногда падает на этом месте тест (Не успевает обновлятся форма)
@@ -79,7 +79,7 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "42", "5", "4", "2");
         mobileFormUnit.completeTask("New unit","блок", "2", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00042 Стол42 IN.01 Quantity 10 шт");
@@ -111,12 +111,14 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "43", "0.1", "0.1", "0.1", "1");
 
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("newSku");
         mobileFormPacking.completeTask(true, true, true, true, "43", "5", "4", "2");
         mobileFormUnit.completeTask("New unit","блок", "2", "0.1", "0.1", "0.1", "1");
 
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("Choice43-5-4-3-1");
-        Thread.sleep(2000);
+
         receptionCardPage.clickButton("DeletePacking");
         receptionCardPage.clickButton("modalDialogOK");
         receptionCardPage.clickButton("Choice43-5-4-2-1");
@@ -125,7 +127,7 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.clickButton("modalDialogOK");
 
         mobileFormUnit.completeTask("New unit","блок", "10", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00043 Стол43 IN.01 Quantity 10 шт");
@@ -152,7 +154,7 @@ public class MobileCaseFive extends BaseMobileClass{
         receptionCardPage.clickButton("modalDialogOK");
 
         mobileFormUnit.completeTask("New unit","паллета", "44", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00044 Стол44 IN.01 Quantity 10 шт");
@@ -170,9 +172,8 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "45", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
-
         receptionCardPage.verifyData("productInfo", "00045 Стол45 IN.01 Quantity 10 шт");
         receptionCardPage.verifyData("package", "45-5-4-3-1");
         receptionCardPage.inputData("container","IN1");
@@ -187,7 +188,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "46", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00046 Стол46 IN.01 Quantity 10 шт");
@@ -204,7 +205,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "47", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00047 Стол47 IN.01 Quantity 10 шт");
@@ -216,7 +217,6 @@ public class MobileCaseFive extends BaseMobileClass{
     //Стол48
         receptionCardPage.inputData("source", "IN.01");
         receptionCardPage.inputData("product","48SnPack00");
-        Thread.sleep(5000);
         receptionCardPage.clickButton("commitSN");                                                              //Eleo - Необходима проверка опознанных СН в таб. части.
 
         receptionCardPage.clickButton("newSku");
@@ -224,7 +224,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "48", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00048 Стол48 IN.01 Quantity 10 шт");
@@ -242,7 +242,7 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "49", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00049 Стол49 IN.01 Quantity 10 шт");
@@ -259,7 +259,8 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormUnit.completeTask("New unit","блок", "3", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","ящик", "4", "0.1", "0.1", "0.1", "1");
         mobileFormUnit.completeTask("New unit","паллета", "50", "0.1", "0.1", "0.1", "1");
-        Thread.sleep(4000);
+
+        receptionCardPage.verifyData("modalDialogTitle", "SKU info");
         receptionCardPage.clickButton("modalDialogOK");
 
         receptionCardPage.verifyData("productInfo", "00050 Стол50 IN.01 Quantity 10 шт");
@@ -291,8 +292,8 @@ public class MobileCaseFive extends BaseMobileClass{
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
-    //Стол41
-        mobileFormAccommodation.completeTask(stol41);
+//    //Стол41
+//        mobileFormAccommodation.completeTask(stol41);
     //Стол42
         mobileFormAccommodation.completeTask(stol42_part1);
         mobileFormAccommodation.completeTask(stol42_part2);

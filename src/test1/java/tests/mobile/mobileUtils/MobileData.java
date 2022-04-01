@@ -1728,7 +1728,7 @@ public class MobileData {
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.31";
                 stolData.qtyTotal = "10";
-                stolData.qty = "2";
+                stolData.qty = "10";
                 stolData.unit = "уп. (5)";
                 stolData.productInfo = productInfoAccommodation(stolData);
                 return stolData;
@@ -1905,7 +1905,7 @@ public class MobileData {
                 stolData.source = "IN.01";
                 stolData.container = "IN1";
                 stolData.destination = "A.1.1.1.42";
-                stolData.qtyTotal = "10";
+                stolData.qtyTotal = "6";
                 stolData.qty = "6";
                 stolData.unit = "шт";
                 stolData.productInfo = productInfoAccommodation(stolData);
