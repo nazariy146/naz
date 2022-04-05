@@ -32,10 +32,10 @@ public class MobileCaseTwo extends BaseMobileClass {
     WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
 
-//    @BeforeClass
-//    public void taskWeb() {
-//        webDownloadMobileTest.completeTask("2");
-//    }
+    @BeforeClass
+    public void taskWeb() {
+        webDownloadMobileTest.completeTask("2");
+    }
 
     @Test
     public void taskReception() throws Exception {
@@ -895,7 +895,7 @@ public class MobileCaseTwo extends BaseMobileClass {
         consolidateContainerPage.clickConsolidateButton();
     }
 
-    @Test //(priority = 12, dependsOnMethods = "taskMergeContainer")
+    @Test (priority = 12, dependsOnMethods = "taskMergeContainer")
     public void taskLoading() throws Exception {
         mobileFormSettings.completeTask();
         mobileFormAuthorization.completeTask();

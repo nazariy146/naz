@@ -3,13 +3,16 @@ package mobile.mobileCase.mobileCase1;
 import mobile.mobileForm.*;
 import mobile.mobilePagesRefactor.*;
 import mobile.mobileUtils.BaseMobileClass;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import mobile.mobileForm.MobileFormBatchProperties;
 import mobile.mobileUtils.MobileData;
 import web.webCase.WebDownloadMobileTest;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class MobileCaseOne extends BaseMobileClass {
     AllTasksPage allTasksPage = new AllTasksPage();

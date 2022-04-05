@@ -2,7 +2,7 @@ package mobile.mobileCase.mobileCaseJenkins;
 
 import mobile.mobileCase.mobileCase5.MobileCaseFive;
 
-public class CaseFiveJenkins {
+public class MobileCaseJenkins5 {
     static MobileCaseFive mobileCaseFive = new MobileCaseFive();
 
     public static void main(String[] var0) throws Exception {

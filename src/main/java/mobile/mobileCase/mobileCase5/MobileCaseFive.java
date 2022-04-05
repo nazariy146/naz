@@ -292,8 +292,8 @@ public class MobileCaseFive extends BaseMobileClass {
         mobileFormAuthorization.completeTask();
         allTasksPage.checkWorkType("Accommodation");
         allTasksPage.getWorkTypeTasksQuantity().click();
-//    //Стол41
-//        mobileFormAccommodation.completeTask(stol41);
+    //Стол41
+        mobileFormAccommodation.completeTask(stol41);
     //Стол42
         mobileFormAccommodation.completeTask(stol42_part1);
         mobileFormAccommodation.completeTask(stol42_part2);

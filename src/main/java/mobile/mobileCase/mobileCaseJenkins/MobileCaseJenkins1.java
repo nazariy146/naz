@@ -3,10 +3,11 @@ package mobile.mobileCase.mobileCaseJenkins;
 import mobile.mobileCase.mobileCase1.MobileCaseOne;
 import web.webCase.WebDownloadMobileTest;
 
-public class CaseOneJenkins {
+public class MobileCaseJenkins1 {
 
     static MobileCaseOne mobileCaseOne = new MobileCaseOne();
     static WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
+//    public static String BASE = "wms_qa_mazv";
 
     public static void main(String[] var0) throws Exception {
 

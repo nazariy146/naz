@@ -2,7 +2,7 @@ package mobile.mobileCase.mobileCaseJenkins;
 
 import mobile.mobileCase.mobileCase4.MobileCaseFour;
 
-public class CaseFourJenkins {
+public class MobileCaseJenkins4 {
 
     static MobileCaseFour mobileCaseFour = new MobileCaseFour();
 

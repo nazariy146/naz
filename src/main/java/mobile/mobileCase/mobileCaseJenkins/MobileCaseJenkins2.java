@@ -3,7 +3,7 @@ package mobile.mobileCase.mobileCaseJenkins;
 import mobile.mobileCase.mobileCase2.MobileCaseTwo;
 import web.webCase.WebDownloadMobileTest;
 
-public class CaseTwoJenkins {
+public class MobileCaseJenkins2 {
     static MobileCaseTwo mobileCaseTwo = new MobileCaseTwo();
     static WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
 
