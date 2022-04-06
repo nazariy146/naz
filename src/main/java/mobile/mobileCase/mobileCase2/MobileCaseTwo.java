@@ -2,6 +2,8 @@ package mobile.mobileCase.mobileCase2;
 
 import mobile.mobileForm.*;
 import mobile.mobilePagesRefactor.*;
+import mobile.mobileSteps.MobileSteps;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import mobile.mobileUtils.BaseMobileClass;
@@ -10,6 +12,7 @@ import web.webCase.WebDownloadMobileTest;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 
 public class MobileCaseTwo extends BaseMobileClass {
     AllTasksPage allTasksPage = new AllTasksPage();
@@ -31,11 +34,12 @@ public class MobileCaseTwo extends BaseMobileClass {
     MobileFormReception mobileFormReception = new MobileFormReception();
     WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
+    MobileSteps mobileSteps = new MobileSteps();
 
-    @BeforeClass
-    public void taskWeb() {
-        webDownloadMobileTest.completeTask("2");
-    }
+//    @BeforeClass
+//    public void taskWeb() {
+//        webDownloadMobileTest.completeTask("2");
+//    }
 
     @Test
     public void taskReception() throws Exception {
@@ -893,6 +897,8 @@ public class MobileCaseTwo extends BaseMobileClass {
         consolidateContainerPage.setCreateConsolidateContainer(true);
         consolidateContainerPage.getReceiverInput().shouldBe(disabled);
         consolidateContainerPage.clickConsolidateButton();
+        mobileSteps.verifyData($(By.id("android:id/message")), "Containers merged: 9990000000012, 9990000000029, 9990000000036, 9990000000043, 9990000000050, 9990000000067, 9990000000074, 9990000000081, 9990000000098, 9990000000104 to 9990000000111.");
+        mobileSteps.clickButton($(By.id("android:id/button2")));
     }
 
     @Test (priority = 12, dependsOnMethods = "taskMergeContainer")

@@ -33,6 +33,8 @@ public class MobileCaseJenkins2 {
         mobileCaseTwo.setUp();
         mobileCaseTwo.taskPackaging();
         mobileCaseTwo.setUp();
+        mobileCaseTwo.taskMergeContainer();
+        mobileCaseTwo.setUp();
         mobileCaseTwo.taskLoading();
     }
 }

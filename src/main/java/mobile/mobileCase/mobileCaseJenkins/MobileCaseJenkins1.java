@@ -7,7 +7,6 @@ public class MobileCaseJenkins1 {
 
     static MobileCaseOne mobileCaseOne = new MobileCaseOne();
     static WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
-//    public static String BASE = "wms_qa_mazv";
 
     public static void main(String[] var0) throws Exception {
 

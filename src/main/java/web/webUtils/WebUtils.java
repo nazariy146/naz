@@ -13,7 +13,7 @@ public class WebUtils {
     public void  webRunBrowser(){
         Configuration.startMaximized = true;
         Configuration.browserSize = null;
-        open("http://dmz.abmretail.com:8080/wms_regress_mikn");
+        open("http://dmz.abmretail.com:8080/wms_qa_mazv");
 
         $("#userName").shouldBe(visible, Duration.ofSeconds(200));
         $("#userName").val("Администратор");
