@@ -34,10 +34,10 @@ public class MobileCaseOne extends BaseMobileClass {
     public WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
 
-//    @BeforeClass
-//    public void taskWeb() {
-//        webDownloadMobileTest.completeTask("1");
-//    }
+    @BeforeClass
+    public void taskWeb() {
+        webDownloadMobileTest.completeTask("1");
+    }
 
     @Test
     public void taskReception() throws Exception {
