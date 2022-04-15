@@ -36,10 +36,10 @@ public class MobileCaseTwo extends BaseMobileClass {
     MobileFormAccommodation mobileFormAccommodation = new MobileFormAccommodation();
     MobileSteps mobileSteps = new MobileSteps();
 
-//    @BeforeClass
-//    public void taskWeb() {
-//        webDownloadMobileTest.completeTask("2");
-//    }
+    @BeforeClass
+    public void taskWeb() {
+        webDownloadMobileTest.completeTask("2");
+    }
 
     @Test
     public void taskReception() throws Exception {

@@ -1,13 +1,15 @@
 package mobile.mobileCase.mobileCaseJenkins;
 
 import mobile.mobileCase.mobileCase3.MobileCaseThree;
+import web.webCase.WebDownloadMobileTest;
 
 public class MobileCaseJenkins3 {
     static MobileCaseThree mobileCaseThree = new MobileCaseThree();
+    static WebDownloadMobileTest webDownloadMobileTest = new WebDownloadMobileTest();
 
     public static void main(String[] var0) throws Exception {
 
-        mobileCaseThree.taskWeb();
+        webDownloadMobileTest.completeTask("3");
         mobileCaseThree.setUp();
         mobileCaseThree.taskReception();
         mobileCaseThree.setUp();
